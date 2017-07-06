@@ -1,0 +1,170 @@
+{
+  "Version": "1.0.0",
+  "StatusCode": 200,
+  "Success": true,
+  "Authorized": true,
+  "Result": {
+    "buttons": [
+      {
+        "button": "index",
+        "title": "职业列表"
+      },
+      {
+        "button": "backAssess",
+        "title": "回到评估"
+      },
+      {
+        "button": "compare",
+        "title": "比较"
+      },
+      {
+        "button": "save",
+        "title": "保存"
+      },
+      {
+        "button": "print",
+        "title": "Print"
+      },
+      {
+        "button": "select",
+        "title": "选择国家"
+      }
+    ],
+    "tabs": [
+      {
+        "seq": 0,
+        "title": "乍看上去"
+      },
+      {
+        "seq": 1,
+        "title": "职位描述"
+      },
+      {
+        "seq": 2,
+        "title": "工资"
+      },
+      {
+        "seq": 3,
+        "title": "就业与展望"
+      },
+      {
+        "seq": 4,
+        "title": "教育培训"
+      },
+      {
+        "seq": 5,
+        "title": "个人素质"
+      },
+      {
+        "seq": 6,
+        "title": "相关职业"
+      }
+    ],
+    "sections": [
+      {
+        "section": "EducationLevel",
+        "title": "教育培训"
+      },
+      {
+        "section": "FindJobs",
+        "title": "找工作"
+      },
+      {
+        "section": "HelpfulHSCourses",
+        "title": "有用的高中课程"
+      },
+      {
+        "section": "Interests",
+        "title": "兴趣爱好"
+      },
+      {
+        "section": "Knowledge",
+        "title": "知识"
+      },
+      {
+        "section": "LicensingCert",
+        "title": "授权/认证"
+      },
+      {
+        "section": "MajorEmployers",
+        "title": "主要雇主"
+      },
+      {
+        "section": "OpportunityRating",
+        "title": "就业机会"
+      },
+      {
+        "section": "OutlookInfo",
+        "title": "外表"
+      },
+      {
+        "section": "OutlookRatings",
+        "title": "就业与展望"
+      },
+      {
+        "section": "Overview",
+        "title": "概述"
+      },
+      {
+        "section": "PhysicalDemands",
+        "title": "物理需求"
+      },
+      {
+        "section": "Preparation",
+        "title": "制备"
+      },
+      {
+        "section": "RelatedPrograms",
+        "title": "学习计划"
+      },
+      {
+        "section": "SalaryRating",
+        "title": "薪水"
+      },
+      {
+        "section": "SkillsAbilities",
+        "title": "技能与能力"
+      },
+      {
+        "section": "TaskList",
+        "title": "任务列表"
+      },
+      {
+        "section": "TopJobTasks",
+        "title": "工作任务"
+      },
+      {
+        "section": "TopOpeningLocations",
+        "title": "工作最多的五大城市"
+      },
+      {
+        "section": "TopSalaryLocations",
+        "title": "前五名工资最高的城市"
+      },
+      {
+        "section": "TopWorkSetting",
+        "title": "工作环境"
+      },
+      {
+        "section": "UserRating",
+        "title": "评价这个职业"
+      },
+      {
+        "section": "Values",
+        "title": "价值观"
+      },
+      {
+        "section": "Video",
+        "title": "职业视频"
+      },
+      {
+        "section": "WageLevels",
+        "title": "工资"
+      },
+      {
+        "section": "WorkingConditions",
+        "title": "工作环境"
+      }
+    ]
+  }
+}

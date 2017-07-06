@@ -1,0 +1,527 @@
+{
+
+ "LANG_EN_TRANS" :{
+
+        "btn_cont": "Continuar",
+        "btn_rst": "Recuperar",
+        "btn_save": "Guardar",
+        "btn_score": "Puntaje",
+        "btn_startover": "Reiniciar",
+        "lang": "Español ",
+
+
+        "rst_rstd_anss": "Sus respuestas han sido restauradas.",
+        "rst_quess_cmtd": "Usted completó todas las preguntas.",
+        "rst_quess_cmt": "Deberá completar algunas preguntas.",
+        "rst_anss_not_saved": "Usted no ha guardado ninguna respuesta aún.",
+        "rst_anss_not_rstd": "Sus respuestas no pudieron ser restauradas.",
+        "rstd_anss": "Respuestas Recuperadas",
+
+
+        "entrp_save_no_anss": "No hay respuestas para guardar.",
+        "entrp_save_anss_save": "Guardar Respuestas",
+
+
+        "entrp_intro_entrps_chrts": "Empresarios aplican sus talentos en una variedad de maneras pero muchos parecen tener ciertas características en común.",
+        "entrp_intro_entrpial_career_Asmts": "La Evaluación de la carrera empresarial le puede ayudar a aprender más sobre empresarios y más sobre usted mismo.",
+        "entrp_intro_entrpial_career_Asmts_desktop": " Cuando usted evalúa sus respuestas con cada oración, usted puede llegar a comprender el porque trabajar por su propia cuenta le atrae. Usted también puede aprender sobre las áreas en las cuales necesita mejorar.",
+        "entrp_intro_entrpial_asmt": "La evaluación no es un examen y no predice éxito en el negocio. No hay un conjunto único de características que describe con precisión a todos los empresarios. Si aun usted obtiene una baja puntuación en la evaluación todavía puede llegar a tener éxito como empresario.",
+        "entrp_intro_entrpl_asmt_stmt": "La evaluación contiene 20 oraciones. Elija la medida en que usted está de acuerdo con las declaraciones de Muy de Acuerdo a Muy Desacuerdo. Después de que complete las 20 oraciones, usted recibirá una calificación que le indicara su aptitud para el trabajo por cuenta propia. Usted también puede revisar un análisis sobre todas las oraciones en la evaluación.",
+        "entrp_intro_rate_stmt": "Evalué las siguientes oraciones",
+
+        "entrp_ques_q": [
+                "Estoy dispuesto a trabajar 50 horas o mas por semana con regularidad.",
+                "Mi familia apoyará mi entrada al negocio.",
+                "Estoy dispuesto a aceptar los riesgos financieros y de carrera cuando es necesario.",
+                "No necesito todos los beneficios adicionales proporcionados por el empleo convencional.",
+                "Me gustaría tomar completa responsabilidad de los éxitos y fracasos de mi negocio.",
+                "Yo recibiría mas éxito financiero al operar mi propio negocio.",
+                "Siento gran orgullo cuando completo un proyecto exitosamente.",
+                "Tengo un nivel de energía alto, el cual puedo mantener sobre un largo periodo de tiempo.",
+                "Disfruto controlar mis propios encargos de trabajo y tomar todas las decisiones que afectan mi trabajo.",
+                "Creo que soy el principal responsable de mis propios éxitos y fracasos.",
+                "Tengo un fuerte deseo de lograr resultados positivos, incluso cuando se requiera una gran cantidad de esfuerzo adicional.",
+                "Tengo un gran conocimiento de cómo manejar un negocio.",
+                "Puedo funcionar en situaciones ambiguas.",
+                "Uno o ambos de mis padres fueron empresarios.",
+                "Creo que mis habilidades y destrezas son mayores que las de la mayoría de mis compañeros de trabajo.",
+                "La gente confía en mi y me consideran honesto y confiable.",
+                "Siempre intento completar cada proyecto que empiezo, independientemente de obstáculos o dificultades.",
+                "Estoy dispuesto a hacer algo aun cuando otras personas se burlan o me menosprecian por hacerlo.",
+                "Puedo tomar decisiones rápidamente.",
+                "Tengo una buena red de amigos, profesionales, y  conocidos de negocios."],
+
+
+
+
+        "entrp_ques_opt1": "Totalmente de acuerdo",
+        "entrp_ques_opt2": "Entre Totalmente de acuerdo y algo de acuerdo",
+        "entrp_ques_opt3": "Parcialmente de acuerdo",
+        "entrp_ques_opt4": "Entre algo de acuerdo y totalmente en desacuerdo",
+        "entrp_ques_opt5": "Muy en desacuerdo",
+        "entrp_ques_opt6": "Restante",
+
+
+        "entrp_score_name": "Puntaje",
+        "entrp_your_score": "Su calificación fue.",
+        "entrp_score_80to100": "Usted tiene una habilidad espectacular para ser un empresario.",
+        "entrp_score_60to79": "Usted tiene una habilidad satisfactoria para ser un empresario.",
+        "entrp_score_40to59": "Trabajar por su propia cuenta puede que no sea una carrera apropiada para usted.",
+        "entrp_score_0to39": "Lo mas probable es que usted debería de evita una carrera empresaria.",
+        "entrp_score_anlys_asmt": "Análisis para la Evaluación de la carrera empresarial",
+
+
+        "entrp_anlys": "Análisis",
+        "entrp_oview": "Resumen",
+        "entrp_cpyrt": "El 'Entrepreneurial Career Assessment' es una reimpresión de 'Mind Your Own Business,'escrito por LaVerne Ludden, Doctor en Educación y Bonnie Maitlen, Doctor en Educación, con el permiso de los autores. Derechos de autor 1994 por JIST, Indianápolis, Indiana.",
+        "entrp_chrts": "Características de un Empresario",
+        "entrp_list_chrts": "La lista a la izquierda describe algunas características comunes de un empresario. Esta lista interpreta la evaluación cualitativamente. Tenga en cuenta que llegar a un retrato concluyente de un empresario típico es muy difícil. Por lo tanto, es posible que usted obtenga baja calificación en su evaluación y todavía tener éxito como empresario.",
+        "entrp_workhard": "Trabaja Duro",
+        "entrp_time_efft": "El trabajar por su propia cuenta requiere una gran cantidad de tiempo y esfuerzo. El empresario debe de desempeñar una gran cantidad de tareas que consumen mucho tiempo. El 77 por ciento de todos los empresarios reportan trabajar 50 horas o más por semana, y el 54 por ciento dicen trabajar más de 60 horas por semana. Tal compromiso de tiempo requiere que usted tenga un nivel de energía alto.",
+        "entrp_chrt_1and8.": "Estas características aplican a las oraciones 1 y 8.",
+        "entrp_fmly_sprt": "Tiene Apoyo Familiar",
+        "entrp_fmly_sprt_sucs": "Un empresario exitoso necesita apoyo familiar. Si usted está casado, su esposo(a) debe de creer en su negocio porque requiere que los dos sacrifiquen tiempo y dinero. El estrés puede crear perturbación en las relaciones familiares. Si usted tiene hijos, ellos necesitarán ánimo en entender su necesidad de pasar tanto tiempo lejos de la familia. Entre más apoyo positivo reciba de parte de su familia, mas podrá concentrarse en hacer su negocio un éxito.",
+        "entrp_chrt_stmt2": "Esta característica aplica a la oración 2.",
+        "entrp_takes_risks": "Toma Riesgos",
+        "entrp_risks_takers": "Empresarios son tomadores de riesgos. Ellos ponen en riesgo sus carreras, tiempo, y dinero para poder hacer un éxito de sus negocios. Una revisión de la investigación sobre este tema relata que la mayoría de los empresarios perciben los riesgos de manera diferente a otras personas. Lo que otros ven como un riesgo, el empresario ve cómo una situación controlable. Los empresarios tratan de organizar una situación de riesgo mediante la identificación de los recursos, ordenándoles debido a su propósito, y la programación de su utilización adecuadamente. Para tener éxito en el trabajo por cuenta propia, usted debe sentirse cómodo tomando riesgos razonables.",
+        "entrp_chrt_stmt3": "Esta característica aplica a la oración 3.",
+        "entrp_scfs_empt_benf": "Sacrifica Beneficios de Empleado",
+        "entrp_major_self_empt": "Una de las mayores realidades de trabajar pos su propia cuenta es que no recibirá un sueldo regular. Usted paga por sus propios beneficios. Una oficina agradable, servicios de secretaría, equipo y otras características del empleo que ha llegado a obtener ya no están disponibles a menos que los proporcione usted mismo.",
+        "entrp_chrt_stmt4": "Esta característica aplica a la oración 4.",
+        "entrp_is_indepnt": "Es Independiente",
+        "entrp_indepnt_ctrl": "A los empresarios les gusta ser independientes y estar en control de las situaciones. Muchas de las personas que se convierten en trabajadores por su propia cuenta consideran la oportunidad de ser su propio gerente como uno de los mayores beneficios de poder trabajar por su propia cuenta.",
+        "entrp_chrt_5and9": "Estas características aplican a las oraciones 5 y 9.",
+        "entrp_fncl-sucs": "Quiere Exitoso Financiero",
+        "entrp_primary_reason": "Una de las razones principales por las cuales empresarios deciden obtener negocios es para obtener éxito financiero.  El deseo por éxito financiero provee motivación para la persona que trabaja por su propia cuenta. Si usted quiere ser un empresario, usted necesita establecer una meta financiera razonable que desea obtener mediante trabajar por su propia cuenta. Esta meta lo ayudará a medir que tan bien está haciendo en satisfacer sus necesidades personales por medio de su carrera empresarial.",
+        "entrp_chrt_stmt6": "Esta característica aplica a la oración 6.",
+        "entrp_is_energetic": "Es Energético",
+        "entrp_self_empt_long_hrs": "El trabajar por su propia cuenta requiere largas horas de trabajo. Usted frecuentemente no tendrá la habilidad de controlar el numero de horas requeridas para satisfacer todas las tareas necesarias. El empresario debe tener un gran nivel de energía para responder a la demanda del trabajo. De hecho, un empresario a menudo será energizado por la demanda de su trabajo y encontrará que sufre de perdida de energía cuando está 'relajándose'. Usted necesitará vigor que le permita trabajar días de 12 a 16 horas, 6 a 7 días a la semana, y 52 semanas al año.",
+        "entrp_locus_ctrl": "Tiene un 'Sitio de Control' Interno",
+        "entrp_internal_locus_ctrl": "Empresarios exitosos tienen un sitio de control interno, o interno sentido de responsabilidad por el resultado de una empresa. Evidencia de la investigación muestra que un sitio de control interno aumenta la creatividad y la actividad. Para ser un empresario, usted debe tener un fuerte sentido de ser un 'vencedor' que se hace responsable por sus acciones. Pero sin embargo si usted con frecuencia se considera una 'víctima' y culpa a otras personas, la mala suerte, o circunstancias difíciles por sus fracasos, la carrera empresarial podría no ser la carrera correcta para usted.",
+        "entrp_chrt_stmt10": "Esta característica aplica a la oración 10.",
+        "entrp_need_achiv": "Tiene Necesidad de Lograr",
+        "entrp_strong_need_achivmt": "Los empresarios tienen una fuerte necesidad de logro. Se esfuerzan por sobresalir y lograr objetivos que son bastante altos. Si desea convertirse en un empresario, usted debe estar dispuesto a fijar metas altas para sí mismo y disfrutar esforzarse para lograr estos objetivos.",
+        "entrp_chrt_7and11": "Estas características aplican a las oraciones 7 y 11.",
+        "entrp_business_expr": "Tiene Experiencia de Negocios",
+        "entrp_extensive_business_expr": "Un empresario debe tener experiencia extensiva de negocios para ser exitoso. Experiencia en la dirección general es beneficioso porque un empresario debe saber algo acerca de todo tipo de dirección. La capacitación y la educación formal en la dirección también son útiles.",
+        "entrp_chrt_stmt12": "Esta característica aplica a la oración 12.",
+        "entrp_role_model": "Tiene Como Ejemplo Padres que Trabajan Por Sus Propias Cuentas",
+        "entrp_research": "La investigación ha demostrado que empresarios son más propensos a tener un padre - especialmente una figura paterna- que trabaja por cuenta propia. La inspiración de un padre y el conocimiento sobre el funcionamiento de una empresa pueden contribuir al éxito de un empresario. Si usted tiene un padre que trabaja por cuenta propia, considere esto una ventaja para su propio éxito como empresario.",
+        "entrp_chrt_stmt14": "Esta característica aplica a la oración 14.",
+        "entrp_self_confd": "Tiene Confianza en si Mismo",
+        "entrp_impt_chrt": "Una característica importante de los empresarios es confianza en sí mismo. Este factor es particularmente importante cuando el empresario se enfrenta a grandes desafíos y dificultades con su negocio. Necesita creer en si mismo.  Su creencia le ayudará a superar los problemas que afectan inevitablemente a todos los empresarios que  trabajan por cuenta propia en algún momento de sus carreras.",
+        "entrp_chrt_10and15and18": "Estas características aplican a las oraciones 10, 15, y 18.",
+        "entrp_integrity": "Tiene Integridad",
+        "entrp_honesty_integrity": "La gente a menudo cita la honestidad e integridad como características de los empresarios. Clientes no quieren tratar con los dueños de negocios que son deshonestos y poco éticos. Debe sentirse positivo acerca de su tratamiento ético hacia personas y debe comprometerse a llevar a cabo su negocio con la mayor integridad.",
+        "entrp_chrt_stmt16": "Esta característica aplica a la oración 16.",
+        "entrp_determn": "Tiene Determinación",
+        "entrp_impt_chrt_determn": "Una de las características más importantes de los empresarios es la determinación. Esta característica está estrechamente relacionada con la confianza en sí mismo. Cuanto más cree en sí mismo, más probabilidades hay de seguir luchando por el éxito aun cuando se enfrenta a enormes obstáculos. Es necesario determinarse para poder vencer los problemas que lo acosan por medio de cada nueva empresa.",
+        "entrp_chrt_stmt17": "Esta característica aplica a la oración 17.",
+        "entrp_adapts_change": "Se Adapta a Cambios",
+        "entrp_two_primary_skills": "Un nuevo negocio cambia rápidamente, por lo que un empresario debe ser capaz de adaptarse al cambio. Dos habilidades primarias son necesarios para la adaptación al cambio: la capacidad para resolver problemas, y la capacidad de tomar decisiones rápidas. Otra habilidad es la capacidad de aprender de sus experiencias y buscar el aprendizaje formal que le ayude a resolver sus problemas. Para ser un empresario exitoso, tendrá que tener todas estas capacidades.",
+        "entrp_chrt_13and19": "Estas características aplican a las oraciones 13 y 19",
+        "entrp_ntwk_prof": "Tiene una Buena Red de Profesionales",
+        "entrp_ntwk_prof_assistance": "Un empresario tiene una buena red de profesionales. Esta red proporciona acceso a los que se les puede consultar para asesoramiento, información y referencias. Usted debe tener una amplia red de profesionales a los que puede acudir en busca de ayuda.",
+        "entrp_chrt_stmt20": "Esta característica aplica a la oración 20.",
+
+
+
+        "entrp_intro_response_choice": "Las opciones para responder son:",
+        "common_chrt": "Características comunes de un empresario",
+        "result": "Resultados",
+
+
+
+        "shortip_btn_myscore": "Mis Puntajes",
+        "print": "Imprimir",
+       
+
+        "shortip_save_no_anss": "No hay respuestas para guardar.",
+        "shortip_save_anss_save": "Guardar Respuestas",
+
+
+        "shortip_intro_get_started": "Para Comenzar",
+        "shortip_intro_Interest_Profiler": "El Perfilador de Intereses le puede ayudar a identificar sus intereses y encajarlos con una amplia variedad de carreras. No le dice lo que debe ser, sino que organiza sus intereses en seis categorías de trabajo amplias.",
+        "shortip_intro_various_careers": "Las siguientes páginas contienen actividades relacionadas a diversas carreras. Para cada actividad, escoja la respuesta que indica si a usted le gustaría o no esa actividad. No se preocupe si no está familiarizado con algunas de las actividades o si requieren capacitación que usted no tiene. No se preocupe sobre el salario, estado, o formación. Tenga en cuenta que todas las ocupaciones y carreras están abiertas a todos.",
+        "shortip_intro_60_activities": "Hay 60 actividades. No gaste demasiado tiempo en una sola actividad ni hable con sus amistades para ver cómo les va a ellos. No hay límite de tiempo, pero trate de trabajar a un paso firme.",
+        "shortip_intro_response_choice": "Las opciones para responder son:",
+        "shortip_intro_note": "NOTA: Sus resultados serán guardados automáticamente cuando llegue a la página de resultados. Para agregar comentarios personales, haga clic en la opción de Guardar. Si tiene que salirse del sistema antes de evaluar todas las actividades, primero asegúrese de Guardar el trabajo que haya completado.",
+        "shortip_intro_rate_activities": "Evalúe las actividades",
+
+
+        "shortip_strong_like": "Me encanta",
+        "shortip_like": "Me gusta",
+        "shortip_unsure": "No estoy seguro",
+        "shortip_dislike": "No me gusta",
+        "shortip_strong_dislike": "Me desagrada",
+
+        "shortip_ques_q": [
+                "Construir muebles de cocina",
+                "Instalar ladrillo o azulejo",
+                "Desarrollar una nueva medicina",
+                "Estudiar cómo reducir la contaminación del agua",
+                "Escribir libros u obras de teatro",
+                "Tocar un instrumento musical",
+                "Enseñar a las personas una rutina de ejercicio",
+                "Ayudar a la gente con problemas personales o emocionales",
+                "Comprar y vender acciones y bonos",
+                "Administrar una tienda",
+                "Crear una hoja de cálculo usando software",
+                "Leer para corregir registros o formas",
+                "Reparar aparatos electrodomésticos",
+                "Criar peces en un criadero",
+                "Realizar experimentos químicos",
+                "Estudiar el movimiento de los planetas",
+                "Componer o hacer arreglos de música",
+                "Dibujar",
+                "Orientar a las personas sobre las profesiones",
+                "Ejecutar terapia de rehabilitación",
+                "Manejar un salón de belleza o barbería",
+                "Administrar un departamento dentro de una empresa grande",
+                "Descargar software para una red grande de computadoras",
+                "Operar una calculadora",
+                "Ensamblar partes electrónicas",
+                "Conducir un camión para entregar paquetes en las oficinas y hogares",
+                "Examinar muestras de sangre usando un microscopio",
+                "Investigar las causas de un incendio",
+                "Crear los efectos especiales para las películas",
+                "Pintar los escenarios para obras de teatro",
+                "Trabajar como voluntario en una organización sin fines de lucro",
+                "Enseñar a los niños cómo jugar deportes Empezar su propio negocio",
+                "Empezar su propio negocio",
+                "Negociar los contratos de negocios",
+                "Mantener los registros de envío y recepción",
+                "Calcular los salarios de los empleados",
+                "Poner a prueba la calidad de las piezas antes de su envío",
+                "Reparar e instalar las cerraduras",
+                "Desarrollar una mejor manera de pronosticar el clima",
+                "Trabajar en una laboratorio de biología",
+                "Escribir los guiones para películas o programas de televisión",
+                "Ejecutar un baile de jazz o tap",
+                "Enseñar lenguaje de señas a las personas con discapacidades del oído",
+                "Ayudar a conducir una sesión de terapia de grupo",
+                "Representar a un cliente en un caso legal",
+                "Hacer publicidad para una nueva línea de ropa",
+                "Hacer un inventario de materiales usando una computadora manual",
+                "Registrar los pagos de renta",
+                "Instalar y operar las máquinas para fabricar productos",
+                "Apagar los incendios forestales",
+                "Inventar un sustituto del azúcar",
+                "Realizar exámenes de laboratorio para identificar las enfermedades",
+                "Cantar en una banda musical",
+                "Editar películas",
+                "Cuidar los niños en una guardería",
+                "Enseñar una clase de escuela secundaria",
+                "Vender mercancías en una tienda departamental",
+                "Administrar una tienda de ropa",
+                "Mantener los registros de inventario",
+                "Poner las estampillas, clasificar y distribuir el correo para una organización"],
+
+
+        "shortip_ques_opt": "Restante",
+
+
+        "shortip_score_explore_occ": "Utilizando sus Intereses para Explorar Ocupaciones ",
+        "shortip_score_explore_careers": "Usted puede utilizar sus intereses para explorar carreras. Es buena idea utilizar sus intereses porque probablemente encontrará que las ocupaciones relacionadas con sus intereses son más satisfactorias para usted que las ocupaciones que no se relacionan con ellos.",
+        "shortip_score_info_explore_careers": "Sin embargo, recuerde que los intereses son sólo una parte de la información que usted puede usar para explorar carreras. La información sobre usted mismo, tal como sus habilidades, valores de trabajo, experiencia, educación y motivación, también es importante cuando se trata de explorar carreras. Entre más aspectos considere sobre usted mismo al explorar carreras, mayor probabilidad tendrá en encontrar un empleo satisfactorio.",
+        "shortip_score_six_interest_areas": "Considere sus intereses relacionados con algunas ocupaciones como su preferencia por ciertas actividades en un empleo. El Perfil de Intereses mide los intereses en cada una de las seis Áreas de Interés que. Lea las definiciones para entender mejor sus intereses relacionados con ciertas ocupaciones.",
+        "shortip_score_list_occ": "Los enlaces en cada Área de Interés le mostrarán una lista de ocupaciones que corresponden con sus intereses.",
+        "shortip_score_ur_score": "Su Puntaje",
+        "Conventional": "Convencional",
+        "Realistic": "Realista",
+        "Investigative": "Investigativo",
+        "Enterprising": "Emprendedor",
+        "Artistic": "Artístico",
+        "Social": "Social",
+        "shortip_score_opt":
+        {
+                "Conventional": "A las personas con intereses convencionales les gustan las actividades de trabajo en las que siguen procedimientos y rutinas establecidas. Prefieren trabajar con datos y detalles más que con las ideas. Prefieren un trabajo que cuenta con estándares precisos en vez de las situaciones en que tienen que juzgar por sí mismos. A estas personas les gusta trabajar en lugares donde las líneas de autoridad son claras.",
+                "Realistic": "A las personas con intereses realistas les gustan las actividades de trabajo que incluyan problemas prácticos y soluciones. Disfrutan ocupándose con plantas, animales, madera, herramientas y maquinaria. Les encanta trabajar al aire libre. Con frecuencia, a este tipo de personas no les gustan las ocupaciones que involucren principalmente hacer papeleo o trabajar junto a otras personas.",
+                "Investigative": "A las personas con intereses investigativos les gustan las actividades de trabajo que se relacionan con ideas y pensamientos más que con actividades físicas. Les gusta investigar información y resolver los problemas mentalmente en vez de persuadir o dirigir a las personas.",
+                "Enterprising": "A las personas con intereses emprendedores les gustan las actividades de trabajo en las que pueden empezar y realizar proyectos, especialmente los de tipo empresarial. Les gusta persuadir y dirigir a las personas, así como tomar decisiones. Les gusta tomar riesgos para obtener una ganancia. Estas personas prefieren la acción en vez de pensar.",
+                "Artistic": "A las personas con intereses artísticos les gustan las actividades de trabajo que se relacionan con el lado artístico de las cosas, tales como formas, diseños y patrones. Les gusta expresarse a sí mismos en su trabajo. Estas personas prefieren trabajar en lugares donde no existe un conjunto de reglas claras.",
+                "Social": "A las personas con intereses sociales les gustan las actividades de trabajo en las que ayudan a otros y en las que promueven el aprendizaje y el desarrollo personal. Prefieren las oportunidades para comunicarse con otros en vez de trabajar con objetos, máquinas o información. Les gusta enseñar, aconsejar, ayudar y estar al servicio de las personas."
+        },
+        "shortip_score_occ": "Ocupaciones",
+
+
+        "occ_ques": [
+                {
+                        "quest": "¿Cuánto desea usted aconsejar a otros como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 0,
+                        "occ_factor": "Asesorar",
+                        "helptext": "En algunos empleos, los trabajadores dialogan sobre temas con individuos o en grupo. Luego ellos dirigen, sugieren, o recomiendan opciones o soluciones."
+                },
+                {
+                        "quest": "¿Cuánto desea usted expresarse artísticamente como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 1,
+                        "occ_factor": "Artístico",
+                        "helptext": "En algunos empleos, los trabajadores se expresan a través de la música, el baile, las palabras o las artes visuales.  En otros empleos, los trabajadores diseñan o crean objetos que son visualmente interesantes, así como funcionales."
+                },
+                {
+                        "quest": "¿Cuánto desea usted atender y cuidar a otras personas como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 2,
+                        "occ_factor": "Ayudar y cuidar de otros",
+                        "helptext": "En algunos empleos, los trabajadores proveen ayuda personal, atención médica, apoyo emocional, y otros cuidados personales a otras personas.  Trabajan con pacientes, clientes, o colegas."
+                },
+                {
+                        "quest": "¿Cuánto desea usted prestarle atención a los detalles como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 3,
+                        "occ_factor": "Atención a los detalles",
+                        "helptext": "Algunos empleos requieren que los trabajadores les presten mucha atención a los detalles y que se aseguren de cumplir todas las tareas."
+                },
+                {
+                        "quest": "¿Cuánto desea usted hablar o escribir como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 4,
+                        "occ_factor": "Comunicar",
+                        "helptext": "Algunos empleos requieren que los trabajadores hablen o escriban con claridad para comunicarse con los demás."
+                },
+                {
+                        "quest": "¿Cuánto desea usted diseñar equipo o sistemas como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 5,
+                        "occ_factor": "Diseño de equipo o sistemas",
+                        "helptext": "En algunos empleos, los trabajadores diseñan equipo o productos (ej., maquinaria para fábricas, aviones). En otros empleos, los trabajadores diseñan sistemas o procesos para los problemas (ej., redes de computadoras)."
+                },
+                {
+                        "quest": "¿Cuánto tiempo desea usted pasar preparándose (escuela, capacitación en el sitio del trabajo) para una ocupación?",
+                        "opt": ["5 años o más','4 años,' a 3 años','4 meses a 1 año","Unas horas a tres meses"],
+                        "occ_factor_id": 6,
+                        "occ_factor": "Educación y capacitación",
+                        "helptext": "Algunos empleos requieren cuatro años o más de preparación universitaria o capacitación. Otros empleos requieren unas cuantas horas de capacitación en el sitio del trabajo. Y aún otras requieren varios años de experiencia o la combinación de experiencia y capacitación."
+                },
+                {
+                        "quest": "¿Cuánto desea usted ser emprendedor como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 7,
+                        "occ_factor": "Emprendedor",
+                        "helptext": "Algunos empleos les brindan a los trabajadores la oportunidad de empezar y llevar a cabo nuevos proyectos, actividades o ideas."
+                },
+                {
+                        "quest": "¿Cuánto desea usted tener horas flexibles como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 8,
+                        "occ_factor": "Horarios flexibles",
+                        "helptext": "Algunos empleos requieren que se trabaje de 9 a.m. a 5 p.m., de lunes a viernes. Otros no tienen horarios rigurosos y el tiempo de trabajo puede ser flexible."
+                },
+                {
+                        "quest": "¿Cuánto desea usted tener independencia como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 9,
+                        "occ_factor": "Independencia",
+                        "helptext": "Algunos empleos permiten que los trabajadores hagan sus tareas a su manera y con pocas instrucciones. En otros trabajos, los supervisores les dicen a los trabajadores lo que tienen que hacer."
+                },
+                {
+                        "quest": "¿Desea trabajar adentro o al aire libre?",
+                        "opt": ["Siempre al aire libre", "Mayormente al aire libre", "Tanto adentro como al aire libre", "Principalmente adentro", "Siempre adentro"],
+                        "occ_factor_id": 10,
+                        "occ_factor": "Adentro o al aire libre",
+                        "helptext": "En algunos empleos, los trabajadores pasan la mayoría del día al aire libre.  En otros empleos, los trabajadores pasan la mayoría del día adentro.  Algunas personas trabajan tanto adentro como al aire libre."
+                },
+                {
+                        "quest": "¿Cuánto desea usted tener influencia sobre otros como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 11,
+                        "occ_factor": "Influenciar a otros",
+                        "helptext": "En algunos empleos, los trabajadores tratan de convencer a las personas de cambiar de parecer o comportamiento. Esto puede incluir hacer que las personas compren algo o que se comporten de manera diferente con los demás."
+                },
+                {
+                        "quest": "¿Qué nivel de oportunidades de empleo está dispuesto a considerar?",
+                        "opt": ["Excelente", "Muy bueno", "Bueno", "No muy bueno", "Pobre"],
+                        "occ_factor_id": 12,
+                        "occ_factor": "Posibilidades de empleos",
+                        "helptext": "En las ocupaciones se necesitan nuevos trabajadores cada año para cubrir puestos nuevos o para reemplazar a los trabajadores que toman otros puestos. Algunas ocupaciones necesitan muchos trabajadores nuevos; otras no necesitan ningunos. La oferta de puestos libres puede afectar la facilidad que usted tiene de encontrar un trabajo. Con el paso del tiempo, las posibilidades de empleo para alguna ocupación pueden cambiar. Algunas ocupaciones pueden tener mejor posibilidades en diez años y otras peor."
+                },
+                {
+                        "quest": "¿Cuánto desea usted usar las matemáticos o ciencias como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 13,
+                        "occ_factor": "Matemáticas y ciencias",
+                        "helptext": "Algunos empleos requieren que los trabajadores seleccionen las fórmulas y los métodos matemáticos correctos para resolver los problemas. Otros empleos requieren que los trabajadores usen reglas y métodos científicos para resolver problemas o crear conocimientos nuevos. A menudo hay ocupaciones que utilizan la misma cantidad de matemáticas y ciencias. Así, si se usa mucho de una, también se utilizará mucho de la otra. Sin embargo, hay unas pocas ocupaciones que utilizan mucho las matemáticas o las ciencias pero no ambas."
+                },
+                {
+                        "quest": "¿Cuánto desea usted organizar las cosas como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 14,
+                        "occ_factor": "Organizar",
+                        "helptext": "En algunos empleos, los trabajadores organizan eventos, programas y actividades para grupos de personas. En otros, los trabajadores organizan datos y otros tipos de información."
+                },
+                {
+                        "quest": "¿Cuánta actividad física desea en un trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca", "Sentado, casi sin moverse"],
+                        "occ_factor_id": 15,
+                        "occ_factor": "Actividad física",
+                        "helptext": "Algunos empleos requieren actividad física, como caminar, escalar, o levantar. Otros empleos requieren estar sentado o parado en el mismo sitio la mayor parte del tiempo."
+                },
+                {
+                        "quest": "¿Cuánto desea trabajar con plantas o animales como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 16,
+                        "occ_factor": "Plantas o animales",
+                        "helptext": "En algunos empleos, los trabajadores trabajan con plantas y animales."
+                },
+                {
+                        "quest": "¿Cuánto desea usted resolver los problemas como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 17,
+                        "occ_factor": "Resolución de problemas",
+                        "helptext": "En algunos empleos, los trabajadores identifican problemas y revisan la información relacionada. También desarrollan y aplican soluciones."
+                },
+                {
+                        "quest": "¿Cuánto desea usted ser responsable por otras personas como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 18,
+                        "occ_factor": "Responsabilidad por otros",
+                        "helptext": "En algunos empleos, los trabajadores son responsables por los productos o servicios que son creados por otros trabajadores. En otros trabajos, los trabajadores cuidan de otras personas que están heridas, en peligro o en necesidad de protección."
+                },
+                {
+                        "quest": "¿Cuánto desea usted tener trabajo de turno como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 19,
+                        "occ_factor": "Trabajo de turnos",
+                        "helptext": "Algunos empleos requieren trabajar noches o tardes. Este puede ser el horario normal o solo algunas veces. Estos empleos pueden requerir trabajo en los días feriados."
+                },
+                {
+                        "quest": "¿Cuánto desea usted supervisar a otras personas como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 20,
+                        "occ_factor": "Supervisar",
+                        "helptext": "En algunos empleos, los trabajadores supervisan a otros. Esto incluye el guiar, dirigir, motivar y evaluar el trabajo de otras personas. También podría incluir el reclutar o despedir."
+                },
+                {
+                        "quest": "¿Cuánto desea usted enseñar a otras personas como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 21,
+                        "occ_factor": "Enseñar",
+                        "helptext": "En algunos empleos, los trabajadores les enseñan a otros materias nuevas o cómo hacer las cosas. La enseñanza puede ocurrir en los salones de clases o en el lugar del empleo."
+                },
+                {
+                        "quest": "¿Cuánto desea usted viajar como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 22,
+                        "occ_factor": "Viajar",
+                        "helptext": "Algunos empleos requieren viajar fuera con frecuencia por una o más noches a la semana. Aún otros empleos requieren que los trabajadores viajen durante el día para regresar la misma noche."
+                },
+                {
+                        "quest": "¿De qué tamaño es la comunidad donde desea trabajar?",
+                        "opt": ["Solo en un pueblo pequeño-área rural", "En una ciudad pequeña o pueblo pequeño-área rural, pero no en una ciudad grande", "En una ciudad grande o pequeña, pero no en un pueblo pequeño-área rural", "Solo en una ciudad pequeña", "Solo en una ciudad grande"],
+                        "occ_factor_id": 23,
+                        "occ_factor": "Urbano o rural",
+                        "helptext": "Algunos empleos solo se encuentran en las áreas rurales, mientras que otros sólo en las grandes ciudades. Muchos empleos se encuentran en todas partes."
+                },
+                {
+                        "quest": "¿Cuánto desea usted tener diversas tareas como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 24,
+                        "occ_factor": "Variedad",
+                        "helptext": "En algunos empleos, los trabajadores realizan diferentes tareas casi todos los días o desarrollan diferentes tareas dentro de un mismo día."
+                },
+                {
+                        "quest": "¿Cuánto deberá pagar una ocupación?",
+                        "opt": ["Al menos $5,000 al mes ($28.85 la hora)", "Al menos $4,000 al mes ($23.08 la hora)", "Al menos $3,000 al mes ($17.31 la hora)", "Al menos $2,000 al mes ($11.54 la hora)", "Al menos el salario mínimo"],
+                        "occ_factor_id": 25,
+                        "occ_factor": "Salarios",
+                        "helptext": "Algunos empleos les pagan mucho dinero a los trabajadores. Otros empleos tienen una paga más modesta, y aún otros pagan poco. ¿Cuánto deberá pagar una ocupación para que la considere (para un empleo regular de jornada completa)? Aunque los trabajadores con poca o ninguna experiencia probablemente cobran menos al empezar, responda como si fuera una persona que tiene experiencia en la ocupación. Éstas son las tasas medianas antes de las deducciones."
+                },
+                {
+                        "quest": "¿Cuánto desea usted trabajar con sus manos como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 26,
+                        "occ_factor": "Trabajo manual",
+                        "helptext": "Algunos empleos requieren que los trabajadores utilicen las manos para manipular objetos físicos. Esto puede incluir el uso de las manos para recoger, mover, o ensamblar objetos; el uso de herramientas; u operar vehículos o máquinas."
+                },
+                {
+                        "quest": "¿Cuánto desea usted trabajar con el público como parte de su trabajo?",
+                        "opt": ["Muchísimo", "Mucho", "Algo", "Un poco", "Casi nunca"],
+                        "occ_factor_id": 27,
+                        "occ_factor": "Trabajo con el público",
+                        "helptext": "En algunos empleos, los trabajadores tratan directamente con el público, tal como saludando o atendiendo a los clientes. En otros empleos, el trabajar con el público incluye representar ante el público."
+                }
+        ],
+
+        "start": "Comenzar",
+        "instructions": "Instrucciones",
+        "explain": "Explicar",
+        "myresults": "Mis Resultados",
+        "restore_ans_set": "Recuperar Conjunto de Respuestas",
+        "delete": "Borrar",
+        "delete_ans_set": "Borrar Conjunto de Respuestas",
+        "delete_sure": "¿Está seguro de que quiere borrarlo?",
+        "action_undone": "Esta acción no se puede deshacer.",
+        "cancel": "Cancelar",
+        "savemythoughts": "Guardar Mis Pensamientos",
+        "enter_thougts": "Introduzca cualquier pensamiento que desea guardar sobre esto.",
+        "occ_mobile_intro": "Occupation Sort diseñado para que indique lo que sabe sobre usted mismo, lo que le gusta y no le gusta, y crea una lista de las ocupaciones que corresponden con los factores que usted considera importante.",
+        "occ_28fact": "Occupation Sort usa 28 factores que usualmente se consideran al tomar decisiones relacionadas con una carrera. Está diseñado para que indique lo que sabe sobre usted mismo, lo que le gusta y no le gusta, y crea una lista de las ocupaciones que corresponden con sus preferencias. No le dice lo que debería ser, sino Occupation Sort localiza las ocupaciones que corresponden con los factores que usted considera importante.",
+        "occ_5to10": "Seleccione de 5 a 10 factores",
+        "occ_select_factors": "Seleccione el orden de los factores",
+        "occ_each_factor": "Indique el nivel de cada factor que usted desea en una ocupación",
+        "result_choice": "Vea los resultados de sus opciones",
+        "options": "Opciones",
+        "select_range": "Para seleccionar el rango que está dispuesto(a) a considerar, utilice los deslizadores.",
+
+        "occ_your_search": "En este paso, usted selecciona los factores de ocupación que desee usar en su búsqueda. Según revise la lista, piense en sus trabajos y experiencias anteriores así como en las ocupaciones que desearía en el futuro. Estás ideas le pueden ayudar a decidir qué factores le gustaría utilizar en su búsqueda de una ocupación.",
+        "occ_selected_factor": "Recibirá los resultados más significativos si coloca en prioridad a los factores que seleccionó. Por ejemplo, si desea ocupaciones que requieran un alto nivel de habilidad artística, seleccione ese factor como su prioridad número 1. Así mismo, si su primera prioridad es evitar actividad física intensa, seleccione ese factor como la número 1.",
+        "select_prior_factor": "Seleccionar y Dar Prioridad a los Factores",
+        "all_28_factor": "Cada uno de los 28 factores están enumerados a continuación. Haga clic en ? para ver una descripción del factor. Seleccionar entre 5 y 10 de los que desee usar en su búsqueda.",
+        "occ_select_factor": "Cada vez que seleccione un factor, será movido a la lista de Sus Factores Importantes. A continuación, va a clasificar sus factores en orden de importancia y sus cinco factores principales aparecerán.",
+        "select_factors": "Seleccionar Factores",
+        "impt_factor": "Sus Factores Importantes",
+        "next": "Próximo",
+        "rank_impt_factor": "Clasifique Sus Factores Importantes",
+        "most_impt_first": "Los Más Importante Primero",
+        "five_factor": "Sus Cinco Factores Principales",
+        "select_five_ten": "Seleccionar entre 5 y 10 de los",
+        "rank_factor_in_order": "Clasifique sus factores en orden de importancia y sus cinco factores principales aparecerán.",
+
+        "occ_list": "Lista de Ocupaciones",
+        "occ_match_list": "Las ocupaciones que coinciden con sus preferencias están enumeradas a continuación.",
+        "none": "Ninguno",
+
+        "erase_all_response": "Esta opción lo regresará al comienzo y borrará todas sus respuestas.",
+
+        "eq_title": "Evaluación de la Carrera Empresarial",
+        "ip_title": "Perfilador de Intereses",
+        "os_title": "Clasificar las Ocupaciones",
+        "footer_ip": "© 1971-2016 Universidad de Oregón. Todos los derechos reservados. Creado por intoCareers,una sección de la Universidad de Oregón.",
+
+        "footer_common": "© 1971-2016 Universidad de Oregón. Todos los derechos reservados. Creado por intoCareers,una sección de la Universidad de Oregón.",
+
+        "footer_eq": "© 1971-2016 Universidad de Oregón. Todos los derechos reservados. Creado por intoCareers,una sección de la Universidad de Oregón. La ¨Forma de Evaluación de CarreraEmpresarial¨ es una reimpresión de ¨Métase en sus Propios Asuntos¨, por LaVerneLudden, Ed. D. Y Bonnie Maitlen, Ed. D., con permiso de los autores. Derechos de autor 1994 por JIST, Indianápolis, Indiana.",
+
+        "footer_mobile": "© 1971-2016 Universidad de Oregón. Todos los derechos reservados",
+
+        "err_occ": "Desafortunadamente, ha habido un error",
+        "unsaved_change": "Los cambios no guardados se perderán. ¿Desea continuar?",
+        "quit_assmt": "¿Desea abandonar la evaluación?",
+        "cannot_fact_10": "No puede seleccionar más de 10 factores",
+        "select_five5": "Por favor seleccione al menos 5 factores",
+        "emp_training_footer": "© 2000 Departamento de Trabajo, Empleo y Administración de Formación de EEUU. Todos los derechos reservados.",
+        "cannot_fact_5": "No puede seleccionar más de 5 factores",
+        "info_hd": "informe",
+        "logout": "Cerrar Sesión",
+        "read_more": "Lee mas",
+        "help_txt": "Ayuda",
+        "question_txt": "P",
+        "translate_toaste": "¡Éxito!",
+        "trans_alert": "¡Alerta!",
+        "trans_error": "Error",
+        "session_exp": "Sesión expirada",
+        "yes": "Sí",
+        "no": "No",
+        "session_exp_txt": "Su sesión expirará en 2 minutos. ¿Desea continuar?",
+        "select_only_five_fac": "Por favor seleccione al menos 5 factores",
+        "click_below_fac": "Haga clic en los factores a continuación para agregar aquí",
+        "selected_btn": "Seleccionado",
+        "print_page": "Imprimir página",
+        "done": "Terminado",
+        "print_preview": "Vista previa de impresión",
+        "close": "Cerca"
+
+}
+}

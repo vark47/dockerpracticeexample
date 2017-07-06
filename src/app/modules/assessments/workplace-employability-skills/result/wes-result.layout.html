@@ -1,0 +1,93 @@
+<br>
+<div>
+  <h2 class="page-header-2 ">Employability Skill Score </h2>
+  <p>
+    If we are required to create multiple slices or large slices we just need to keep on adding more slices in same or multiple
+    colors. The following code creates multiple slices on a circle Read more.If we are required to create multiple slices
+    or large slices we just need to keep on adding more slices in same or multiple colors. The following code creates multiple
+    slices on a circle Read more
+  </p>
+</div>
+
+<h2 class="page-header-2 ">Employability Skill Score </h2>
+<div class="row wes-graph-body-plp4" style="margin:0;">
+
+  <div class="col-md-10 offset-md-2 col-12">
+    <ul class="wes-colorbox-list">
+      <li><span class="wes-color-box wes-color-box-proficient"></span>Proficent</li>
+      <li><span class="wes-color-box wes-color-box-Knowledge"></span>Knowledgeable</li>
+      <li><span class="wes-color-box wes-color-box-NeedImp"></span>Need Improvement</li>
+    </ul>
+  </div>
+  <!--Shows score, name and its level in graph formate-->
+  <div class="col-11 col-lg-12 col-md-9   col-sm-11">
+    <dl>
+      <div class="graph-block" *ngFor="let name of osResult,let i=index;">
+        <div class="dd"><span class="text-right plp4-hide-mobi cmpr-cap-letr"><ul><li>{{name.givenName}}</li></ul></span>
+          <img src="{{icons[i]}}" class="plp4-hide-desk wes-icn-img "></div>
+        <div class=" graph-bg-bar-plp4">
+          <div class="wes-percentage">
+            <div class="wes-percentage-after" [ngClass]="name.givenColor" [ngStyle]="{'width': percentage[i]+'%'}"></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:table;">
+        <div class="dd"></div>
+        <div class="number-12" style="display:table-cell;position: absolute;">
+          <ul style="list-style: none;">
+            <li [ngStyle]="{'left':item*8+'%'}" *ngFor="let item of numbers">{{item}}</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+    </dl>
+    <p class="text-center col-12 pt-4 col-md-6 offset-md-6 col-lg-10 offset-lg-2">Skill Score</p>
+  </div>
+</div>
+
+<br>
+<!--Shows score, name and its level in card form-->
+<div class="row p-b gutter-10 wrapper columned space-between heightWESDiv">
+  <div class="col-12 col-lg-4 col-md-4 p-b-res-plp4 object{{j}} spaceWESDiv" *ngFor="let item of osResult, let j=index" data-toggle="modal"
+    data-target="#myModal1">
+
+    <div class="wes-card-blue" [ngClass]="item.givenColor">
+      <span class="wes-text-alig">Your&nbsp;Score</span>
+      <span class="text-center spn-wes">{{item.givenScore}}</span>
+      <span class="wes-text-alig cmpr-cap-letr">{{item.givenLevel}}</span>
+    </div>
+    <div class="media-left-plp4 w-100">
+      <div class="">
+        <ul class="wes-result-plp4 text-center">
+          <li><img src="{{icons[j]}}" class="wes-icn-img"></li>
+          <li>
+            <h6 class="wes-text-alig cmpr-cap-letr"> <b>{{item.givenName}}</b></h6>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--When user click on card its coresponding message was showed in the model-->
+<!-- model start -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="width:92%;">
+    <div class="modal-content content-color">
+      <div class="modal-header eq-heading">
+        <h6 class="modal-title eq-popup-tittle"><b>work</b></h6>
+        <i class="" data-dismiss="modal" aria-label="Close">&times;</i>
+      </div>
+      <div class="modal-body">
+        <div class="eq-data">It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+          its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+          to using 'Content here, content here', making it look like readable English. </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- model end -->
+
+<br>

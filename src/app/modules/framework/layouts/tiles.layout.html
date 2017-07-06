@@ -1,0 +1,46 @@
+<div class="container white-bg content-box-shadow bodypadding">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 click-here-tiles plp-title-overflow" >
+            <!--<div class="" [hidden]="tileView" (click)="tileView=true" [ngStyle]="{'cursor':'pointer'}" routerLink="./tiles"><u>Click here to show tiles menu..</u></div>-->
+            <!--<div class="content-plp-3"> </div>-->
+        <div [hidden]="tileView">
+               <router-outlet></router-outlet>
+            </div>
+            
+
+            <div [hidden]="!tileView" class="gutter-10 tails-gap-bottom ">
+
+<div class="row">
+   <div class="col-12">
+<div class=" landing-career border-1">
+    <div class="text-landing-img col-md-8 col-12 ">
+         <h1><b>Learn About Yourself</b></h1>
+        <h4> There is a lot to consider when you think about feature</h4>
+        <h4 class="desktop-design-hide-plp2"> Learn what people do in careers, how much they earn, and how to prepare to enter a career.  
+            Make your search easier by using Cluster view, this option shows careers grouped by the knowledge and skill they require. 
+            You can narrow your search by comparing careers side by side</h4> 
+     </div>
+</div>
+</div> 
+</div>
+                <div class="row gutter-10">
+                    <a href="#" *ngFor="let item of ItemsList.menuItems" (click)="$event.preventDefault();tileClicked(item.name)" [routerLink]="item.url" 
+                        class="col-md-4 col-lg-4" [ngStyle]="{'padding':'10px'}">
+                       <div class="card " [ngStyle]='{"border-color":item.color}'> 
+                        <div class="card-block card-block-plp3 tails-card" [ngStyle]="{'cursor':'pointer'}">
+                            <div class="card-text-tails">
+                                <h6>{{item.name}}
+                                </h6>
+                            </div>
+                            <div class="icon-tails"> <img src="{{item.image}}" /> </div>
+                        </div>
+                        <div class="card-footer card-footer-plp3" [ngStyle]='{"background-color":item.color}'>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                        </div>
+                       </div>   
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

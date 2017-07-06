@@ -1,0 +1,67 @@
+<div class="row  gutter-10">
+  <div class="col-lg-6 col-md-6 col-12">
+    <div class="card-plp3 overview_update-plp3">
+      <div class="card-header-plp3 card-header-plp3-atc">
+        <h5> <i class="icon-overview occCluster-icon-txt" aria-hidden="true"></i> {{rightForMeData.OverviewSection}}</h5>
+      </div>
+      <div class="card-block card-box-height scroll-class">
+        <div *ngFor="let value of rightForMeData.Overview" >
+          <p  *ngIf="(value.type == 'p')" class="para-padding-plp3"> {{value.text}}</p>
+          <ul *ngIf="(value.type == 'ul')" class="plp3-list">
+            <li *ngFor="let val of value.text" ><i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+            <div class="list-text-alignment-plp3 "><i>{{val}}</i></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>   
+  </div>
+  <div class="col-lg-6 col-md-6 col-12">
+    <div class="card-plp3 rc-card-body2 ">
+      <div class="card-header-plp3 card-header-plp3-atc">
+        <h5><i class="icon-skills-abilities occCluster-icon-txt" aria-hidden="true"></i>&nbsp;&nbsp;{{rightForMeData.SkillsSection}}</h5>
+      </div>
+      <div class="card-block card-box-height scroll-class">
+       <!--rightForMeData is: {{rightForMeData|json}}-->
+        <!--<div *ngFor="let value of rightForMeData.Skills.lists">
+          <p  class="para-padding-plp3"> {{rightForMeData.SkillsIntro}}</p>
+          <div>
+            <h6> <b>{{value.header}}</b></h6>
+            <ul class="plp3-list link-text-rc">
+              <li *ngFor="let val of value.items;let in=index"><i class=" fa fa-chevron-right arrow-align-plp3" aria-hidden="true "></i>
+              <div class="list-text-alignment-plp3">{{val}}</div></li>
+            </ul>
+          </div>
+        </div>-->
+           <!--<div *ngFor="let value of rightForMeData.Skills">
+          <h5 *ngIf="(value.type == 'h')" class="para-padding-plp3"> {{value.text}}</h5>
+          <ul *ngIf="(value.type == 'ul')" class="plp3-list link-text-rc">
+            <li *ngFor="let val of value.text" ><i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+              <div class="list-text-alignment-plp3">{{val}}</div>
+            </li>
+          </ul>
+        
+        </div>-->
+        <div *ngFor="let value of rightForMeData.Skills" >
+          <p  *ngIf="(value.type == 'p')" class="para-padding-plp3"> {{value.text}}</p>
+           <h5 *ngIf="(value.type == 'h')" class="para-padding-plp3"> {{value.text}}</h5>
+          <ul *ngIf="(value.type == 'ul')" class="plp3-list link-text-rc">
+            <li *ngFor="let val of value.text" ><i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+            <div class="list-text-alignment-plp3 ">{{val}}</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card-plp3 rc-card-body3">
+  <div class="card-header-plp3  card-header-plp3-atc">
+    <h5><i class="icon-employment-outlook occCluster-icon-txt" aria-hidden="true "> </i>  {{rightForMeData.EmploymentOutlookSection}}</h5>
+  </div>
+  <div class="card-block emp-block2-p-plp3-v scroll-class">
+    <div *ngFor="let item of rightForMeData.EmploymentOutlook" class="inner para-padding-plp3">
+      {{item.text}}
+    </div>
+  </div>
+</div>

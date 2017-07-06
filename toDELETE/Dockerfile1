@@ -1,0 +1,34 @@
+FROM node:6.10.0
+
+# RUN useradd --user-group --create-home --shell /bin/false nodejs
+#RUN npm install -g pm2
+# RUN npm install -g nodemon
+
+RUN useradd --user-group --create-home --shell /bin/sh nodejs
+
+ENV HOME=/home/nodejs/app
+ENV NODE_ENV=production
+
+# Install pm2 so we can run our application
+RUN npm i -g pm2
+
+# Add project dependencies
+COPY package.json $HOME
+
+# Add application files
+ADD . $HOME
+VOLUME $HOME/logs
+RUN chown -R nodejs:nodejs $HOME/*
+
+
+USER nodejs
+WORKDIR $HOME
+RUN npm i --production
+
+
+#Expose the port
+EXPOSE 3000
+
+CMD ["pm2", "start", "pm2-processes.json", "--no-daemon"]
+
+#CMD ["node", "index.js"]

@@ -1,0 +1,126 @@
+<div id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="card1 overview_update-plp3">
+    <div class="card-header-plp3 card-header-plp3-atc addp2" role="tab" id="headingOne" activeIds="1" (click)="(filter != 1)?methodfilter(1):methodfilter(999)">
+      <h5 class="heading-plp3"> 
+        <span><i class="icon-overview icon-align-plp3" aria-hidden="true"></i></span>
+        <span class="w-100"> {{job_descResult.Overview}}</span>
+        <span>
+<button class="btn-bg-none btn-white-color pull-right"> 
+<i *ngIf="(filter != 1)" class="icon-down-rounded-arrow  icon-align-plp3-right" aria-hidden="true"></i>
+        <i *ngIf="filter == 1" class="icon-up-rounded-arrow icon-align-plp3-right" aria-hidden="true"></i>
+</button> 
+</span> </h5>
+    </div>
+    <div id="1" #filter1 *ngIf="filter == 1" class="" role="tabpanel" aria-labelledby="headingOne">
+      <div class="card-block  card-plp3">
+        <div *ngFor="let value of paraname">
+          <p *ngIf="(value.type == 'p')" class="para-padding-plp3"> {{value.text}}</p>
+          <ul *ngIf="(value.type == 'ul')" class="plp3-list link-text-rc">
+            <li *ngFor="let val of value.text"><i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+              <div class="list-text-alignment-plp3">{{val}}</div>
+            </li>
+          </ul>
+          <h5 *ngIf="(value.type == 'h')" class="para-padding-plp3"><b>{{value.text}}</b></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card1 ec-card-colr-powdblue">
+    <div class="card-header-plp3 card-header-plp3-atc addp2" role="tab" id="headingThree" (click)="(filter != 5)?methodfilter(5):methodfilter(999)">
+      <h5 class="heading-plp3">
+        <span> <i class="icon-job-list icon-align-plp3" aria-hidden="true"></i></span>
+        <span class="w-100"> {{job_descResult.TaskList}}</span>
+        <span>
+<button class="btn-bg-none btn-white-color pull-right">
+<i *ngIf="(filter != 5)" class="icon-down-rounded-arrow icon-align-plp3-right" aria-hidden="true"></i>
+        <i *ngIf="filter == 5" class="icon-up-rounded-arrow  icon-align-plp3-right" aria-hidden="true"></i>
+</button>
+</span> </h5>
+    </div>
+    <div id="5" #filter3 *ngIf="filter == 5" class="" role="tabpanel" aria-labelledby="headingThree">
+      <div class="card-block  card-plp3 card-plp3">
+        <div *ngFor="let value of header4html">
+          <h5 *ngIf="(value.type == 'h')" class="para-padding-plp3"> {{value.text}}</h5>
+          <ul *ngIf="(value.type == 'ul')" class="plp3-list link-text-rc">
+            <li *ngFor="let val of value.text"><i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+              <div class="list-text-alignment-plp3">{{val}}</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card1 Ideas-card1">
+    <div class="card-header-plp3 card-header-plp3-atc addp2" role="tab" id="headingThree" (click)="(filter != 3)?methodfilter(3):methodfilter(999)">
+      <h5 class="heading-plp3">
+        <span> <i class="icon-skills-abilities icon-align-plp3" aria-hidden="true"></i></span>
+        <span class="w-100"> {{job_descResult.SkillsAbilities}}</span>
+        <span>
+<button class="btn-bg-none btn-white-color pull-right"> 
+<i *ngIf="(filter != 3)" class="icon-down-rounded-arrow  icon-align-plp3-right" aria-hidden="true"></i>
+        <i *ngIf="filter == 3" class="icon-up-rounded-arrow  icon-align-plp3-right" aria-hidden="true"></i>
+</button>
+</span> </h5>
+    </div>
+    <div id="3" #filter3 *ngIf="filter == 3" class="" role="tabpanel" aria-labelledby="headingThree">
+      <div class="card-block  card-plp3">
+        <div *ngFor="let value of header3html">
+          <h5 *ngIf="(value.type == 'h')" class="para-padding-plp3"> {{value.text}}</h5>
+          <ul *ngIf="(value.type == 'ul')" class="plp3-list link-text-rc">
+            <li *ngFor="let val of value.text"><i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+              <div class="list-text-alignment-plp3">{{val}}</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card1 careere-dark-blue-card">
+    <div class="card-header-plp3 card-header-plp3-atc addp2" role="tab" id="headingTwo" (click)="(filter != 2)?methodfilter(2):methodfilter(999)">
+      <h5 class="heading-plp3">
+        <span> <i class="icon-work-setting icon-align-plp3" aria-hidden="true"></i></span>
+        <span class="w-100"> {{job_descResult.WorkingConditions}}</span>
+        <span> 
+ <button class="btn-bg-none btn-white-color pull-right"> 
+<i *ngIf="(filter != 2)" class="icon-down-rounded-arrow  icon-align-plp3-right" aria-hidden="true"></i> <i *ngIf="filter == 2" class="icon-up-rounded-arrow  icon-align-plp3-right"
+          aria-hidden="true"></i> </button></span></h5>
+    </div>
+    <div id="2" #filter2 *ngIf="filter == 2" class="" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="card-block  card-plp3">
+        <div *ngFor="let value of header5html">
+          <h5 *ngIf="(value.type == 'h')" class="para-padding-plp3"> {{value.text}}</h5>
+          <ul *ngIf="(value.type == 'ul')" class="plp3-list link-text-rc">
+            <li *ngFor="let val of value.text"><i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+              <div class="list-text-alignment-plp3">{{val}}</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card1 job-desc-phy-demands-header">
+    <div class="card-header-plp3 card-header-plp3-atc addp2" role="tab" id="headingThree" (click)="(filter != 4)?methodfilter(4):methodfilter(999)">
+      <h5 class="heading-plp3"> 
+        <span><i class="icon-physical-demands icon-align-plp3" aria-hidden="true"></i> </span>
+        <span class="w-100"> {{job_descResult.PhysicalDemands}}</span>
+        <span>
+ <button class="btn-bg-none btn-white-color pull-right">
+<i *ngIf="(filter != 4)" class="icon-down-rounded-arrow icon-align-plp3-right" aria-hidden="true"></i>
+        <i *ngIf="filter == 4" class="icon-up-rounded-arrow  icon-align-plp3-right" aria-hidden="true"></i>
+</button>
+</span></h5>
+    </div>
+    <div id="4" #filter3 *ngIf="filter == 4" class="" role="tabpanel" aria-labelledby="headingThree">
+      <div class="card-block  job-desc-phy-demands card-plp3">
+        <div *ngFor="let value of header2html">
+          <h5 *ngIf="(value.type == 'h')" class="para-padding-plp3"> {{value.text}}</h5>
+          <ul *ngIf="(value.type == 'ul')" class="plp3-list link-text-rc">
+            <li *ngFor="let val of value.text"><i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+              <div class="list-text-alignment-plp3">{{val}}</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

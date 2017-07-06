@@ -1,0 +1,346 @@
+<div id="snackbar">
+	<img style="height:1.5em" alt="checked" src="\assets\images\compareChecked.png"> {{selectTostVal}} added to compare
+</div>
+<!-- os result list start -->  
+<div *ngIf="alphaStyle=='os'">
+	<div *ngIf="(why=='true')">
+		<h4 class="page-sub-header-2"> Careers On My List</h4>
+		<p>
+			{{'LANG_EN_TRANS.occ_match_list' | translate}}</p>
+	</div>
+	<div *ngIf="(why=='false')">
+		<h4 class="page-sub-header-2"> Careers Off My List</h4>
+		<p>
+			{{'LANG_EN_TRANS.occ_notmatch_list' | translate}}</p>
+	</div>
+</div>
+<div class="row">
+
+	<div class="col-12 col-md-8 col-lg-8 col-sm-12 switch-button-align">
+		<h6>{{headerValue.headers.view}}</h6>
+		<div class="btn-group btn-toggle mb-1 career-onmylist" *ngIf="alphaStyle=='os'">
+            <button class="btn " [ngClass]="(show == 1)?'foc-blue-bg-switch':'foc-white-bg-switch'" (click)="whyOccList()">Careers On My List</button>
+            <button class="btn " [ngClass]="(show == 0)?'foc-blue-bg-switch':'foc-white-bg-switch'" (click)="whyNotOccList()">Careers Not On My List</button>
+        </div>
+		<div class="btn-group btn-toggle mb-1">
+            <button class="btn " [ngClass]="(showBtn == 1)?'foc-blue-bg-switch':'foc-white-bg-switch'" (click)="clusterListFun('cluster')">{{indexValue.buttons.cluster}}</button>
+            <button class="btn " [ngClass]="(showBtn == 0)?'foc-blue-bg-switch':'foc-white-bg-switch'" (click)="clusterListFun('title')">{{indexValue.buttons.title}}</button>
+        </div>
+		<div class="btn-group  cmpr-orngarrow crareer-onmylist-btn" data-toggle="buttons">
+			<button class="btn btn-primary active label-onmylist" [ngStyle]="(indexOccId.length < 2)  ? {'opacity':'0.5','pointer-events': 'none','cursor': 'pointer','border-radius':'7px'}:''"
+			 (click)="CompareOccupations()">
+                                Compare Selected
+			</button>
+			<label>
+                            <!--<i class="icon-red-arrow occ_index-red-arrow" *ngIf="indexOccId.length == 2"></i>-->
+				  <ul class="chips-plp3">
+					   <li *ngFor="let i of indexTitleName;let inx = index" class="not-onmylist-chips"><h6>{{i}}</h6><button class="btn-bg-none" (click)="checkCareer(indexOccId[inx],i,'click')"><i >&times;</i></button></li>
+				  </ul>
+                </label>
+		</div>
+	</div>
+	<br>
+	<div class="col-12 col-md-4 col-lg-4  col-sm-12 pull-right">
+		<h6>{{FilterName}}</h6>
+		<div class="input-group">
+			<input type="text" class="form-control career-index-searchbox" (keyup)="changeText()" placeholder="Search for..." [(ngModel)]="search.text">
+			<button class="btn career-index-searchicon" type="button"> <i class="fa fa-search" aria-hidden="true" ></i> </button>
+			<a (click)="showHideIcon()" class="career-index-filter-icon pointer" data-toggle="collapse" href="#collapseExample1" aria-expanded="false"
+			 aria-controls="collapseExample"> 
+					<i [ngClass]="filtericon[iconInxVal]"  > </i>
+			</a>
+		</div>
+	</div>
+	<div class="col-12 col-md-12 col-lg-12" *ngIf="searchBox == false">
+		<div class="collapse slider-drop-plp3" id="collapseExample1">
+			<div class="card ">
+				<div class="card-block-slider-filter">
+					<div class="row">
+						<div class="col-12 col-md-4 col-lg-4  p-t-b">
+							<h5 class="list-text-color"> {{careerheader}} </h5>
+							<ul class="lst-style-plp3" *ngFor="let item of ratingoptions;let indx = index">
+								<li *ngIf="item.id==1">
+									<div class="checkbox-occ">
+										<input id="{{item.id}}" type="checkbox" name="{{item.title}}" [(ngModel)]="item.status" />
+										<label for="{{item.id}}"><span><i class="icon-thumbs-up-hover"></i> 
+ 
+                 </span>{{item.title}}</label>
+
+									</div>
+								</li>
+								<li *ngIf="item.id==0">
+									<div class="checkbox-occ"> <input id="{{item.id}}" type="checkbox" name="{{item.title}}" [(ngModel)]="item.status" />
+										<label for="{{item.id}}"><span>
+											<i class="icon-thumbs-down-hover"></i> 
+
+</span>{{item.title}}</label>
+									</div>
+								</li>
+								<li *ngIf="item.id==-1">
+									<div class="checkbox-occ"> <input id="{{item.id}}" type="checkbox" name="{{item.title}}" [(ngModel)]="item.status" />
+										<label for="{{item.id}}"><i class=""></i><span class="span-notrate"></span>{{item.title}}</label>
+									</div>
+
+								</li>
+
+							</ul>
+						</div>
+						<div class="col-12 col-md-4 col-lg-4 filler-slider-border p-t-b">
+							<h5 class="list-text-color">{{educationheader}} </h5>
+							<ul class="lst-style-plp3" *ngFor="let item of eduoptions;let indx1 = index">
+
+								<li *ngIf="eduoptions[indx1].id !=-1">
+
+									<div class="checkbox-occ"> <input id="edu{{eduoptions[indx1].id}}" type="checkbox" name="{{eduoptions[indx1].title}}" [(ngModel)]="eduoptions[indx1].status"
+										/>
+										<label for="edu{{eduoptions[indx1].id}}"><span>{{eduoptions[indx1].title}}</span></label>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+						<div class="col-12 col-md-4 col-lg-4 p-t-b filler-slider-border">
+							<h5 class="list-text-color"> {{wageheader}}</h5>
+							<ul class="lst-style-plp3" *ngFor="let item of wageoptions;let indx1 = index">
+								<li *ngIf="wageoptions[indx1].id !=-1">
+									<div class="checkbox-occ"> <input id="wag{{wageoptions[indx1].id}}" type="checkbox" name="{{wageoptions[indx1].title}}" [(ngModel)]="wageoptions[indx1].status"
+										/>
+										<label for="wag{{wageoptions[indx1].id}}"><span>{{wageoptions[indx1].title}}</span></label>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer-slider text-right">
+
+
+					<button type="button" class="btn btn-success " (click)="getResultFilter()">{{indexValue.buttons.show}}</button>
+					<button class="btn btn-warning" type="button" (click)="resetCheckBoxes()">{{indexValue.buttons.reset}}</button>
+					<button class="btn btn-danger " data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+					 type="button" (click)="cancelButton()">Cancel</button>
+
+
+				</div>
+			</div>
+		</div><br>
+	</div>
+</div>
+<div [hidden]="titlehide">
+	<div class="panel-heading career-heading-plp3 mt-2">
+		<div class="row hideContainer career-list-powderblue-plp3 career-header-section">
+			<div class="col-12 col-md-6  col-lg-6">
+				<div class="row">
+					<div class="col-md-9 col-12">Careers by Title</div>
+					<div class="col-12 col-md-3 col-lg-3 text-center-plp3">Interest</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 col-lg-6">
+				<div class="row">
+					<div class="col-12 col-md-8 col-lg-8 text-center-plp3">Education Level</div>
+					<div class="col-12 col-md-4 col-lg-4 wag-head-list text-center-plp3">Wages</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class=" occList-textColor-plp3">
+		<div class="panel panel-primary ">
+
+			<ul class="list-group even-color" infinite-scroll [infiniteScrollDistance]="3" [infiniteScrollThrottle]="500"
+			 (scrolled)="onScroll()" [scrollWindow]="false">
+				<li class="list-group-item ip-list-block" *ngFor="let value of titlelist|searchPipe:'title':search.text:search:titlesum ; let inx=index"
+				 [ngStyle]="(indexOccId.length == 2)  && (indexOccId[0]!=value.occID && indexOccId[1]!=value.occID) ? {'opacity':'0.5','pointer-events': 'none'}:''">
+					<div class="row">
+
+						<div class="col-12 col-md-6  col-lg-6">
+							<div class="row">
+								<div class="col-md-9 col-12">
+									<div class="checkbox-occ">
+										<input type="checkbox" *ngIf="(value.title.indexOf('Emerging') == -1)" id="test{{inx}}" (keydown)="checkCareer(value.occID,value.title,$event)"  (click)="checkCareer(value.occID,value.title,'click')"
+										 [disabled]="(indexOccId.length == 2 )&& (indexOccId.indexOf(value.occID) ==-1)" [checked]="(indexOccId.indexOf(value.occID) !=-1)"
+										/>
+										<label for="test{{inx}}" class="list-text-color">
+										<p class="font-siz-mob" >
+											<a href="#" (click)="$event.preventDefault();callOccDetail(value.occID,value.title,clusIconValue[inx1],cluBgColor[inx1])">{{value.title}}</a>
+											<a href="#" *ngIf="alphaStyle=='os'" (click)="$event.preventDefault();occListClick(value.occID,value.title,'title')" [ngStyle]="{'cursor': 'pointer'}" [hidden]="compareImg">
+								&nbsp;&nbsp;<img src="/assets/images/OCC.png">
+							  </a>
+										</p>
+										</label></div>
+								</div>
+								<div class=" col-md-3 col-lg-3 text-right-sm-plp3 text-center-plp3 hideContainer ">
+									<i class="icon-thumbs-up-hover" aria-hidden="true " *ngIf="value.rating == 1"></i>
+									<i class="icon-thumbs-down-hover" aria-hidden="true " *ngIf="value.rating == 0"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 col-lg-6">
+							<div class="row mbl-emp-wag-align">
+								<div class="col-12 col-md-8 col-lg-8 text-center-plp3">
+									<ul class="plp3-list-occ">
+										<li>
+											<span class="iteam-none-small-screen blck-col-ed-wag">Education Level:</span>
+											<span class=" ed-lev ">&nbsp;&nbsp;{{value.edLevel}}</span>
+										</li>
+									</ul>
+								</div>
+								<div class="col-12 col-md-4 col-lg-4">
+
+
+									<ul class="plp3-list-occ">
+										<li>
+											<div class="row">
+												<div class="col-6 col-lg-12 col-md-12 text-center-plp3">
+													<span class="iteam-none-small-screen blck-col-ed-wag">Wages:</span>
+													<span class=" ed-lev ">&nbsp;&nbsp;{{value.wages}}
+
+													</span>
+												</div>
+												<div class="col-6 iteam-none-small-screen ">
+													<span class=" iteam-none-small-screen list-text-alignment-occ-plp3 pull-right">
+								  <i class="icon-thumbs-up-hover pull-right" aria-hidden="true " *ngIf="value.rating == 1"></i> 
+									<i class="icon-thumbs-down-hover pull-right" aria-hidden="true " *ngIf="value.rating == 0"></i>
+											</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<div *ngIf="parentCnt==0 || countvalue==0" class="img-dataNotFound"><img class="dta-not-found-img" width="100%" src="/assets/images/nodata-found.png" /></div>
+			</ul>
+		</div>
+
+	</div>
+</div>
+<!--cluster hide-->
+<div class="panel panel-primary " [hidden]="clusterhide">
+	<div class="panel-heading career-heading-plp3 mt-2">
+		<div class="row hideContainer career-list-powderblue-plp3 career-header-section">
+			<div class="col-12 col-md-6 col-lg-6">
+				<div class="row">
+					<div class="col-md-9 col-lg-9 col-12">Careers by Cluster</div>
+					<div class="col-12 col-md-3 col-lg-3 text-center-plp3">Interest</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 col-lg-6">
+				<div class="row">
+
+					<div class="col-12 col-md-8 col-lg-8 text-center-plp3">{{headerValue.headers.edLevel}}</div>
+					<div class="col-6 col-md-4 col-lg-4 text-center-plp3 wag-head-list">{{headerValue.headers.wages}}</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class=" occList-textColor-plp3">
+		<div *ngFor="let clus of ClusName|filterChildItems:'title':search.text:search; let inx1=index; let first=first;">
+			<!--logic based on child count we can display message "There is no cluster list avaiable" -->
+			<div *ngIf="(clus.childcnt>=0)">{{incrementCount(clus.childcnt)}}</div>
+			<div *ngIf="first">{{clearParentVal()}}</div>
+			<div *ngIf="(clus.childcnt!=0)">
+				<div class="panel-heading career-heading-plp3" [ngStyle]="(indexOccId.length == 2)  && (indexOccId[0]!=clus.clusterId && indexOccId[1]!=clus.clusterId) ? {'opacity':'0.5','pointer-events': 'none','cursor': 'pointer'}:''">
+					<div class="row career-header-section">
+						<div class="col-10 col-md-6">
+							<div class="row">
+								<div class="col-md-9 col-8" [ngStyle]="{'cursor':'pointer'}">
+
+									<ul class="plp3-list occ-list-btm-plp3">
+										<li><i [ngClass]="clusIconValue[inx1]" aria-hidden="true" [ngStyle]="{'color':cluBgColor[inx1]}"></i>
+											<div class="list-text-sub-head-plp3">
+												<a href="#" (click)="$event.preventDefault();callOccDetailCluster(clus.clusterId,clus.clusterName,clusIconValue[inx1],cluBgColor[inx1])"
+												 [ngStyle]="{'color':cluBgColor[inx1]}">&nbsp;{{clus.clusterName}}</a>
+											</div>
+
+										</li>
+									</ul>
+								</div>
+								<div class=" col-md-3 col-4 text-center" *ngIf="clus.clusterRating != -1">
+									&nbsp;&nbsp;<i class="icon-thumbs-up-hover" aria-hidden="true " *ngIf="clus.clusterRating == 1" [ngStyle]="{'color':'#000'}"></i>									&nbsp;&nbsp;
+									<i class="icon-thumbs-down-hover" aria-hidden="true " *ngIf="clus.clusterRating == 0" [ngStyle]="{'color':'#000'}"></i>
+
+
+								</div>
+							</div>
+						</div>
+						<div class="col-2 col-md-6" (click)="methodfilter(inx1)">
+							<button class="btn-bg-none pull-right"><i *ngIf="(filter != inx1)" class="icon-down-rounded-arrow  icon-align-plp3-right" aria-hidden="true" [ngStyle]="{'color':cluBgColor[inx1]}"></i>
+							<i *ngIf="filter == inx1" class="icon-up-rounded-arrow  icon-align-plp3-right" aria-hidden="true" [ngStyle]="{'color':cluBgColor[inx1]}"></i></button>
+						</div>
+					</div>
+				</div>
+				<div id="clus{{inx1}}" *ngIf="(filter ==inx1)" class="collapse show panel-body" role="tabpanel" aria-labelledby="headingOne">
+					<ul class="list-group even-color">
+						<li class="list-group-item ip-list-block" *ngFor="let clusvalue of clus.clusterTitle|visibleFilter ; let inx=index" [ngStyle]="(indexOccId.length == 2)  && (indexOccId[0]!=clusvalue.occID && indexOccId[1]!=clusvalue.occID) ? {'opacity':'0.5','pointer-events': 'none'}:''">
+							<div class="row">
+								<div class="col-12 col-md-6  col-lg-6">
+									<div class="row">
+										<div class="col-md-9 ">
+											<div class="checkbox-occ">
+												<input *ngIf="(clusvalue.title.indexOf('Emerging') == -1)" (keydown)="checkCareer(clusvalue.occID,clusvalue.title,$event)"  (click)="checkCareer(clusvalue.occID,clusvalue.title,'click')" type="checkbox"
+												 id="cluster{{inx1}}{{inx}}" name="checkValue" [checked]="(indexOccId.indexOf(clusvalue.occID) !=-1)" [disabled]="(indexOccId.length == 2 ) && (indexOccId.indexOf(clusvalue.occID) ==-1)"
+												/>
+												<label for="cluster{{inx1}}{{inx}}" class="list-text-color">
+												<p class="font-siz-mob" ><a href="#" (click)="$event.preventDefault();callOccDetail(clusvalue.occID,clusvalue.title,clusIconValue[inx],cluBgColor[inx])">{{clusvalue.title}}</a>
+													<a href="#" *ngIf="alphaStyle=='os'" (click)="$event.preventDefault();occListClick(clusvalue.occID,clusvalue.title,'clus')" [ngStyle]="{'cursor': 'pointer'}" [hidden]="compareImg">
+								&nbsp;&nbsp;<img src="/assets/images/OCC.png">
+							  </a>
+												</p>
+												 </label></div>
+										</div>
+										<div class=" col-md-3 col-lg-3 text-right-sm-plp3  text-center-plp3 hideContainer">
+											<i class="icon-thumbs-up-hover" aria-hidden="true " *ngIf="clusvalue.rating == 1"></i>
+											<i class="icon-thumbs-down-hover" aria-hidden="true " *ngIf="clusvalue.rating == 0"></i>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-6 col-lg-6">
+									<div class="row mbl-emp-wag-align">
+										<div class="col-12 col-md-8 col-lg-8 text-center-plp3">
+											<ul class="plp3-list-occ ">
+												<li>
+													<span class="iteam-none-small-screen blck-col-ed-wag ">Education Level:</span>
+													<span class=" ed-lev ">&nbsp;{{clusvalue.edLevel}}</span>
+												</li>
+											</ul>
+										</div>
+										<div class="col-12 col-md-4 col-lg-4">
+
+											<ul class="plp3-list-occ">
+												<li>
+													<div class="row">
+														<div class="col-6 col-lg-12 col-md-12 text-center-plp3">
+															<span class="iteam-none-small-screen blck-col-ed-wag">Wages:</span>
+															<span class=" ed-lev">&nbsp;{{clusvalue.wages}}&nbsp;&nbsp;
+															</span>
+														</div>
+														<div class="col-6 iteam-none-small-screen">
+															<span class=" iteam-none-small-screen list-text-alignment-occ-plp3 pull-right">
+				       <i class="icon-thumbs-up-hover pull-right" aria-hidden="true " *ngIf="clusvalue.rating == 1"></i>
+			         <i class="icon-thumbs-down-hover pull-right" aria-hidden="true " *ngIf="clusvalue.rating == 0"></i>
+											</span></div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<div *ngIf="parentCnt==0 || countvalue==0" class="img-dataNotFound"><img class="dta-not-found-img" width="100%" src="/assets/images/nodata-found.png" /></div>
+
+	</div>
+</div>
+
+
+<!-- Code for index starts here  for os list -->

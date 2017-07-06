@@ -1,0 +1,184 @@
+<!-- Fixed navbar -->
+
+<div class="clear-fixed"> </div>
+
+<!-- Main component for a primary marketing message or call to action -->
+
+
+<div class="row desktop-design-hide-plp2">
+  <div class="col-md-12">
+    <div class="panel panel-green">
+      <div class="panel-progress-green shadow-bottom">
+        <!-- Previous button-->
+
+        <div class="col-md-1 col-sm-2 col-lg-1">
+          <a href="" class="EntiQuizleftArrow white-color" (click)="$event.preventDefault();previousQuestion()">
+             <i [class.class-withOpacity]="isClassVisible" class="fa icon-asmnt-back-arrow arrows" aria-hidden="true"></i>&nbsp;&nbsp;
+             <!--Question number-->
+             </a> <span class="eq-ques"> {{'LANG_EN_TRANS.question_txt' | translate}}.{{cnt}} </span>
+        </div>
+        <div class="col-md-8 col-sm-7 col-lg-9" [ngStyle]="{'margin-top':'2px'}">
+          <!--progress bar-->
+          <div class="progress xs progress-m">
+            <div class="progress-bar-green" [ngStyle]="{'width': currentValue +'%'}"></div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-lg-2 text-right">
+          <span class="eq-ques-remainng">{{remaining}} {{'LANG_EN_TRANS.entrp_ques_opt6' | translate}}</span>&nbsp;
+          <!-- Next button-->
+          <a href="#" class="ntxArrowEq pull-right white-color" *ngIf="showNxt" (click)="$event.preventDefault();nextEQArrow(cnt)">
+                  <i aria-hidden="true"  class="fa icon-asmnt-forward-arrow arrows " ></i></a>
+        </div>
+      </div>
+      <!--Display question-->
+      <div class="block-box">
+        <p class="text-center"> {{('LANG_EN_TRANS.entrp_ques_q' | translate)[EntrePreQuestionName]}}</p>
+      </div>
+      <!-- displays circles -->
+      <div class="circle-body circle-eq-ass">
+        <div class="col-md-5ths text-center">
+          <button [ngClass]="(btnHighLight==5)?'iris-blue-onPrev':''" class=" btn-default orange-circle-button" href="" (click)="callQuestion(5)">
+                 <i class="fa icon-asmnt-strongly-agree" [ngClass]="(btnHighLight==5)?'white-color':''" ></i>
+            <p style=" white-space: pre-line;">{{'LANG_EN_TRANS.entrp_ques_opt1' | translate}}<br>
+                <br>
+                &nbsp;</p>
+              </button>
+        </div>
+        <div class="col-md-5ths text-center">
+          <button [ngClass]="(btnHighLight==4)?'iris-blue-onPrev':''" class=" btn-default orange-circle-button" href="" (click)="callQuestion(4)"> 
+                <i class="fa icon-asmnt-between-strongly" [ngClass]="(btnHighLight==4)?'white-color':''"></i>
+              <p  style=" white-space: pre-line;"> {{dataArr[1]}}<br>
+                <br>
+                </p>
+              </button>
+        </div>
+        <div class="col-md-5ths text-center">
+          <button [ngClass]="(btnHighLight==3)?'iris-blue-onPrev':''" class=" btn-default orange-circle-button" href="" (click)="callQuestion(3)">
+                <i class="fa icon-asmnt-somewhat" [ngClass]="(btnHighLight==3)?'white-color':''"></i>
+              <p style=" white-space: pre-line;">{{dataArr[2]}}<br>
+                <br>
+                &nbsp;</p>
+              </button>
+        </div>
+        <div class="col-md-5ths text-center">
+          <button [ngClass]="(btnHighLight==2)?'iris-blue-onPrev':''" class=" btn-default orange-circle-button" href="" (click)="callQuestion(2)">
+                <i class="fa icon-asmnt-between-somewhat" [ngClass]="(btnHighLight==2)?'white-color':''"></i>
+              <p style=" white-space: pre-line;">{{dataArr[3]}}<br>
+               <br>
+                 </p>
+              </button>
+        </div>
+        <div class="col-md-5ths text-center">
+          <button [ngClass]="(btnHighLight==1)?'iris-blue-onPrev':''" class=" btn-default orange-circle-button" href="" (click)="callQuestion(1)">
+                <i class="fa icon-asmnt-strongly-disagree" [ngClass]="(btnHighLight==1)?'white-color':''"></i>
+              <p style="white-space: pre-line;">{{dataArr[4]}}<br>
+                 <br>
+                &nbsp;</p>
+              </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- mobile design -->
+
+<div class="mobile-design-hide-plp2">
+  <div class="panel-progress-green plp2-green-bg-margin">
+    <div class="container mob-head-style">
+      <div class="row plp-2-m-t">
+        <!--Question number-->
+        <div class="col-6"> <span class="text-right">{{'LANG_EN_TRANS.question_txt' | translate}}.{{cnt}}</span> </div>
+        <div class="col-6 text-right"> <span>{{remaining}} {{'LANG_EN_TRANS.entrp_ques_opt6' | translate}}</span> </div>
+      </div>
+      <div class="row plp-2-m-t">
+        <!-- Previous button-->
+        <div class="col-1"> <div  class="EntiQuizleftArrow" (click)="previousQuestion()"> 
+		<i [class.class-withOpacity]="isClassVisible" class="fa icon-asmnt-back-arrow arrows"></i> </div></div>
+        <div class="col-9">
+          <div class="progress xs progress-m">
+            <!--progress bar-->
+            <div class="progress-bar-green" [ngStyle]="{'width': currentValue +'%'}"></div>
+          </div>
+        </div>
+        <div class="col-1 ">
+          <div  (click)="nextEQArrow(cnt)" class="ntxArrowEq" *ngIf="showNxt">
+            <!-- Next button-->
+            <i aria-hidden="true" class="fa icon-asmnt-forward-arrow arrows"></i> </div>
+        </div>
+      </div>
+      <div class="row plp-2-m-t">
+        <div class="col-1"> </div>
+        <div class="col-9">
+          <!--Display question-->
+          <p class="text-center">{{quesArr[EntrePreQuestionName]}} </p>
+        </div>
+        <div class="col-1"> </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="clear: both;"> </div>
+  <div class="card-green">
+    <!-- displays cards -->
+    <div class="card-plp-2 card-green-hover" [ngClass]="(btnHighLight==5)?'iris-blue-onPrev':''" (click)="callQuestion(5)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>{{dataArr[0]}}</p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa icon-asmnt-strongly-agree" [ngClass]="(btnHighLight==5)?'white-color':''"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-plp-2 card-green-hover" [ngClass]="(btnHighLight==4)?'iris-blue-onPrev':''" (click)="callQuestion(4)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>{{dataArr[1]}} </p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa  icon-asmnt-between-strongly" [ngClass]="(btnHighLight==4)?'white-color':''" ></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-plp-2 card-green-hover" [ngClass]="(btnHighLight==3)?'iris-blue-onPrev':''" (click)="callQuestion(3)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>{{dataArr[2]}} </p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa icon-asmnt-somewhat"  [ngClass]="(btnHighLight==3)?'white-color':''"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-plp-2 card-green-hover" [ngClass]="(btnHighLight==2)?'iris-blue-onPrev':''" (click)="callQuestion(2)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>{{dataArr[3]}} </p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa icon-asmnt-between-somewhat" [ngClass]="(btnHighLight==2)?'white-color':''" ></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-plp-2 card-green-hover" [ngClass]="(btnHighLight==1)?'iris-blue-onPrev':''" (click)="callQuestion(1)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>{{dataArr[4]}} </p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa icon-asmnt-strongly-disagree" [ngClass]="(btnHighLight==1)?'white-color':''"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End mobile design -->

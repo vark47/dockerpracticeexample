@@ -1,0 +1,163 @@
+<!-- Nav tabs -->
+
+<div id="waves">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" *ngFor="let tab of wageDate;let i=index;">
+      <a class="nav-link " [class.active]="tab == wageDate[0]" data-toggle="tab" [attr.href]="value(-1,-1,-1,tab)" role="tab">{{wageDate[i]}}</a>
+    </li>
+    <!--<li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Monthly</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#messages" role="tab">Hourly</a>
+    </li>-->
+
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content content-wave-inner" *ngIf="length">
+    <div class="tab-pane " *ngFor="let tab of wageDate;let inx=index;" id="{{wageDate[inx]}}" role="tabpanel" [class.active]="tab == wageDate[0]">
+      <!--<div class="tab-pane" id="profile" role="tabpanel">Monthly</div>
+    <div class="tab-pane" id="messages" role="tabpanel">Hourly</div>-->
+
+      <div class="content wages-tab-mobile" id="waveTab{{inx}}">
+
+        <!--<div class="content-wave-inner" id="waveTab{{inx}}">-->
+        <b>{{wageDataVal[inx]}}</b>
+
+        <div class="wave-table ">
+          <div *ngFor="let label of wageLabel[inx];let inx1=index;" class="hide-desktop-plp3" id="hideWage">
+            <b> {{label.labelVal}} </b>
+            <div class="row  wave-table-header-bg">
+
+              <div class="col-lg-3 col-md-3 wave-text-bold iteam-none-big-screen">{{wageHeaders[3]}}</div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-4 text-center">{{wageHeaders[4]}}</div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-4 text-center">{{wageHeaders[5]}}</div>
+              <div class="col-lg-2 col-md-2 col-sm-4 col-4 text-center">{{wageHeaders[6]}}</div>
+            </div>
+            <div id="" role="tablist" aria-multiselectable="true" *ngFor="let label1 of states[inx][inx1];let in=index;">
+              <div *ngFor="let selectedState of selectedStates">
+                <div *ngIf="selectedState == label1.location">
+                  <div role="tab" id="headingOne">
+                    <div class="row main-table-row-header ">
+                      <div class="col-lg-3 col-md-3 location-wag-mob">{{label1.location}}
+                        <!--<i data-toggle="collapse" [attr.data-parent]="" [attr.href]="value(inx,inx1,in,'ref')" aria-expanded="true" [attr.aria-controls]="value(inx, inx1, in,'controls')"
+                            [ngClass]="(inxValue==inx && inx1Value==in) ? 'icon-up-rounded-arrow':'icon-down-rounded-arrow'"
+                            class=" hideContainer1 pull-right" (click)="iconClick(inx,in)" aria-hidden="true" [hidden]="iconHide[in]"></i>-->
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-4 col-4 plp3-break-the-word-wrap text-center">{{label1.entry}}</div>
+                      <div class="col-lg-3 col-md-3 col-sm-4 col-4 plp3-break-the-word-wrap text-center">{{label1.median}}</div>
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-4 plp3-break-the-word-wrap text-center">{{label1.expert}}</div>
+                      <div class="col-lg-1 col-md-1 col-sm-1 col-1 plp3-break-the-word-wrap text-center">
+                        <!--<i data-toggle="collapse" [attr.data-parent]="" [attr.href]="value(inx,inx1,in,'ref')" aria-expanded="true" [attr.aria-controls]="value(inx, inx1, in,'controls')"
+                            [ngClass]="(inxValue==inx && inx1Value==in) ? 'icon-up-rounded-arrow':'icon-down-rounded-arrow'"
+                            class="hideContainer" (click)="iconClick(inx,in)" aria-hidden="true" [hidden]="iconHide[in]"></i>-->
+                      </div>
+                    </div>
+                  </div>
+                  <div id="{{label.valueKey}}{{in}}">
+                    <!-- *ngIf="(inxValue==inx && inx1Value==in) " role="tabpanel" aria-labelledby="headingOne"-->
+                    <div *ngFor="let city of cities[inx][inx1][in];let ci=index;" class="row " [ngClass]="(ci%2==0)? 
+                    'wave-row-bg1':'wave-row-bg2'">
+                      <div class="col-lg-3 col-md-3 wave-text-bold"> {{city.location}} </div>
+                      <div class="col-lg-3 col-md-3 col-sm-4 col-4 wages-mobile-screen plp3-break-the-word-wrap text-center">{{city.entry}}</div>
+                      <div class="col-lg-3 col-md-3 col-sm-4 col-4 wages-mobile-screen plp3-break-the-word-wrap text-center">{{city.median}}</div>
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-4 wages-mobile-screen plp3-break-the-word-wrap text-center">{{city.expert}}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- eo keerthhi code-->
+            </div>
+            <div [ngStyle]="{'margin-bottom':'4px','margin-top':'4px'}" *ngFor="let item of notesdata">
+              <span [ngStyle]="{'color':'#ef5350 ','font-weight':'bold'}">Note:</span> {{item}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--</div>-->
+    </div>
+
+
+  </div>
+
+
+<br>
+  <div class="row  gutter-10  eo-card-bottom-align">
+
+    <div class="col-lg-2 col-md-2">
+      <div ngbDropdown class="d-inline-block" style="width:100%;">
+        <button class="btn s-state-btn" (click)="checkopen()" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+          aria-controls="collapseExample" style="width:130px;cursor:pointer;"><b>Select States&nbsp;&nbsp;</b></button>
+      </div>
+    </div>
+
+    <!-- drop down toggel start -->
+    <div class="col-12 col-md-12 col-lg-12">
+      <div class="collapse slider-drop-plp3-2" id="collapseExample">
+        <div class="card ">
+          <div class="card-header-slider">
+            {{stateIntro}}
+          </div>
+          <div class="card-block-slider-filter">
+
+
+            <div class="row">
+              <div class="col-6 col-md-4 col-lg-4" *ngFor="let stateName of uniqueStates;let checkId=index;">
+                <ul class="lst-style-plp3">
+
+                  <li>
+                    <div class="checkbox-occ">
+                      <input type="checkbox" (keydown)="count(stateName.stateNam,$event)" (click)="count(stateName.stateNam,'click')" id="test{{checkId}}"
+                        [checked]="stateName.checkedVal" [disabled]="stateName.checkedVal==false && displayValue>=5" />
+                      <label for="test{{checkId}}" class="popup-states" [class.disabledp2]="stateName.checkedVal==false && displayValue>=5">{{stateName.stateNam}}</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer-slider text-right">
+
+
+            <button class="btn btn-success" data-toggle="collapse" (click)="showStates()" href="#collapseExample" aria-expanded="false"
+              aria-controls="collapseExample" type="button">Apply</button>
+            <button type="button" class="btn btn-warning " (click)="resetStates()">Reset</button>
+            <button class="btn btn-danger " data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+              type="button">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+<div class="clearfix"> </div>
+
+
+
+<div *ngFor="let value of paraname" [ngStyle]="{'margin-top':'15px'}">
+  <p *ngIf="(value.type == 'p')"> {{value.text}}</p>
+</div>
+<div style="position: relative;">
+  <span> </span>
+  <div class="eo-bottom-image desktop-table">
+    <div class="">
+      <h5 class="eo-image-heading"> {{wageResult.TopSalaryLocations}} </h5>
+      <div class="row text-center">
+
+        <div class="col-lg-1 col-md-1"> </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 " *ngFor="let item of emp_location;let inx=index">
+          <button type="button" class=" loc-button-color" [ngStyle]="{'background':loc_btn_color[inx]}">
+          <i> {{emp_location[inx]}}</i></button>
+        </div>
+        <div class="col-lg-1 col-md-1">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

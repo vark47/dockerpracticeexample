@@ -1,0 +1,50 @@
+<!-- 3 cards result  start -->
+<div class="inner-pading-cci-plp4">
+  <div class="div-border-cci-plp4">
+    <p><b>Your top 3 career</b></p>
+    <div class="row gutter-10">
+      <div class="col-lg-4 col-md-4 col-12" *ngFor="let res of ccijrResult;let in=index">
+
+        <div *ngIf="in<3" class="card-plp3 " [ngStyle]="{'background-color':res.ccijrBgColor}">
+          <div class="card-header-plp3 card-header-plp3-atc">
+            <ul class="icn-align-result-plp4">
+              <li> <i class="icn-align-result-plp4" [ngClass]="res.ccijrIcon"></i>
+                <h6 class="icn-align-result-plp4"> {{res.ccijrClusterName}}</h6>
+              </li>
+            </ul>
+          </div>
+          <div class="card-block smll-box-plp4 scroll-class text-center">
+            <h1>{{res.ccijrScore}}</h1>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- 3 cards result  end -->
+<!-- bottom list with result and icon start -->
+<div class="row p-b wrapper columned space-between  heightCCiJr">
+
+  <div class="col-12 col-lg-6 col-md-6 p-b-res-plp4 spaceCCiDiv" *ngFor="let valConstant of ccijrResult">
+
+
+    <div class="media-left-plp4 w-100">
+      <div class="smllcard-list-cci-plp4">
+        <ul class="icn-align-result-plp4">
+          <li class="cci-icon-alig"> <i class="icn-align-result-plp4" [ngClass]="valConstant.ccijrIcon" aria-hidden="true" [ngStyle]="{'color':valConstant.ccijrBgColor}"></i>
+            <h6 class="icn-align-result-plp4"> {{valConstant.ccijrClusterName}}</h6>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="media-body-plp4" [ngStyle]="{'background-color':valConstant.ccijrBgColor , 'padding':'0 15px','color':'white'}">
+      <span> {{valConstant.ccijrScore}}</span>
+    </div>
+
+  </div>
+</div><br>
+<!-- bottom list with result and icon end -->

@@ -1,0 +1,37 @@
+<div class="form-box">
+  <div class="form-top">
+    <div class="form-top-left">
+      <h4 class="login-font-heading">
+        <a routerLink="/login/passwordRecovery" href="">
+    <i aria-hidden="true" class="fa icon-back-left-arrow password-arrow-align"></i></a> &nbsp;&nbsp;&nbsp;{{loginText.user_rec_heading}}
+      </h4>
+    </div>
+  </div>
+  <div class="form-bottom">
+    <form [formGroup]="ForgotUserNameForm" role="form" class="form-horizontal" id="loginform">
+      <span *ngIf="errorVal" class="error-color validation-msg">Incorrect email address</span>
+      <span *ngIf="successVal" class="success-color validation-msg"><b>Your username has been sent to your email.</b></span>
+      <span *ngIf="ForgotUserNameForm.get('EmailAddress').touched && ForgotUserNameForm.get('EmailAddress').errors">
+                  <span *ngIf="ForgotUserNameForm.get('EmailAddress').hasError('required')" 
+                 class="error-color validation-msg">
+                 {{errorMessage.email_req}}</span>
+      <span *ngIf="ForgotUserNameForm.get('EmailAddress').hasError('incorrectMailFormat')" class="error-color validation-msg">
+                 {{errorMessage.email_invalid}}</span>
+      </span>
+      <p class="login-para"> {{loginText.user_rec_inp_info_text}}</p>
+      <div class="input-group login-m-b">
+        <input type="text" placeholder="E-mail Address" name="EmailAddress" class="form-control input-font-size" formControlName="EmailAddress"
+          [(ngModel)]='userdata.email'>
+        <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span> </div>
+
+      <div class="form-group">
+        <!-- Button -->
+        <div class="controls">
+          <button type="submit" class="btn btn-login1 btn-success" id="btn-login" [disabled]="!ForgotUserNameForm.valid" (click)="resetUsername()">{{loginText.user_rec_btn}}</button>
+        </div>
+      </div>
+
+      <p class="login-para">{{loginText.user_rec_inp_help_text}}</p>
+    </form>
+  </div>
+</div>

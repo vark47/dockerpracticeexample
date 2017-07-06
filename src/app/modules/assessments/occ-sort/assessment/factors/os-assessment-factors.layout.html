@@ -1,0 +1,263 @@
+<div class="content-top-plp2">
+	<div class="clear-fixed"> </div>
+	<div class="container">
+		<!--desktop start-->
+		<div class="mobie-width">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="interest-profiler">
+						<div class="interest-content" id="idlen">
+							<div class="mobile-design-hide-plp2">
+								<!--Display heading-->
+								<p *ngIf="rankFactors=='false'" class="all-28-factors"><b>{{'LANG_EN_TRANS.select_five_ten' | translate}}</b>
+								</p>
+								<div class="occ-fac-pad"></div>
+								<a *ngIf="rankFactors=='false'" href="#" data-toggle="modal" data-target="#myModalread" style="margin: -52px -1px 0px 0px;float: right;">
+									<u>{{'LANG_EN_TRANS.info_hd' | translate}}</u>
+								</a>
+							</div>
+							<div class="desktop-design-hide-plp2">
+								<!--Display all 28 factors-->
+								<p *ngIf="rankFactors=='false'" class="row">{{'LANG_EN_TRANS.all_28_factor' | translate}}{{'LANG_EN_TRANS.occ_select_factor' | translate}}</p>
+								<p *ngIf="rankFactors=='true'" class="row">{{'LANG_EN_TRANS.rank_factor_in_order' | translate}}</p>
+							</div>
+							<!-- ----First column Start--- -->
+							<div class="first-p2">
+								<div id="sliderheadp2">
+									<div class="inrp2">
+										<div id="onep2" class="itemsp2" #itemsp2Val>
+											<div class="row">
+												<div class="drag-heading-plp2 col-6"> <b>{{'LANG_EN_TRANS.select_five_ten' | translate}}</b> </div>
+												<div *ngIf="rankFactors=='false'" class="drag-heading-plp2 "><b>{{'LANG_EN_TRANS.impt_factor' | translate}}</b></div>
+											</div>
+											<!--Display first half of 28 factors-->
+											<div class="row">
+												<div class="col-md-3 col-12">
+													<ul class="todo">
+														<li class="list-group-item iteam1 addp2" *ngFor="let item of occ_sort_factors;let inx =index;" style="width:100%;">
+															<a href="#" class="para-2-lines-break color-dark-black w-100  text-left" (click)="$event.preventDefault();selectFactor($event,item,1)">{{facNames[item].factorName}} </a>
+															<a href="#" [ngClass]="(inx<=10)? 'exptooltip':'exptooltip2'" class="pull-right" (click)="$event.preventDefault();">
+															<span  class="badge" >?</span>
+															<!--Display help text for coresponding factors-->
+															<span [ngClass]="(inx<=10)? 'exptooltiptext':'exptooltiptext2'">{{facNames[item].help}}</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+												<!-- First column End-> 
+											<!- Second column Start -->
+												<div class="mobile-design-hide-plp2">
+													<div class="occ-fac-pad"></div>
+												</div>
+												<div class="col-md-3 col-12">
+													<div class="drag-heading-plp2"> &nbsp; </div>
+													<ul class="todo todo-list-gap">
+														<!--Display second half of 28 factors-->
+														<li class="list-group-item iteam1 addp2" *ngFor="let item of occ_sort_factors2;let inx =index;" style="width:100%;">
+															<a href="#" class="para-2-lines-break color-dark-black w-100 text-left" (click)="$event.preventDefault();selectFactor($event,item,2)"> {{facNames[item].factorName }}</a>
+															<a href="#" [ngClass]="(inx<=10)? 'exptooltip':'exptooltip2'" class="pull-right" (click)="$event.preventDefault();">
+																<span class="badge">?	</span>
+															<!--Display help text for coresponding factors-->
+															<span [ngClass]="(inx<=10)? 'exptooltiptext':'exptooltiptext2'">{{facNames[item].help}}</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+												<!-- Second column End -->
+												<!-- add and delete -->
+												<div class=" desktop-design-hide-plp2 ">
+													<div *ngIf="rankFactors=='true'" class="drag-heading-plp2 "><b class="rank-heading-desktop">{{'LANG_EN_TRANS.rank_impt_factor' | translate}}</b></div>
+
+													<div id="add-value-p2">
+														<div [class.class-margin]="marginClass" class="desktop-designplp2">
+															<div class=" empty-div empty " *ngFor="let item of factorsArray1;let inx =index;" (click)="finalFactors($event,item)">
+																<a class='foctorsp2 ancour-tag-hide-line' [ngStyle]="(curVal)? {'cursor':'pointer'} : {'cursor':'default'}">
+																	<span class='well-box-add1-p2' [ngStyle]="(curVal)? {'cursor':'pointer'} : {'cursor':'default'}"> <i class='fa fa-star-o'  ></i>  </span>
+																	<span class='well-box-add2-p2 ' [ngStyle]="(curVal)? {'cursor':'pointer'} : {'cursor':'default'}"><a href="#" class='factordynamic white-color' id="focus{{inx}}" tabindex=""  (click)="$event.preventDefault();" > {{facNames[item].factorName }}  </a>
+																<a href="#" *ngIf="fa_times" class='remove pull-right  white-color' (click)="$event.preventDefault();selectFactorRemove($event,item)">
+																<i class='fa fa-times' ></i>
+															</a>
+																</span>
+																</a>
+															</div>
+
+															<div class=" empty-div empty " *ngFor="let item of emptybox;let inx =index;">
+																<span class='well-box-add1-p2'> <i class='fa fa-star-o' [ngStyle]="{'color': '#0c8cbd'}"  ></i>  </span>
+																<span class='well-box-add2-p2 '>
+															<span>
+																<i class='fa fa-times' [ngStyle]="{'color': '#0c8cbd'}"></i>
+															</span>
+																</span>
+															</div>
+														</div>
+													</div>
+													<br>
+													<!--<a class="btn-plp-2  close-prev-e btn-raised blue-btn-plp2" hidden >Pre</a>-->
+													<a href="#" class="btn-plp-2 close-e btn-
+												 blue-btn-plp2 btn" id="next-p2" *ngIf="nextHide" (click)="$event.preventDefault();nextFactors()" [ngClass]="isDisable? 'disabledp2': ''">{{'LANG_EN_TRANS.next' | translate}}</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="itemsp2-col-2  desktop-design-hide-plp2" id="twop2">
+											<div class="col-md-12 col-12">
+												<div class="drag-heading-plp2"><b>{{'LANG_EN_TRANS.five_factor' | translate}}</b></div>
+
+												<div id="add-value-final" class="itemsp2-col-3">
+													<!--<div class=" empty-div empty " *ngFor="let item of factorsArray2;let inx =index;">
+														<a href='javascript:void(0);' class='foctorsp2 ancour-tag-hide-line' [ngStyle]="{'cursor':'default'}">
+															<span class='well-box-green'>  {{inx+1}}</span>
+															<span class='well-box-add2-green '><span class='factorgreen'> {{facNames[item].factorName}}  </span>
+															<span class='final-remove' (click)="removeFinalFactor($event,item)" [ngStyle]="{'cursor':'pointer'}">
+					    											<i class='fa fa-times pull-right inTab' > </i>
+				    											</span>
+															</span>
+														</a>
+													</div>-->
+													<div class=" empty-div empty " *ngFor="let item of factorsArray2;let inx =index;">
+														<a class='foctorsp2 ancour-tag-hide-line' [ngStyle]="{'cursor':'default'}">
+															<span class='well-box-green'>  {{inx+1}}</span>
+															<span class='well-box-add2-green'><span class='factorgreen'> {{facNames[item].factorName}}  </span>
+															<a href="#" class='final-remove pull-right white-color pointer' (click)="$event.preventDefault();removeFinalFactor($event,item)" >
+					    											<i class='fa fa-times  inTab' > </i>
+				    											</a>
+														</span>
+														</a>
+													</div>
+
+												</div>
+
+
+												<div id="add-value-final" class="itemsp2-col-3">
+													<div class=" empty-div empty " *ngFor="let item of finalArray;let inx =index;">
+														<a href='javascript:void(0);' class='foctorsp2 ancour-tag-hide-line' [ngStyle]="{'cursor':'default'}">
+															<span class='well-box-green' [ngStyle]="{'color': '#07737f'}"> {{inx+1}} </span>
+															<span class='well-box-add2-green '><span class='factorgreen'> </span>
+															<span>
+																<i class='fa fa-times' [ngStyle]="{'color': '#07737f'}"></i>
+															</span>
+															</span>
+														</a>
+													</div>
+
+												</div>
+												<br>
+												<a href="#" id="next-sec-btn" class="btn-plp-2  btn-raised blue-btn-plp2 btn" [ngClass]="isDisableNext? 'disabledp2': ''"
+												 (click)="$event.preventDefault();nextQuestions()">{{'LANG_EN_TRANS.next' | translate}}</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End mobile and desktop common body content -->
+</div>
+
+<!-- Modal content only for mobile-->
+<div class="modal  mobile-design-hide-plp2" id="myModal" role="dialog">
+	<div class="modal-dialog" style="width:92%;">
+		<div class="modal-content modal-mobile-plp2">
+			<div class="modal-header">
+
+				<div class="drag-heading-popup-plp2"><b>{{'LANG_EN_TRANS.impt_factor' | translate}} </b>
+
+				</div><button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body" id="mypopup-plp2">
+				<div class="second-p2">
+					<div id="add-value-p2">
+						<div class=" empty-div empty " *ngFor="let item of factorsArray1;let inx =index;" (click)="finalFactors($event,item)" [ngStyle]="{'cursor':'pointer'}">
+
+							<a href='javascript:void(0);' class='foctorsp2 ancour-tag-hide-line'>
+								<span class='well-box-add1-p2'> <i class='fa fa-star-o'></i>  </span>
+								<span class='well-box-add2-p2 pop-well-box-add2-p2'><span class='factordynamic'> {{facNames[item].factorName}}  </span>
+								<span class='remove' (click)="selectFactorRemove($event,item)">
+									    <i class='fa fa-times pull-right' *ngIf="fa_times"></i>
+								    </span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal  mobile-design-hide-plp2" id="myModalread" role="dialog">
+	<div class="modal-dialog" style="width:90%;">
+		<div class="modal-content modal-mobile-plp2">
+			<div class="modal-header">
+				<h6> Factors </h6>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="drag-heading-popup-plp2" style="padding:10px;"><b>{{'LANG_EN_TRANS.all_28_factor' | translate}}{{'LANG_EN_TRANS.occ_select_factor' | translate}} </b></div>
+
+
+		</div>
+	</div>
+</div>
+<!-------- Modal content End------- -->
+<!-------- show list content ------- -->
+<div class="alert-mobile mobile-design-hide-plp2" *ngIf="showdiv">
+	<div id="twop2-mobile">
+		<div class="drag-heading-plp2-mobile "><b>{{'LANG_EN_TRANS.five_factor' | translate}}</b></div>
+		<div id="add-value-final-mobile" class="itemsp2-col-3-mobile ">
+			<p class="dummy-text" *ngIf="dummyText">
+				{{'LANG_EN_TRANS.click_below_fac' | translate}}</p>
+		</div>
+		<div class=" empty-div empty " *ngFor="let item of factorsArray2;let inx =index;">
+			<a href='javascript:void(0);' class='foctorsp2 ancour-tag-hide-line'>
+				<span class='well-box-green'> {{inx+1}} </span>
+				<span class='well-box-add2-green '><span class='factorgreen'> {{facNames[item].factorName}}  </span>
+				<span class='final-remove' (click)="removeFinalFactor($event,item)" [ngStyle]="{'cursor':'pointer'}">
+					    <i class='fa fa-times pull-right' ></i>
+				    </span>
+				</span>
+			</a>
+
+		</div>
+	</div>
+	<div id="rankFact" class="drag-heading-plp2-mobile" [hidden]="showImpFac"><b>{{'LANG_EN_TRANS.rank_impt_factor' | translate}}  </b>
+	</div>
+	<div id="add-value-p2-mobile">
+		<div class=" empty-div empty " *ngFor="let item of finalFactorsMob;let inx =index;" (click)="finalFactors($event,item)">
+			<a href='javascript:void(0);' class='foctorsp2 ancour-tag-hide-line' [ngStyle]="(curVal)? {'cursor':'pointer'} : {'cursor':'default'}">
+				<span class='well-box-add1-p2' [ngStyle]="(curVal)? {'cursor':'pointer'} : {'cursor':'default'}"> <i class='fa fa-star-o'  ></i>  </span>
+				<span class='well-box-add2-p2 ' [ngStyle]="(curVal)? {'cursor':'pointer'} : {'cursor':'default'}"><span class='factorgreen' > {{facNames[item].factorName}}  </span>
+				<span class='remove' (click)="selectFactorRemove($event,item)">
+					    <i class='fa fa-times pull-right' *ngIf="fa_times"></i>
+				    </span>
+				</span>
+			</a>
+
+		</div>
+	</div>
+</div>
+<!-- End mobile design -->
+
+
+<!-- footer for count content only for mobile *ngIf="close_e_mobile"-->
+<div class="row mobile-design-hide-plp2 navbar-fixed-bottom" style="z-index: 6;">
+	<div class="view" [ngStyle]="{'left':'0'}">
+		<ul id="select-count-plp2">
+			<li id="select-plp2" [ngStyle]="{'cursor':'pointer'}" *ngIf="select_plp2" [ngClass]="isDisableSelect? 'disabledp2': ''" data-toggle="modal"
+			 data-target="#myModal"> <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;{{'LANG_EN_TRANS.selected_btn' | translate}} : {{count}}</li>
+			<li>
+				<button class="btn-plp-2  close-e-mobile-prev  btn-raised  view-plp2 " *ngIf="close_e_mobile_prev" id="next-prev-p2" [ngClass]="isDisableNext? 'disabledp2': ''"
+				 (click)="nextQuestions()">{{'LANG_EN_TRANS.next' | translate}}  </button>
+				<button class="btn-plp-2 close-e-mobile btn-raised view-plp2 " *ngIf="close_e_mobile" id="next-p2-mob" (click)="nextFactors()"
+				 [ngClass]="isDisable? 'disabledp2': ''"> {{'LANG_EN_TRANS.next' | translate}}  </button>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!-- footer for count content only for mobile-->

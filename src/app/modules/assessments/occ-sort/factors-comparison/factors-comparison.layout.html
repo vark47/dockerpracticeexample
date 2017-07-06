@@ -1,0 +1,44 @@
+<div class="p-b"> 
+<div class="head-buttons " [ngStyle]="{'display':'inline-block'}" >
+    <div class= "row ">
+    <p class="col-md-10 col-sm-10 pull-left">
+        The chart below shows the comparison between your preferences and the requirements of the occupation for all the factors you selected.
+		</p>
+		<ul class="col-md-2 col-sm-2 nav navbar-nav circle-top-nav pull-right">
+		<li>
+			<button class="  btn-plp-2 btn-raised back-to-list-btn " [ngStyle]="{'background-color':'#06737f'}" (click)="goToList()">
+				<img src="assets\images\back-to-list.png" />
+				&nbsp;&nbsp;Back to List
+			</button>
+		</li>
+	</ul>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-8" *ngFor="let item of SelectedFactors;let indx = index">
+		<div class="card text-center">
+  <div class="card-header">
+    <h5 class="card-title text-left" style="margin:0px;">{{('LANG_EN_TRANS.occ_ques'+[item]+'.occ_factor') | translate  }} </h5>
+  </div>
+
+
+  <div class="card-block ">
+    <p class="progressbar-para">Your Choice</p>
+  <ul class="plp-2-progress-container plp-2-progress-radius-first plp-2-progress-radius-last userList"  >
+  <li class="u_list border-prog-blue plp-2-progress-radius plp-2-progress-radius-first" > <span>A Great Deal </span> </li>
+  <li class="u_list border-prog-blue "></li>
+  <li class="u_list border-prog-blue "> <span>Somewhat </span> </li>
+  <li class="u_list border-prog-blue "></li>
+  <li class="u_list plp-2-progress-radius plp-2-progress-radius-last"><span>Sitting</span> </li>
+</ul>
+ <p>{{occName}}</p>
+<ul class="plp-2-progress-container plp-2-progress-two plp-2-progress-radius-first plp-2-progress-radius-last sysList"  >
+	<li class="s_list border-prog-green" *ngFor="let item2 of [0,1,2,3]"></li>	
+	<li class="s_list plp-2-progress-radius plp-2-progress-radius-last"></li>	
+</ul>
+  </div>
+</div>
+	</div>
+	<div class="clearfix"> </div>
+</div>
+</div>

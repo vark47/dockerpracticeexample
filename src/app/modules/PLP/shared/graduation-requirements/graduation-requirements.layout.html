@@ -1,0 +1,111 @@
+<!--<PLP-nav-header [header]="sectionObject" (changeView)="changeView($event)" [report-status]="report"></PLP-nav-header>-->
+<form>
+
+  <div class="form-group">
+
+    <div class="col-spacer">
+      <!--<p class="question-head">{{ questionObject.questions[0] }}</p>-->
+      <div class="desktop-table">
+
+
+        <div class="col-12 col-sm-12 col-md-12 rtable-plp1">
+          <div class="rTableHeading">
+            <div class="rTableRow row">
+              <div class="col-6 col-sm-6 col-md-6 rTableHead border-b-n">
+                <b>Subject</b></div>
+
+              <div class="col-6 col-sm-6 col-md-6 rTableHead border-b-n">
+                <b> Credit Requirements</b></div>
+            </div>
+            <div class="rTableRow row">
+              <div class="col-6 col-sm-6 col-md-6 rTableHead border-top-0 border-b-n">
+                &nbsp;</div>
+              <div class="col-6 col-sm-6 col-md-6 rTableHead border-b-n">
+                <b>{{ graduationRequirementsData.Titles.ReqColTitle1 }}</b></div>
+            </div>
+          </div>
+          <div class="rTableBody">
+            <!--<div class="rTableRow" *ngIf="careerAssessmentsData && careerAssessmentsData.length == 0">
+               <div class="col-12 col-sm-12 col-md-12 rTableCell"  align="center">
+                 {{tableNoData}}
+              </div>
+            </div>-->
+
+            <div class="rTableRow row" *ngFor='let item of graduationRequirementsData.ReqItems'>
+              <div class="col-6 col-sm-6 col-md-6 rTableCell">
+                {{ item.Subject }}
+              </div>
+              <div class="col-6 col-sm-6 col-md-6 rTableCell">
+                {{ item.Credit1 }}
+              </div>
+            </div>
+
+            <div class="rTableHeading">
+              <div class="rTableRow row">
+                <div class="col-6 col-sm-6 col-md-6 rTableHead ">
+                  <b>Total </b></div>
+
+                <div class="col-6 col-sm-6 col-md-6 rTableHead ">
+                  {{ graduationRequirementsData.Totals.Credit1 }} </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- mobile table ---->
+      <div style="width: 100%;" class="mobile-table">
+        <div class="col-12 col-sm-12 col-md-12">
+          <div class="row mTableRow " *ngFor='let item of graduationRequirementsData.ReqItems, let odd=odd, let evn=even'>
+            <div class="mTableCell">
+              <div class="inner-row-m">
+
+                <div class="col-6 col-sm-6 col-md-6 ">
+                  <b>Subject</b></div>
+
+                <div class="col-6 col-sm-6 col-md-6 p-0">
+                  {{ item.Subject }}</div>
+
+              </div>
+
+
+              <div class=" inner-row-m">
+                <div class="col-6 col-sm-6 col-md-6 ">
+                  <div>
+                    <b> Credit Requirements</b>
+                  </div>
+                  <div>
+                    2015 and Beyond:
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 p-0 ">
+                  <div> </div>
+                  <div class="m-p-graducation">
+                    {{ item.Credit1 }}</div>
+                </div>
+              </div>
+              <div class="inner-row-m">
+                <div class="col-6 col-sm-6 col-md-6">
+                  <b>Total </b></div>
+                <div class="col-6 col-sm-6 col-md-6 p-0">
+                  {{ graduationRequirementsData.Totals.Credit1 }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End mobile table ---->
+
+      <p><em>Students must complete algebra I by 8th grade and 
+       algebra II or its equivalent before graduation.
+        Science requirement must include one credit in biology, 
+        chemistry and physics or an approved course credit in CTE.</em> </p>
+      <div class="clearfix"> </div>
+      <!--<div *ngIf='(report=="")' class="col-md-5 form-group">
+         <button class="btn btn-red-plp plf-dots3" (click)="postGraduationRequirementsData()" type="button"><i class="fa fa-save white-color"> </i> Update Planned & Compleated Cre3dits</button>
+   </div>-->
+    </div>
+
+  </div>
+</form>

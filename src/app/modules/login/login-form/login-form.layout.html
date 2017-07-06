@@ -1,0 +1,64 @@
+<div class="form-box">
+  <div class="form-top">
+    <div class="form-top-left">
+      <h4>{{loginText.login_heading}}</h4>
+    </div>
+  </div>
+  <!--<div>
+      <h2>{{ 'HOME.TITLE' | translate }}</h2>
+      <label>
+        {{ 'HOME.SELECT' | translate }}
+        <select #langSelect (change)="translate.use(langSelect.value)">
+          <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+        </select>
+      </label>
+    </div>-->
+
+  <div class="form-bottom">
+    <form [formGroup]="PLPLoginForm" class="form-horizontal" id="loginform">
+      <span *ngIf="session" class="error-color validation-msg">{{loginText.login_sessexpire_msg}}<br></span>
+      <span *ngIf="loggout" class="success-color validation-msg"><b>Successfully logged out</b><br></span>
+      <span *ngIf="errorVal" class="error-color validation-msg">
+                     {{errorMessage.invalid_credentials}}</span>
+      <span *ngIf="loginValidation" class="error-color validation-msg">
+            Please enter the credentials<br></span>
+      <span *ngIf="!(PLPLoginForm.get('UserName').valid) && (PLPLoginForm.get('UserName').dirty )">
+      <span *ngIf="PLPLoginForm.get('UserName').hasError('required')" class="error-color validation-msg">
+          {{errorMessage.username_req}}</span>
+      <span *ngIf="PLPLoginForm.get('UserName').hasError('invalidText')" class="error-color validation-msg">
+                           {{errorMessage.script_tags_error}}</span>
+      </span>
+
+
+      <div class="input-group login-m-b">
+        <input #namevalue id="login-username" type="text" placeholder="Username" name="Username" class="form-control input-font-size"
+          formControlName="UserName" [(ngModel)]='userdata.username'>
+        <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span></div>
+
+      <span *ngIf="!(PLPLoginForm.get('Password').valid) && (PLPLoginForm.get('Password').dirty)">
+        <span *ngIf="PLPLoginForm.get('Password').hasError('required')" 
+        class="error-color validation-msg">
+        {{errorMessage.password_req}}</span>
+      <span *ngIf="PLPLoginForm.get('Password').hasError('invalidText')" class="error-color validation-msg">
+            {{errorMessage.script_tags_error}}</span>
+      </span>
+
+      <div class="input-group login-m-b">
+        <input #namevalue1 id="login-password" type="password" placeholder="Password" name="Password" class="form-control input-font-size"
+          formControlName="Password" [(ngModel)]='userdata.password'>
+        <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span> </div>
+      <div class="form-group">
+        <div class="controls">
+          <button *ngIf="isVisible ? 'opacityValue' : 'opctValue'" id="loginSbt" type="Submit" class="btn btn-login1 btn-success" [disabled]="!PLPLoginForm.valid && isBtnDisable"
+            (click)="login()">
+           {{loginText.login_btn_text}}</button>
+          <div class="user-pass-text">{{loginText.login_info_text}}</div>
+        </div>
+
+      </div>
+      <div class="input-group">
+        <label class="lofing-forgot"><a routerLink="/login/passwordRecovery">{{loginText.forgot_uname_link}} </a></label>
+      </div>
+    </form>
+  </div>
+</div>

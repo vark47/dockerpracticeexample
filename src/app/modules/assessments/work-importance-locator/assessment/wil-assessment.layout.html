@@ -1,0 +1,119 @@
+<!-- smile cards start -->
+
+<div class="row">
+		<div class="col-md-4 col-sm-6 col-12"  *ngFor="let txt of cards">
+		<div class="wil-p2-plp4  text-center">
+						<div class="wil-select-right pull-right"></div>
+						<div class="checked-image-wil-plp4 pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+						<div class="div-icon">{{txt.text}}</div>
+							<div> 
+								<ul class="wil-ul-plp4">
+									<li *ngFor="let item of smiles"> <i class="fa" [ngClass]="item.heading"></i> </li>
+									
+								</ul>
+						</div>
+				</div>
+		</div>
+</div>
+<!-- smile cards end -->
+<!-- smile circle start -->
+ <div class="desktop-design-hide-plp2">
+      <div class="panel-progress-pink-plp4">
+        <p class="text-right mr-5">12/25</p>
+      </div>
+      <div class="circle-body">
+        <div class="circle-wil-align-plp4 text-center">
+          <button class="btn btn-default blue-circle-button circle-pink-plp4" href=""
+            (click)="callQuestion(4)">
+                <i class="fa icon-asmnt-strongly-agree" [ngClass]="(btnHighLight==4)? 'plp-white':''"></i>
+                <p>strong_like &nbsp; &nbsp;</p>
+				         <p>4 Remaing</p>
+              </button>
+        </div>
+        <div class="circle-wil-align-plp4 text-center">
+          <button  class="btn btn-default blue-circle-button circle-pink-plp4" href=""  (click)="callQuestion(3)">
+                <i class="fa icon-asmnt-between-strongly" [ngClass]="(btnHighLight==3)? 'plp-white':''"></i>
+              <p>like</p>
+			  <p>4 Remaing</p>
+              </button>
+        </div>
+		 <div class="circle-wil-align-plp4 text-center">
+          <button  class="btn btn-default blue-circle-button circle-pink-plp4" href=""  (click)="callQuestion(2)">
+                <i class="fa icon-asmnt-strongly-disagree" [ngClass]="(btnHighLight==2)? 'plp-white':''"></i>
+              <p>unsure  &nbsp;</p>
+			  <p>4 Remaing</p>
+              </button>
+        </div>
+        <div class="circle-wil-align-plp4 text-center">
+          <button  class="btn btn-default blue-circle-button circle-pink-plp4" href=""  (click)="callQuestion(2)">
+                <i class="fa icon-asmnt-somewhat" [ngClass]="(btnHighLight==2)? 'plp-white':''"></i>
+              <p>unsure &nbsp;</p>
+			  <p>4 Remaing</p>
+              </button>
+        </div>
+        <div class="circle-wil-align-plp4 text-center">
+          <button  class="btn btn-default blue-circle-button circle-pink-plp4" href="" (click)="callQuestion(1)">
+                <i class="fa icon-asmnt-between-somewhat" [ngClass]="(btnHighLight==1)? 'plp-white':''"></i>
+              <p>dislike &nbsp;</p>
+			  <p>4 Remaing</p>
+              </button>
+        </div>
+		
+        
+      </div>
+    </div>
+
+
+
+
+
+<!-- mobile -->
+
+<div class="mobile-design-hide-plp2">
+  
+  <div class="card-blue">
+    <div class="card-plp-2   circle-pink-plp4"  (click)="callQuestion(4)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>like</p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa  icon-asmnt-strongly-agree" [ngClass]="(btnHighLight==4)? 'plp-white':''"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="card-plp-2 circle-pink-plp4"  (click)="callQuestion(3)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>like</p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa  icon-asmnt-between-strongly" [ngClass]="(btnHighLight==3)? 'plp-white':''"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="card-plp-2  circle-pink-plp4"  (click)="callQuestion(2)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>unsure </p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa icon-asmnt-somewhat" [ngClass]="(btnHighLight==2)? 'plp-white':''"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="card-plp-2  circle-pink-plp4 "  (click)="callQuestion(1)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>dislike </p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa icon-asmnt-between-somewhat" [ngClass]="(btnHighLight==1)? 'plp-white':''"></i></span>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+</div>
+
+<!-- smile circle end -->

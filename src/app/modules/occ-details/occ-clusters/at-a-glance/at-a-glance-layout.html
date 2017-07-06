@@ -1,0 +1,68 @@
+<div class="row gutter-10">
+  <div class="col-lg-12">
+    <p><b>{{atAGlance.ShortDescription}}</b></p>
+  </div>
+  <div class="col-lg-4 col-md-4 col-12" id="ataglance">
+    <div class="card-plp3 rc-card-body2">
+      <div class="card-header-plp3">
+        <h5>{{atAGlance.TopSalariesSection}}<i class="fa icon-top-5-salaries pull-right" aria-hidden="true"></i> </h5>
+      </div>
+      <div class="card-block card-block2-p-plp3-v scroll-class card-block2-p-plp3-v-Sal">
+        <div class="inner">
+          <ul class="plp3-list related-career">
+            <li class="" *ngFor="let item of atAGlance.TopSalaries">    
+                <i class="fa fa-chevron-right text-align-plp3 arrow-align-plp3"></i> 
+                 <a href="#" class="list-text-alignment-plp3 pointer" 
+                 (click)="$event.preventDefault();CallOccDetailCareer(item.linkID,item.linkTitle)"> {{item.linkTitle}}</a>                      
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="col-lg-4 col-md-4 col-12" id="ataglance">
+    <div *ngIf="(atAGlance.CCIScoreresult==false)" class="card-plp3" [ngStyle]="{'background':atAGlance.clusterColor}">
+      <div class="alignfaicon-card-2" align="center">
+        <i class="{{atAGlance.iconName}}" aria-hidden="true"></i> </div>
+      <div class="card-block  card-header-plp3 divheight-card-2 scroll-class ">
+        <p  class="take-the-career-para">Take the Career Cluster Inventory to see if this Career cluster is a match for you</p>
+      </div>
+    </div>
+    <div *ngIf="(atAGlance.CCIScoreresult==true)" class="card-plp3" [ngStyle]="{'background':atAGlance.clusterColor}">
+      <div class="alignfaicon" align="center">
+        <i class="{{atAGlance.iconName}} leaf-atglance" aria-hidden="true" ></i>
+      </div>
+      <div align="center" class="divheight">
+        <img src="/assets/images/bar-small-graph.png" class="bar-graph-plp3">
+        <p  class="take-the-career-para"> {{atAGlance.CCIScore}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-12" id="ataglance">
+    <div class="card-plp3 ec-card-colr-powdblue ">
+      <!--<div class="card-header-plp3 card-header-plp3">
+        <h5>{{atAGlance.TopOpportunitiesSection}}<i class="fa icon-top-5-employment-opps pull-right" aria-hidden="true"></i>          </h5>
+      </div>-->
+      <div class="card-header-plp3">
+       <div class="row">
+         <div class="col-lg-9 col-md-10 col-9"  >
+         <h5 class="atglancertop-title">{{atAGlance.TopOpportunitiesSection}}</h5></div>
+         <div class="col-lg-3 col-md-2 col-3"> 
+<h5> <i class="icon-clu_business pull-right" aria-hidden="true"></i> </h5></div>      </div>
+     </div>
+      <div class="card3 card-block card-block2-p-plp3-v scroll-class">
+        <div class="inner">
+          <ul class="plp3-list related-career">
+            <li class="" *ngFor="let item of atAGlance.TopOpportunities">
+               <i class="fa fa-chevron-right text-align-plp3 arrow-align-plp3 "></i>             
+                   <a href=""  class="list-text-alignment-plp3 pointer" 
+                    (click)="$event.preventDefault();CallOccDetailCareer(item.linkID,item.linkTitle,atAGlance.iconName,atAGlance.clusterColor)">
+                     {{item.linkTitle}} </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

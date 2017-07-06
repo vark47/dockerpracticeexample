@@ -1,0 +1,136 @@
+<!-- Fixed navbar -->
+
+
+<!-- mobile and desktop common body content -->
+
+<div class="row" style="margin-bottom:80px">
+	<div class="col-md-12">
+		<div class="interest-profiler">
+			<div class="interest-content">
+				<h4 class="page-sub-header-2"> {{'LANG_EN_TRANS.shortip_score_explore_occ' | translate}}</h4>
+				<p> {{'LANG_EN_TRANS.shortip_score_explore_careers' | translate}}</p>
+				<h4 class="page-sub-header-2">{{'LANG_EN_TRANS.shortip_ipheader' | translate}}</h4>
+				<div class="panel panel-default content-box-shadow-plp2">
+					<div class="row panel-body-p2" style="height:auto;">
+						<div class="col-md-4 col-sm-4 col-centered-p2">
+							<div id="svg" style="margin-top: -12px;"></div>
+						</div>
+
+					<div class="col-md-8 col-sm-8 col-12 col-centered-p2">
+							<div class="ip-result-p2">
+								<ul data-pie-id="svg" id="list" class="columns-ip-result">
+									<li *ngFor="let res of result; let inx=index;" [attr.data-inx]="inx" class="ChartData " [attr.data-value]="res.score" [ngStyle]="{'color': pieColor[res.interest]}">
+
+										<span class="box-color1 cls-cursor" (click)="getOccListBasedOnInterest(res.interest)" [ngStyle]="{'background-color': pieColor[res.interest]}"></span>&nbsp;
+										<span class="colorocc-heading-plp2 number-alignocc cls-cursor text-left" [attr.id]="res.interest">
+										<a href="#" [attr.data-value]="res.score" [attr.data-inx]="inx" (click)="$event.preventDefault();getOccListBasedOnInterest(res.interest)"  class = "heading-link-plp2"  ><u>{{'LANG_EN_TRANS.'+res.interest | translate}}</u></a></span>&nbsp;
+										<span class="color-number-plp2 cls-cursor heading-link-plp2" (click)="getOccListBasedOnInterest(res.interest)">
+										{{res.score}}</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- IP RESULT CARD START -->
+				<div [ngStyle]="{'margin-top':'15px'}">
+					<p>Read over the interest descriptions below to get a better idea of your career interests.</p>
+				</div>
+				<div class="row gutter-10">
+					<div class="col-lg-4 col-md-4 col-12 " *ngFor="let item of result">
+						<button class="card-ip-rsult style_prevu_kit w-100 p-0" data-toggle="modal" [attr.data-target]="'#interest'+item.interest">
+
+						 
+								<div class="ip-result-card-score " [ngStyle]="{'background-color': pieColor[item.interest]}">
+									<ul class="ip-result-icn-text text-center">
+										<li>Your&nbsp;Score</li>
+										<li class="text-center ip-result-score">{{item.score}}</li>
+									</ul>
+								</div>
+								<div class="media-left-ip-result">
+									<div>
+										<ul class="ip-result-icn-text text-center">
+											<li><img src="{{pieIpColor[item.interest]}}" class="">
+											</li>
+											<li>
+												<h6 class="text-capitalize"> <b>{{item.interest}}</b></h6>
+											</li>
+										</ul>
+									</div>
+								</div>
+						</button>
+						<div class="modal fade" id="interest{{item.interest}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog " role="dialog" style="width:92%;">
+								<div class="modal-content content-color">
+									<div class="modal-header eq-heading" [ngStyle]="{'background-color': pieColor[item.interest]}">
+										<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.'+item.interest | translate}}</b></h6>
+										<button class="btn-bg-none" data-dismiss="modal" aria-label="Close">&times;</button>
+									</div>
+									<div class="modal-body">
+										<div class="eq-data">{{('LANG_EN_TRANS.shortip_score_opt'| translate)[item.interest] }} </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- IP RESULT CARD END -->
+
+
+				<div class="internal-data-plp2">
+
+					<!--<p><br>  </p>-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Destop End design -->
+
+<!-- mobile design -->
+<button id="openModalButton" [hidden]="true" data-toggle="modal" data-target="#ip-result-print">Open Modal</button>
+
+<div class="modal bd-example-modal-lg" id="ip-result-print" role="dialog" [ngClass]="(displayPopup)? 'in':''" [ngStyle]="(displayPopup)?{'display':'block'}:{'display':'none'}">
+	<div class="modal-dialog  popup-dialogbox-plp2">
+
+		<div class="modal-content container-fluid">
+			<div class="modal-header">
+				<h5 id="ip-print-heading">{{'LANG_EN_TRANS.ip_title' | translate}} {{'LANG_EN_TRANS.print_preview' | translate}}</h5>
+				<button type="button" class="close" (click)="displayPopup=false;" data-dismiss="modal" style="color:#9d9d9d;float:right;">x</button>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="">
+				<div class="panel panel-default content-box-shadow-plp2">
+					<div class="row panel-body-p2" style="height:auto;">
+						<div id="print-piechart" class="col-md-4 col-sm-3 col-centered-p2">
+							<div id="svg-popup" class="main-svg" style="margin-top: -12px;"></div>
+						</div>
+						<div id="print-list" class="col-md-8 col-sm-9  list-print-ip">
+							<div class="ip-result-p2-print print-ip">
+								<ul data-pie-id="svg-popup" id="list-popup" class="columns-ip-result">
+									<li *ngFor="let res of result" class="ChartData " [attr.data-value]="res.score" [ngStyle]="{'color': pieColor[res.interest]}">
+										<span class="box-color1 cls-cursor" [ngStyle]="{'background-color': pieColor[res.interest]}"></span>&nbsp;
+										<span class="colorocc-heading-plp2 number-alignocc-print cls-cursor text-left" [attr.id]="res.interest"><a  class = "heading-link-plp2 cmpr-cap-letr" ><u>{{res.interest}}</u></a></span>&nbsp;
+										<span class="color-number-plp2 cls-cursor"><a  class = "heading-link-plp2" >{{res.score}}</a></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="print-text" class="internal-data-plp2">
+					<p><br> {{'LANG_EN_TRANS.shortip_score_list_occ' | translate}}{{'LANG_EN_TRANS.shortip_score_six_interest_areas' | translate}}
+						</p>
+				</div>
+
+				<button class="btn-plp-2 btn-raised print-btn-popup blue-btn-plp2" (click)="printResultPage('ip-result-print')">{{'LANG_EN_TRANS.done' | translate}}</button>
+				<br>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End mobile design -->

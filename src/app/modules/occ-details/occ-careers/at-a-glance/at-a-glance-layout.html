@@ -1,0 +1,167 @@
+<div class="row gutter-10 ">
+  <div class="col-lg-4 col-md-12 ">
+    <div class="card atglance">
+	<!-- Card that displays about salary-->
+      <div class="card-block">
+        <div class="row gutter-10 ">
+          <div class="col-lg-5 col-md-5 content-sm-center-plp3">
+            <div class="content-sm-center-plp3">
+              <b>{{jsonValue.SalaryRating}}</b></div>
+            <br> {{salRatingName}} </div>
+          <div class="col-lg-7 col-md-7 ">
+            <ul class="chart-skills">
+              <li> <span [ngClass]="(classChart==0)? 'activeChartClass0':''"> </span> </li>
+              <li> <span [ngClass]="(classChart==1)? 'activeChartClass1':''"> </span> </li>
+              <li> <span [ngClass]="(classChart==2)? 'chart-ative-p3':''"> </span> </li>
+            </ul>
+            <ul>
+              <div class="textDiv"> {{salamt}} </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6 ">
+    <div class="card atglance">
+		<!-- Card that displays about EducationLevel-->
+      <div class="card-block  ">
+        <div class="content-sm-center-plp3"><b> {{jsonValue.EducationLevel}}</b></div>
+        <br>
+        <div class="stacked-bar-graph" style="display: inline-flex;">
+          <span *ngFor="let item of [0,1,2,3,4]" [ngStyle]="(item == eduBar)? {'background-color':'#0d47a1'}:{}" style="width:20%"
+            class="eduBar bar-1">&nbsp;
+                  <span *ngIf="(item == eduBar)" class="eduNameStyle"> {{eduName}}</span>
+
+          </span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card atglance">
+		<!-- Card that displays about OpportunityRating-->
+      <div class="card-block">
+        <div class="row gutter-10 content-sm-center-plp3">
+          <div class="col-lg-8 col-md-8">
+            <div class="content-sm-center-plp3">
+              <b>{{jsonValue.OpportunityRating}}</b></div>
+            <br> {{opportunityRange}}</div>
+          <div class="col-lg-4 col-md-4 content-sm-center-plp3">
+            <!--<ul class="chart">
+              <li *ngFor="let item of [0,1,2];let inx=index">
+                <span [ngStyle]="(item == chartValue)? {'background-color':'#0d47a1'}:{}"></span>
+              </li>
+               <span class="ataglance-bargraph"> {{amt}} </span>
+            </ul> -->
+            <ul class="chart">
+              <li *ngIf="chartValue==0" [ngStyle]="{'top':'25px'}">
+                <span [ngStyle]="{'background-color':'#0d47a1','border-top':'2px solid red'}"></span>
+              </li>
+              <li *ngFor="let item of [1,2,3];let inx=index">
+                <span [ngStyle]="(item == chartValue)? {'background-color':'#0d47a1'}:{}" [ngClass]="(chartValue==0)? 'borderBottom':''"></span>
+              </li>
+              <span *ngIf="chartValue != 0" class="ataglance-bargraph"> {{amt}}</span>
+              <span *ngIf="chartValue == 0" class="ataglance-bargraph1"> {{amt}}</span> </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row gutter-10 ">
+<!-- Card that describe about occupation-->
+  <div class="col-lg-12 col-md-12">
+    <p> <b>{{description}}</b></p>
+  </div>
+  <div class="col-lg-4 col-md-4">
+    <!-- Card that describe about TopJobTasks-->
+    <div class="card-plp3  ec-card-colr-powdblue ">
+      <div class="card-header-plp3">
+        <h5> {{jsonValue.TopJobTasks }} <i class="icon-job-list pull-right " aria-hidden="true"></i> </h5>
+      </div>
+      <div class="card-block card-block2-p-plp3-v scroll-class">
+        <div class="inner">
+          <ul class="plp3-list">
+            <li *ngFor="let item of joblength;let inx=index;">
+              <i class="fa fa-chevron-right arrow-align-plp3"></i>
+              <div class="list-text-alignment-plp3">{{joblength[inx]}}</div>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Card that describe about parant cluster-->
+        <div class="card-plp3 " [ngStyle]="{'background-color': parentClusterColor}">
+         <a href="#" class="card-block card-block2-p-plp3 pointer white-color" (click)="$event.preventDefault();WorkplaceRedirect()" >
+            <div class="inner text-center">
+              <div class="icon career-atGlnc-icon">
+                <h5>16 Career Clusters</h5>
+                <i class="{{parentClusterIcon}}" aria-hidden="true"></i> </div>
+              <h5 class="" [ngStyle]="{'-webkit-line-clamp': '3'}">{{parentClusterName}}</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-12 desktop-table" >
+        <div class="card-plp3 careere-video-card">
+          <div class="card-block card-block2-p-plp3 pointer" >
+            <div class="inner text-center">
+
+              <!-- Card that describe about video-->
+              <a href="#" data-toggle="modal" data-target="#myModal" class="icon white-color"> <i class="icon-video " aria-hidden="true"></i> 
+			 </a>
+              <br>
+              <h5> {{jsonValue.video }} </h5>
+              <!--Modal Video-->
+              <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
+              <!-- Modal -->
+              <div id="myModal" class="modal fade bd-example-modal-lg" role="dialog">
+                <div class="modal-dialog" style="width: 94%;">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <video height="100%" width="100%" controls>
+                        <source src="/assets/images/Welcome.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4">
+
+    <!-- Card that describe about TopWorkSetting-->
+    <div class="card-plp3 careere-dark-blue-card">
+      <div class="card-header-plp3">
+        <h5>{{jsonValue.TopWorkSetting}} <i class="icon-work-setting pull-right " aria-hidden="true"></i> </h5>
+      </div>
+      <div class="card-block card-block2-p-plp3-v scroll-class">
+        <div class="inner">
+          <ul class="plp3-list">
+            <li *ngFor="let item of worklength;let inx=index;">
+              <i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+              <div class="list-text-alignment-plp3"> {{worklength[inx]}}</div>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

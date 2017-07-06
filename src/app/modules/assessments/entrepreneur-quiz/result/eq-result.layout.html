@@ -1,0 +1,578 @@
+<!-- Desktop design for Entrepreneur-quiz -->
+
+<div class="eq-result-bottom-margin">
+	<h4 class="page-sub-header-2">Is Self-Employment Right For You?</h4>
+	<p> The Entrepreneurial Career Assessment can help you learn more about entrepreneurs and more about yourself. Your self-employment
+		score below may predict your success as an entrepreneur.</p>
+	<div class="clearfix"> </div>
+	<div class="block-box-circle">
+		<div class="row">
+
+			<div class="col-md-5  centered">
+				<div align="center">
+					<h3 class="plp2-white">{{'LANG_EN_TRANS.entrp_your_score' | translate}}</h3>
+					<div class="circleGraphic1 col-12 col-sm-12 col-md-12 col-centered canvas-align"> </div>
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div class="block-box-h">
+					<div class="result-para" [ngClass]="((resultEntiQuizvar>=80)&&(resultEntiQuizvar<=100))?'entrp-result ':''">
+						<div class="pull-left">80-100 ..... </div>
+						<div class="eq-result-text">{{'LANG_EN_TRANS.entrp_score_80to100' | translate}}</div>
+					</div>
+					<div class="result-para" [ngClass]="((resultEntiQuizvar>=60)&&(resultEntiQuizvar<=79))?'entrp-result ':''">
+						<div class="pull-left">60-79 ..... </div>
+						<div class="eq-result-text">{{'LANG_EN_TRANS.entrp_score_60to79' | translate}}</div>
+					</div>
+					<div class="result-para" [ngClass]="((resultEntiQuizvar>=40)&&(resultEntiQuizvar<=59))?'entrp-result ':''">
+						<div class="pull-left"> 40-59 .....</div>
+						<div class="eq-result-text"> {{'LANG_EN_TRANS.entrp_score_40to59' | translate}}</div>
+					</div>
+					<div class="result-para" [ngClass]="((resultEntiQuizvar>=0)&&(resultEntiQuizvar<=39))?'entrp-result':''">
+						<div class="pull-left">0-39 .....</div>
+						<div class="eq-result-text"> {{'LANG_EN_TRANS.entrp_score_0to39' | translate}} </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 col-12">
+			<p><br> Read over the descriptions below to get a better idea about the common characteristics of entrepreneurs.
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-sm-6">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModalfirst">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="work-hard" src="\assets\images\works-hard.png"></div>
+				<div> {{'LANG_EN_TRANS.entrp_workhard' | translate}} </div>
+			</a>
+			<div class="modal fade" id="myModalfirst" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog " role="dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_workhard' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i></button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_time_efft' | translate}} </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6 ">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal1">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="Family-support" src="\assets\images\has-family-support.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_fmly_sprt' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_fmly_sprt' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i  aria-label="Close">&times;</i></button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_fmly_sprt_sucs' | translate}} </div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6 ">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal2">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="Tasks-risks" src="\assets\images\takes-risks.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_takes_risks' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content" class="content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_takes_risks' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i  aria-label="Close">&times;</i></button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_risks_takers' | translate}}</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6 ">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal3">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="Sacrifices-employment" src="\assets\images\sacrifices-employment.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_scfs_empt_benf' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_scfs_empt_benf' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i></button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_major_self_empt' | translate}} </div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6 ">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal4">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="Is independent" src="\assets\images\independent.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_is_indepnt' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_is_indepnt' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i></button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_indepnt_ctrl' | translate}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6 ">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal5">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="Locus-control" src="\assets\images\has-an-internal-locus-of-control.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_locus_ctrl' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog " style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_locus_ctrl' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i> </button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_internal_locus_ctrl' | translate}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal6">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="Need-achievement" src="\assets\images\has-a-need-to-achieve.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_need_achiv' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_need_achiv' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i> </button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_strong_need_achivmt' | translate}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6 ">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal7">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="Business-experience" src="\assets\images\has-business-experience.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_business_expr' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_business_expr' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i class=""  aria-label="Close">&times;</i> </button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_extensive_business_expr' | translate}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal8">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="Role-Model" src="\assets\images\has-a-self-employed-parent-as-a-role-model.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_role_model' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog " style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_role_model' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i> </button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_research' | translate}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6 ">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal9">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="Self-confidence" src="\assets\images\has-self-confidence.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_self_confd' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_self_confd' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i> </button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_impt_chrt' | translate}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6 ">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal10">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="Has-integrity" src="\assets\images\has-integrity.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_integrity' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_integrity' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i> </button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_honesty_integrity' | translate}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6 ">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal11">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="Has-determination" src="\assets\images\has-determination.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_determn' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_determn' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i> </button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_impt_chrt_determn' | translate}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6 ">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal12">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="Adapts-to-change" src="\assets\images\adapts-to-change.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_adapts_change' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_adapts_change' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i> </button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_two_primary_skills' | translate}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6 ">
+			<a href="#" class="well-p2 text-center div-default" data-toggle="modal" data-target="#myModal13">
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="has-good-network" src="\assets\images\has-a-good-network.png"></div>
+				<div>{{'LANG_EN_TRANS.entrp_ntwk_prof' | translate}}</div>
+
+			</a>
+			<div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_ntwk_prof' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i> </button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_ntwk_prof_assistance' | translate}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6 ">
+			<a  class="well-p2 text-center div-default" >
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="energitic" src="\assets\images\Is-Energetic.png"></div>
+				<div>Is Energetic</div>
+
+			</a>
+			<!--<div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_ntwk_prof' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i> </button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_ntwk_prof_assistance' | translate}}</div>
+						</div>
+					</div>
+				</div>
+			</div>-->
+		</div>
+<div class="col-md-4 col-sm-6 ">
+			<a  class="well-p2 text-center div-default" >
+				<div class="eq-select-right pull-right"></div>
+				<div class="checked-image pull-right"><img alt="checked" src="\assets\images\checked.png"></div>
+				<div class="div-icon"><img alt="energitic" src="\assets\images\Wants-Financial-Success.png"></div>
+				<div>Wants Financial Success</div>
+
+			</a>
+			<!--<div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:92%;">
+					<div class="modal-content content-color">
+						<div class="modal-header eq-heading">
+							<h6 class="modal-title eq-popup-tittle"><b>{{'LANG_EN_TRANS.entrp_ntwk_prof' | translate}}</b></h6>
+							<button class="btn-bg-none" data-dismiss="modal"><i aria-label="Close">&times;</i> </button>
+						</div>
+						<div class="modal-body">
+							<div class="eq-data">{{'LANG_EN_TRANS.entrp_ntwk_prof_assistance' | translate}}</div>
+						</div>
+					</div>
+				</div>
+			</div>-->
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 col-12">
+			<p><br> {{'LANG_EN_TRANS.entrp_intro_entrpial_asmt' | translate}}
+		</div>
+	</div>
+</div>
+
+
+<!-- Destop End design -->
+
+<!-- Mobile design -->
+<button id="openModalButton" [hidden]="true" data-toggle="modal" data-target="#eq-result-print">Open Modal</button>
+
+<div class="modal  " id="eq-result-print" role="dialog">
+	<div class="modal-dialog  popup-dialogbox-plp2">
+
+		<div class="modal-content ">
+			<div class="modal-header">
+				<h5 id="eq-print-heading"> {{'LANG_EN_TRANS.eq_title' | translate}} {{'LANG_EN_TRANS.print_preview' | translate}} </h5>
+				<button type="button" class="close" data-dismiss="modal" style="color:#9d9d9d" (click)="displayPopup=false;">×</button>
+			</div>
+			<div class="modal-body">
+				<div class="clearfix"> </div>
+				<div class="row block-box-circle-pt">
+					<div class="col-md-4   centered">
+						<div align="center">
+							<div class=" circleGraphicpopup   col-centered canvas-align" id="circleGraphicpopup-print" style="display:none;"></div>
+							<h3 class="plp2-white" id="canvas-img">{{'LANG_EN_TRANS.entrp_your_score' | translate}}</h3>
+							<div class="circleGraphic2  col-12 col-sm-12 col-md-12 col-centered canvas-align">
+
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-8  ">
+						<div class="block-box-h" id="eq-canvas-data">
+							<div class="result-para" [ngClass]="((resultEntiQuizvar>=80)&&(resultEntiQuizvar<=100))?'entrp-result ':''">
+								<div class="pull-left">80-100 ..... </div>
+								<div class="eq-result-text">{{'LANG_EN_TRANS.entrp_score_80to100' | translate}}</div>
+							</div>
+							<div class="result-para" [ngClass]="((resultEntiQuizvar>=60)&&(resultEntiQuizvar<=79))?'entrp-result ':''">
+								<div class="pull-left">60-79 ..... </div>
+								<div class="eq-result-text">{{'LANG_EN_TRANS.entrp_score_60to79' | translate}}</div>
+							</div>
+							<div class="result-para" [ngClass]="((resultEntiQuizvar>=40)&&(resultEntiQuizvar<=59))?'entrp-result ':''">
+								<div class="pull-left"> 40-59 .....</div>
+								<div class="eq-result-text"> {{'LANG_EN_TRANS.entrp_score_40to59' | translate}}</div>
+							</div>
+							<div class="result-para" [ngClass]="((resultEntiQuizvar>=0)&&(resultEntiQuizvar<=39))?'entrp-result':''">
+								<div class="pull-left">0-39 .....</div>
+								<div class="eq-result-text"> {{'LANG_EN_TRANS.entrp_score_0to39' | translate}} </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-12">
+						<p><br> Read over the descriptions below to get a better idea about the common characteristics of entrepreneurs.
+
+					</div>
+				</div>
+
+
+				<div class="col-md-12" id="eq-canvas-matter">
+					<div class="div-icon"><img alt="work-hard" src="/assets/images/works-hard.png">&nbsp;&nbsp;
+						<h4>{{'LANG_EN_TRANS.entrp_workhard' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_indepnt_ctrl' | translate}}</div>
+					</div>
+
+					<div class="div-icon"><img alt="Family-support" src="/assets/images/has-family-support.png">&nbsp;&nbsp;
+						<h4>{{'LANG_EN_TRANS.entrp_fmly_sprt' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_fmly_sprt_sucs' | translate}}</div>
+					</div>
+
+
+					<div class="div-icon"><img alt="Tasks-risks" src="/assets/images/takes-risks.png">&nbsp;&nbsp;
+						<h4>{{'LANG_EN_TRANS.entrp_takes_risks' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_risks_takers' | translate}}</div>
+					</div>
+
+
+					<div class="div-icon"><img alt="Sacrifices-employment" src="/assets/images/sacrifices-employment.png">&nbsp;&nbsp;
+						<h4>{{'LANG_EN_TRANS.entrp_takes_risks' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_major_self_empt' | translate}}</div>
+					</div>
+
+
+					<div class="div-icon"><img alt="Is independent" src="/assets/images/independent.png">&nbsp;&nbsp;
+						<h4>{{'LANG_EN_TRANS.entrp_is_indepnt' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_indepnt_ctrl' | translate}}</div>
+					</div>
+
+
+					<div class="div-icon"><img alt="Locus-control" src="/assets/images/has-an-internal-locus-of-control.png">&nbsp;&nbsp;
+						<h4>{{'LANG_EN_TRANS.entrp_locus_ctrl' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_internal_locus_ctrl' | translate}}</div>
+					</div>
+
+
+					<div class="div-icon"><img alt="Need-achievement" src="/assets/images/has-a-need-to-achieve.png">&nbsp;&nbsp;
+						<h4> {{'LANG_EN_TRANS.entrp_need_achiv' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_strong_need_achivmt' | translate}}</div>
+					</div>
+
+
+					<div class="div-icon"><img alt="Business-experience" src="/assets/images/has-business-experience.png">&nbsp;&nbsp;
+						<h4>{{'LANG_EN_TRANS.entrp_business_expr' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_extensive_business_expr' | translate}}</div>
+					</div>
+
+
+					<div class="div-icon"><img alt="Role-Model" src="/assets/images/has-a-self-employed-parent-as-a-role-model.png">&nbsp;&nbsp;
+						<h4>{{'LANG_EN_TRANS.entrp_role_model' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_research' | translate}}</div>
+					</div>
+
+
+					<div class="div-icon"><img alt="Self-confidence" src="/assets/images/has-self-confidence.png">&nbsp;&nbsp;
+						<h4>{{'LANG_EN_TRANS.entrp_self_confd' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_impt_chrt' | translate}}</div>
+					</div>
+
+
+					<div class="div-icon"><img alt="Has-integrity" src="/assets/images/has-integrity.png">&nbsp;&nbsp;
+						<h4>{{'LANG_EN_TRANS.entrp_integrity' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_honesty_integrity' | translate}}</div>
+					</div>
+
+
+					<div class="div-icon"><img alt="Has-determination" src="/assets/images/has-determination.png">&nbsp;&nbsp;
+						<h4>{{'LANG_EN_TRANS.entrp_determn' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_impt_chrt_determn' | translate}}</div>
+					</div>
+
+
+					<div class="div-icon"><img alt="Adapts-to-change" src="/assets/images/adapts-to-change.png">&nbsp;&nbsp;
+						<h4> {{'LANG_EN_TRANS.entrp_adapts_change' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_two_primary_skills' | translate}}</div>
+					</div>
+
+
+					<div class="div-icon"><img alt="has-good-network" src="/assets/images/has-a-good-network.png">&nbsp;&nbsp;
+						<h4>{{'LANG_EN_TRANS.entrp_ntwk_prof' | translate}}</h4>
+						<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_ntwk_prof_assistance' | translate}}</div>
+					</div>
+					<div class="div-icon"><img alt="Is-Energetic" src="/assets/images/Is-Energetic.png">&nbsp;&nbsp;
+						<h4>Is-Energetic</h4>
+						<!--<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_ntwk_prof_assistance' | translate}}</div>-->
+					</div>
+					<div class="div-icon"><img alt="Wants-Financial-Success" src="/assets/images/Wants-Financial-Success.png">&nbsp;&nbsp;
+						<h4>Wants-Financial-Success</h4>
+						<!--<div class="eq-data-print-popup">{{'LANG_EN_TRANS.entrp_ntwk_prof_assistance' | translate}}</div>-->
+					</div>
+					<div class="col-md-12">
+						<p id="eq-print-para">{{'LANG_EN_TRANS.entrp_intro_entrpial_asmt' | translate}}</p>
+					</div>
+					<button class="btn-plp-2 btn-raised print-btn-popup blue-btn-plp2" (click)="printResultPage('eq-result-print')">{{'done' | translate}}</button>
+				</div>
+
+			</div>
+
+
+
+		</div>
+	</div>
+</div>
+<!--End of mobile design -->

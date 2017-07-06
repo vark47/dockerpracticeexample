@@ -1,0 +1,71 @@
+  <p>{{relatedCareers.RelatedCareersIntro}}</p>
+<div   class="row gutter-10">
+   <div class="col-lg-4 col-md-4 col-12">
+            <div class="card-plp3 careere-video-card">
+              <div class="card-header-plp3">
+                <h5>&nbsp; {{relatedCareers.CareersHeader}}
+                  <i class="icon-careers icon-align-plp3-right" aria-hidden="true"></i> 
+                  </h5>
+              </div>
+             
+              <div class="card-block card-block2-p-plp3-v scroll-class">
+                <div class="inner" >
+                   <div *ngFor="let item of relatedCareers.Careerslinks">
+                    <ul class = "plp3-list related-career " *ngIf = "item.linkTitle">
+                       <li>
+                          <i class="fa fa-chevron-right arrow-align-plp3 text-align-plp3" aria-hidden="true"></i>
+                       <div class="list-text-alignment-plp3 pointer">
+ 
+              <a href="#" (click)="$event.preventDefault();CallOccDetailCareer(item.linkID,item.linkTitle,relatedCareers.clusIcon,relatedCareers.clusColor)">{{item.linkTitle}}</a>
+</div></li>
+                      </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="card-plp3" [ngStyle]="{'background':relatedCareers.clusColor}">
+              <div class="card-header-plp3" >
+                <h5> &nbsp;{{relatedCareers.ClustersHeader}}
+                  <i class="{{relatedCareers.clusIcon}} icon-align-plp3-right" aria-hidden="true"></i>
+                  </h5>
+              </div>
+              <div class="card-block card-block2-p-plp3-v scroll-class">
+                <div class="inner">
+                <div *ngFor="let item of relatedCareers.Clusterslinks">
+                    <ul class = "plp3-list related-career " *ngIf = "item.linkTitle">
+                     <li><i class="fa fa-chevron-right arrow-align-plp3 text-align-plp3" aria-hidden="true"></i>
+                         <div class="list-text-alignment-plp3 pointer" >
+                 <a href="#" (click)="$event.preventDefault();CallOccDetailCluster(item.linkID,item.linkTitle)">  {{item.linkTitle}}
+                 </a>
+
+                </div>
+              </li>
+            </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="card-plp3 Occupation-physical-demand">
+              <div class="card-header-plp3 " >
+                <h5>&nbsp;{{relatedCareers.MilitaryHeader}}
+                  <i class="icon-military-careers icon-align-plp3-right" aria-hidden="true"></i></h5>
+              </div>
+              <div class="card-block card-block2-p-plp3-v scroll-class">
+                <div class="inner " >
+                  <div *ngFor="let item of relatedCareers.Militarylinks">
+                    <ul class = "plp3-list related-career" *ngIf = "item.linkTitle">
+                      <li ><i class="fa fa-chevron-right arrow-align-plp3 text-align-plp3" aria-hidden="true"></i>
+                       <div class="list-text-alignment-plp3">{{item.linkTitle}}</div> </li>
+                      </ul>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+             </div>
+     

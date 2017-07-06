@@ -1,0 +1,100 @@
+<!--<PLP-nav-header [header]="sectionObject" (changeView)="changeView($event)" [report-status]="report"></PLP-nav-header>-->
+
+<div class="form-group">
+
+  <div class="col-spacer">
+
+    <div class="desktop-table">
+
+
+
+      <div class="col-12 col-sm-12 col-md-12  rtable-plp1">
+        <div class="expTableHeading row">
+          <div class="col-4 col-sm-4 col-md-4 rTableHead">
+            Assessment</div>
+          <div class="col-4 col-sm-4 col-md-4 rTableHead">
+            Date Saved</div>
+          <div class="col-4 col-sm-4 col-md-4 rTableHead">
+            What I Learned</div>
+        </div>
+
+        <div class="">
+          <div class="row" *ngIf="careerAssessmentsData && careerAssessmentsData.length == 0">
+            <div class="col-12 col-sm-12 col-md-12 rTableCell" align="center" style="font-weight: normal;">
+              {{tableNoData}}
+            </div>
+          </div>
+          <div class="rTableRow row" *ngFor='let item of careerAssessmentsData'>
+            <div class="col-4 col-sm-4 col-md-4 rTableCell">
+              {{item.SortName}}
+            </div>
+            <div class="col-4 col-sm-4 col-md-4 rTableCell">
+              {{item.UpdatedTimeStamp | customDate}}
+            </div>
+            <div class="col-4 col-sm-4 col-md-4 rTableCell">
+              <span *ngIf="item.UserNotes!='undefined'">{{item.UserNotes}}</span>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div style="width: 100%;">
+      <!-- mobile table ---->   
+
+      <div style="width: 100%;" class="mobile-table">
+
+        <div class="col-12 col-sm-12 col-md-12">
+
+          <div class="row rtable-plp1" *ngIf="careerAssessmentsData && careerAssessmentsData.length == 0" align="center">
+            <div class="col-12 col-sm-12 col-md-12 rTableCell" align="center" style="font-size:18px;">{{tableNoData}}</div>
+          </div>
+          <div class="row mTableRow " *ngFor='let item of careerAssessmentsData, let odd=odd, let evn=even'>
+            <div class="mTableCell">
+              <div class="inner-row-m">
+
+                <div class="col-6 col-sm-6 col-md-6 ">
+                  <b>Assessment</b></div>
+
+                <div class="col-6 col-sm-6 col-md-6 p-0">
+                  {{item.SortName}}</div>
+              </div>
+              <div class=" inner-row-m">
+                <div class="col-6 col-sm-6 col-md-6 ">
+                  <b> Date Saved </b></div>
+
+                <div class="col-6 col-sm-6 col-md-6 p-0">
+                  {{item.UpdatedTimeStamp | customDate}}</div>
+
+              </div>
+              <div class=" inner-row-m">
+                <div class="col-6 col-sm-6 col-md-6 ">
+                  <b> What I Learned </b></div>
+
+                <div class="col-6 col-sm-6 col-md-6 p-0">
+                  {{item.UserNotes}}</div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+      <!-- End mobile table ---->
+
+
+      <div class="clearfix"> </div>
+
+    </div>
+  </div>
+
+</div>

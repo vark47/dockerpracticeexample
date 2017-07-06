@@ -1,0 +1,42 @@
+FROM node:6.10.0
+
+ARG NG_ENV
+# ENV DEMO_VAR $NG_ENV
+# COPY dk.sh /
+# RUN chmod +x /dk.sh
+# ENTRYPOINT ["/dk.sh"]
+
+RUN npm install -g @angular/cli@1.1.2 
+    # apt-get update 
+    #\ && apt-get install nano
+    #&& ng set --global packageManager=yarn
+        
+    
+    
+# RUN apk update \
+#   && apk add --update alpine-sdk \
+#   && npm install -g @angular/cli@1.1.2 
+#   && ng set --global packageManager=yarn \
+#   && apk del alpine-sdk \
+#   && rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm \
+#   && npm cache clear \
+#   && sed -i -e "s/bin\/ash/bin\/sh/" /etc/passwd
+
+ VOLUME /var/www/cis
+
+ ENV HOME=/var/www/cis
+ #ENV NODE_ENV=production
+
+# #RUN npm i -g pm2
+WORKDIR $HOME
+ADD . $HOME
+
+# COPY package.json  $HOME
+# COPY ./src ./src
+RUN npm i --production
+#RUN npm install
+
+
+
+RUN ng build --env=$NG_ENV
+CMD ["node", "index.js"]

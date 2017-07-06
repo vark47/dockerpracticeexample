@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+    cis-mobile:
+        image: intocareers/cis-mobile
+        container_name: cis-mobile
+        
+        build: .  
+        ports:
+            - "${DOCKER_PORT}:3000"
+        volumes:
+            - ./logs:/home/nodejs/logs
+        volumes:
+            - ./dist:/opt/dist
+        restart: always
+    ng:
+        env_file:
+            - .env        
+        container_name: angular-cli
+        volumes:
+            - ./:./
+        build:
+            context: .
+            args:
+                - NG_ENV=${NG_ENV}

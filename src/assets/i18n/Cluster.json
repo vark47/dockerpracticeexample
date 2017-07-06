@@ -1,0 +1,953 @@
+[{
+  "Version": "1.0.0",
+  "StatusCode": 200,
+  "Success": true,
+  "Authorized": true,
+  "Result": [
+    {
+      "sectionName": "CCIScore",
+      "sectionResults": {
+        "taken": "真正",
+        "text": "您的职业生涯群组清单得分表明您对此职业群体感兴趣。"
+      }
+    },
+    {
+      "sectionName": "EmploymentOutlook",
+      "sectionResults": [
+        {
+          "type": "p",
+          "text": "农业生产前景有限。为农产品支付的价格继续保持低位。更少的农民和牧场主产生更多。结果是越来越大的农场。"
+        },
+        {
+          "type": "p",
+          "text": "你会在农业服务中找到更多的工作。因为需要更换每年离开的工人，都会出现工作机会。动物照顾者，农场和牧场工人的营业额很高。营业额是工作季节性和兼职性的结果。其他因素是低工资和高实质需求。"
+        },
+        {
+          "type": "p",
+          "text": "宠物主人预计将利用梳妆服务和登机服务。由于宠物主人数量的增加，预期需求将会增加。"
+        },
+        {
+          "type": "p",
+          "text": "农场相关农业服务的就业增长 - 作物服务，土壤准备服务，农业劳动和管理服务以及牲畜服务 - 与农业生产的健康有关。当农民和牧场主面临困难时期，对农业服务的需求也在下降。"
+        }
+      ]
+    },
+    {
+      "sectionName": "HelpfulHSCourses",
+      "sectionResults": [
+        {
+          "type": "p",
+          "text": "高中是你开始准备工作的时候了。您可以参加课程，帮助您满足农业，食品和自然资源部门职业的教育和培训要求。"
+        },
+        {
+          "type": "p",
+          "text": "有些职业要求你在高中毕业后进行培训，其他职业则不要。无论高中毕业后的培训水平如何，一定要满足现在的国家毕业要求。"
+        },
+        {
+          "type": "p",
+          "text": "您将被要求参加数学，英语和其他课程毕业。您还将选择您选择的课程，这些课程是根据您的兴趣选择的。以下是可以帮助您准备在此群集中工作的选修课列表。考虑在高中期间参加这些课程。"
+        },
+        {
+          "type": "ul",
+          "text": [
+            "农业经营",
+            "农业生产",
+            "农业技术",
+            "农艺学",
+            "动物科学",
+            "计算机应用",
+            "林业",
+            "园艺",
+            "自然资源管理",
+            "植物与土壤学 "
+          ]
+        },
+        {
+          "type": "p",
+          "text": "[您可以通过点击[这里](https://cis.intocareers.org/portfolio/activities/A Agriculture.pdf) 查看与此职业群体相关的推荐课程顺序，包括选修课程."
+        }
+      ]
+    },
+    {
+      "sectionName": "Image",
+      "sectionResults": "https://images.intocareers.org/occ/110100.png"
+    },
+    {
+      "sectionName": "Overview",
+      "sectionResults": [
+        {
+          "type": "ul",
+          "text": [
+            "你喜欢和动物玩吗？",
+            "你有一个绿色的拇指吗？",
+            "你收集岩石吗？",
+            "你有兴趣保护环境吗？",
+            "你喜欢在户外工作吗？",
+            "科学课是你最喜欢的吗？"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "如果您对上述两个或多个问题回答“是”，您可能有兴趣考虑在农业，食品和自然资源方面的事业。"
+        },
+        {
+          "type": "p",
+          "text": "如果您选择在农业，食品和自然资源部门工作，您可以将植物和动物作为食物和住所来源。另一方面，您可以专注于销售和制作植物和动物产品。这些产品包括食品，木材和织物。您还可以提供农民和牧场主需要改进产品的建议和服务。这个集群的另一个选择是努力保护自然资源和保护环境。"
+        },
+        {
+          "type": "p",
+          "text": "下一个主题列出的途径为您提供有关农业，食品和自然资源工作和学习机会的更多信息。"
+        }
+      ]
+    },
+    {
+      "sectionName": "Pathways",
+      "sectionResults": [
+        {
+          "header": "农业企业系统",
+          "intro": "在农业企业系统途径中，您将专注于产品或服务。这包括食品，纤维，木制品，天然资源，园艺和其他植物和动物产品或服务。您可以使用卫星系统，计算机数据库和电子表格或生物技术来提高效率和盈利能力。",
+          "links": [
+            {
+              "linkType": "偶尔",
+              "linkID": 100077,
+              "linkTitle": "农民和农场经理"
+            }
+          ]
+        },
+        {
+          "header": "Animal Systems",
+          "intro": "在动物系统途径中，您将努力寻找更好的方法来生产和加工肉类，蛋类和乳制品。你可以研究动物的遗传学，营养学或发育。另一方面，您可以从农民和牧场主购买牲畜，或协助他们营销或销售动物。为了确保产品安全吃，您可以检查和分级肉类。为了帮助农民和牧场主，您可以建议他们如何饲养或饲养动物以增加生产。另一个选择是照顾动物。你可以训练，饲养和水，新郎，或锻炼动物。您也可以清洁，消毒和修理其笼子，摊位或谷仓。.",
+          "links": [
+            {
+              "linkType": "偶尔",
+              "linkID": 100237,
+              "linkTitle": "动物饲养者"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100240,
+              "linkTitle": "动物科学家"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100238,
+              "linkTitle": "动物看护人"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100313,
+              "linkTitle": "农场和牧场工人"
+            }
+          ]
+        },
+        {
+          "header": "Environmental Service Systems",
+          "intro": "在环境服务系统路径中，您将采取行动来保护环境。您可能会专注于污染控制，回收，废物处理或公共卫生问题。你的工作可能涉及到研究生态系统的威胁。那么你会弄清楚如何应对这些威胁，并防止未来的问题。您可以设计和操作废水系统。在此途径的其他职业中，您可以收集，回收和清除有害物质。",
+          "links": [
+            {
+              "linkType": "偶尔",
+              "linkID": 100544,
+              "linkTitle": "环境工程技术员"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100558,
+              "linkTitle": "回收再造工人"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100499,
+              "linkTitle": "环境工程师"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100215,
+              "linkTitle": "垃圾收集器"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100338,
+              "linkTitle": "危险材料工人"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100225,
+              "linkTitle": "水处理厂操作员"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100152,
+              "linkTitle": "害虫控制工作者"
+            }
+          ]
+        },
+        {
+          "header": "食品和加工系统",
+          "intro": "如果您要在食品和加工系统途径中学习和工作，您将有几个选择。你可能会发现新的食物来源。您还可以分析食物内容并创建新的食品。或者，您可以检查加工区域，以确保食物安全食用。",
+          "links": [
+            {
+              "linkType": "偶尔",
+              "linkID": 100009,
+              "linkTitle": "农产品平地机和分拣机"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100230,
+              "linkTitle": "农工主管"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100252,
+              "linkTitle": "面包师"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 140020,
+              "linkTitle": "工艺啤酒（新兴）"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100323,
+              "linkTitle": "食品加工工人"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100324,
+              "linkTitle": "食品科学家"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100374,
+              "linkTitle": "肉类切割机"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 140017,
+              "linkTitle": "酿酒师（新兴）"
+            }
+          ]
+        },
+        {
+          "header": "自然资源系统",
+          "intro": "在自然资源系统路径中，您可以执行各种任务。森林和牧场供应木制品，牲畜饲料，矿物质和水。他们也作为娱乐活动场所，为野生动物提供家园。您将管理，开发和帮助保护森林和牧场等资源.",
+          "links": [
+            {
+              "linkType": "偶尔",
+              "linkID": 100042,
+              "linkTitle": "商业渔民"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100365,
+              "linkTitle": "记录器"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100088,
+              "linkTitle": "森林人"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100136,
+              "linkTitle": "自然科学管理人员"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100327,
+              "linkTitle": "林业技术员"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100486,
+              "linkTitle": "动物学家"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100364,
+              "linkTitle": "对数平地机和定标器"
+            }
+          ]
+        },
+        {
+          "header": "植物系统",
+          "intro": "在植物系统途径的职业中，您将学习植被。您的目标是帮助作物生产者饲养不断增长的人口。同时，您也可以帮助他们保护自然资源，保护环境。您也可以开发提高作物食物价值和种子质量的方法。通过研究，您可以开发需要较少肥料，农药和除草剂或能耐干旱的植物。",
+          "links": [
+            {
+              "linkType": "偶尔",
+              "linkID": 100229,
+              "linkTitle": "农业科学家"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100390,
+              "linkTitle": "苗圃工人"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100313,
+              "linkTitle": "农场和牧场工人"
+            }
+          ]
+        },
+        {
+          "header": "电力，结构和技术系统",
+          "intro": "在电力，结构和技术系统途径中，您可以使用工程，力学，电子和电力来改善农业。您可以设计在农场和农场使用的建筑物和设备。你也可以开发出保护土壤和水的方法。或者您的目标可能是改善农产品的处理方式。您的另一个选择是维护和修理机器和结构。",
+          "links": [
+            {
+              "linkType": "偶尔",
+              "linkID": 100007,
+              "linkTitle": "农业工程师"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100076,
+              "linkTitle": "农机设备力学"
+            },
+            {
+              "linkType": "偶尔",
+              "linkID": 100313,
+              "linkTitle": "农场和牧场工人"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "相关职位",
+      "sectionResults": {
+        "intro": "下面列出的职业属于您正在探索的职业生涯。",
+        "lists": [
+          {
+            "header": "职业",
+            "links": [
+              {
+                "linkType": "偶尔",
+                "linkID": 100007,
+                "linkTitle": "农业工程师"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100009,
+                "linkTitle": "农产品平地机和分拣机"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100229,
+                "linkTitle": "农业科学家"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100230,
+                "linkTitle": "农工主管"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100237,
+                "linkTitle": "动物饲养者"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100238,
+                "linkTitle": "动物看护人"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100240,
+                "linkTitle": "动物科学家"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100252,
+                "linkTitle": "面包师"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100042,
+                "linkTitle": "商业渔民"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 140020,
+                "linkTitle": "工艺啤酒（新兴）"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100544,
+                "linkTitle": "环境工程技术员"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100499,
+                "linkTitle": "环境工程师"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100313,
+                "linkTitle": "农场和牧场工人"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100076,
+                "linkTitle": "农机设备力学"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100077,
+                "linkTitle": "农民和农场经理"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100323,
+                "linkTitle": "食品加工工人"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100324,
+                "linkTitle": "食品科学家"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100088,
+                "linkTitle": "森林人"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100327,
+                "linkTitle": "林业技术员"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100338,
+                "linkTitle": "危险材料工人"
+              },
+              {
+                "linkType": "偶尔",
+                
+                "linkID": 100364,
+                "linkTitle": "对数平地机和定标器"
+              },
+              {
+                "linkType": "偶尔",
+                
+                "linkID": 100365,
+                "linkTitle": "记录器"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100374,
+                "linkTitle": "肉类切割机"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100136,
+                "linkTitle": "自然科学管理人员"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100390,
+                "linkTitle": "苗圃工人"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100152,
+                "linkTitle": "害虫控制工作者"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100558,
+                "linkTitle": "回收再造工人"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100215,
+                "linkTitle": "垃圾收集器"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100225,
+                "linkTitle": "水处理厂操作员"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 140017,
+                "linkTitle": "酿酒师（新兴）"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100486,
+                "linkTitle": "动物学家"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sectionName": "相关程序",
+      "sectionResults": {
+        "intro": "这些学习课程将帮助您准备您正在探索的职业生涯。",
+        "lists": [
+          {
+            "header": "学习计划",
+            "links": [
+              {
+                "linkType": "程序",
+                "linkID": 110200,
+                "linkTitle": "农业和推广教育服务"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110101,
+                "linkTitle": "农业经营管理"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110103,
+                "linkTitle": "农业经济学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 230200,
+                "linkTitle": "农业工程"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110303,
+                "linkTitle": "农业生产经营"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110304,
+                "linkTitle": "农业技术"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110500,
+                "linkTitle": "农业，一般"
+              },
+              {
+                "linkType": "Prog",
+                "linkID": 110423,
+                "linkTitle": "农业生态与可持续农业"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110404,
+                "linkTitle": "农学与作物科学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110405,
+                "linkTitle": "动物修饰"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110413,
+                "linkTitle": "畜牧与生产"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 140202,
+                "linkTitle": "动物生理学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110406,
+                "linkTitle": "动物科学，一般"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110421,
+                "linkTitle": "动物训练"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110407,
+                "linkTitle": "水产养殖"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 350200,
+                "linkTitle": "汽车技术"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 140400,
+                "linkTitle": "生物科学，一般"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 141101,
+                "linkTitle": "植物学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 140701,
+                "linkTitle": "保育生物学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110410,
+                "linkTitle": "乳业科学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 140702,
+                "linkTitle": "生态"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 140203,
+                "linkTitle": "昆虫学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 140703,
+                "linkTitle": "环境生物学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 231400,
+                "linkTitle": "环境工程"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 370401,
+                "linkTitle": "环境科学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 370402,
+                "linkTitle": "环境研究"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110411,
+                "linkTitle": "进化生物学研究"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 140704,
+                "linkTitle": "进化生物学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110104,
+                "linkTitle": "农场和牧场管理"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 370200,
+                "linkTitle": "渔业科学与管理"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110600,
+                "linkTitle": "食物科学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 280102,
+                "linkTitle": "食品服务"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 370303,
+                "linkTitle": "森林技术"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 370304,
+                "linkTitle": "林业"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 400403,
+                "linkTitle": "地质与地球科学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 231500,
+                "linkTitle": "地质与地球物理工程"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 280407,
+                "linkTitle": "高尔夫球场操作和场地管理"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110802,
+                "linkTitle": "园艺科学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110803,
+                "linkTitle": "园艺作业"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 400405,
+                "linkTitle": "水文与水利科学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110900,
+                "linkTitle": "园林绿化和地面保养"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 140900,
+                "linkTitle": "海洋生物学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 370405,
+                "linkTitle": "自然资源保护"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 370406,
+                "linkTitle": "自然资源政策与管理"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110804,
+                "linkTitle": "观赏园艺"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110415,
+                "linkTitle": "虫害管理"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110416,
+                "linkTitle": "植物病理学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 141103,
+                "linkTitle": "植物生理学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110418,
+                "linkTitle": "植物科学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110417,
+                "linkTitle": "家禽科学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 361401,
+                "linkTitle": "兽医学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 370407,
+                "linkTitle": "范围科学与管理"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110422,
+                "linkTitle": "土壤科学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 111000,
+                "linkTitle": "分类标本"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 111100,
+                "linkTitle": "草皮和草坪草管理"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 361402,
+                "linkTitle": "老兵专用医药"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 361404,
+                "linkTitle": "兽医科学"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 270316,
+                "linkTitle": "兽医技术"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 110424,
+                "linkTitle": "葡萄栽培和野味"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 243800,
+                "linkTitle": "水和污水处理技术"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 370408,
+                "linkTitle": "水，湿地和海洋资源管理"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 370409,
+                "linkTitle": "野生动物科学与管理"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 370500,
+                "linkTitle": "木科学与造纸技术"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 140205,
+                "linkTitle": "动物和动物生物学"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sectionName": "ShortDescription",
+      "sectionResults": "在农业，食品和自然资源集群中，您将从植物和动物生产，销售或制造产品，或者为保护自然资源和保护环境而努力。."
+    },
+    {
+      "sectionName": "Skills",
+      "sectionResults": {
+        "intro": "您将需要以下技能和能力才能在农业，食品和自然资源职业生涯中成功学习和工作",
+        "lists": [
+          {
+            "header": "通信",
+            "items": [
+              "阅读并了解工作相关资料。",
+              "听别人问问题",
+              "说话或写作时要清楚地表达想法.",
+              "写和说话，其他人可以了解信息"
+            ]
+          },
+          {
+            "header": "理由解决问题",
+            "items": [
+              "注意事项错误或可能出错.",
+              "使用推理来发现问题的答案。.",
+              "分析想法和使用逻辑来确定他们的优缺点。.",
+              "认识到一个问题的本质.",
+              "查找并识别重要信息，并将信息片段放在一起.",
+              "重新排列信息以找到一种新的问题和任务的方法。",
+              "为问题开发一些可能的解决方案.",
+              "评估想法的有用性.",
+              "检查问题的解决方案并评估其有效性。",
+              "判断可能采取的行动的成本和收益"
+            ]
+          },
+          {
+            "header": "管理自己，人，时间和事物",
+            "items": [
+              "管理自我和他人的时间.",
+              "决定如何花钱来完成工作，并跟踪资金的使用情况"
+            ]
+          },
+          {
+            "header": "与人合作",
+            "items": [
+              "注意别人的反应，了解可能的原因",
+              "说服别人以不同的方式处理事情."
+            ]
+          },
+          {
+            "header": "与事物合作",
+            "items": [
+              "分析设计产品时的需求和要求。",
+              "设计设计和技术满足用户需求",
+              "检查和评估产品的质量。",
+              "确定做工作所需的工具和设备.",
+              "测试设备，软件或程序，以确保其正常运行。",
+              "操作和控制设备。",
+              "常规维护设备。",
+              "确定技术问题的原因，为他们寻找解决方案。",
+              "修理机器和系统."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sectionName": "TopOpportunities",
+      "sectionResults": [
+        {
+          "linkType": "Occ",
+          "linkID": 100238,
+          "linkTitle": "动物看护人"
+        },
+        {
+          "linkType": "Occ",
+          "linkID": 100252,
+          "linkTitle": "面包师"
+        },
+        {
+          "linkType": "Occ",
+          "linkID": 100313,
+          "linkTitle": "农场和牧场工人"
+        },
+        {
+          "linkType": "Occ",
+          "linkID": 100077,
+          "linkTitle": "农民和农场经理"
+        },
+        {
+          "linkType": "Occ",
+          "linkID": 100390,
+          "linkTitle": "苗圃工人"
+        }
+      ]
+    },
+    {
+      "sectionName": "TopSalaries",
+      "sectionResults": [
+        {
+          "linkType": "Occ",
+          "linkID": 100007,
+          "linkTitle": "农业工程师"
+        },
+        {
+          "linkType": "Occ",
+          "linkID": 100499,
+          "linkTitle": "环境工程师"
+        },
+        {
+          "linkType": "Occ",
+          "linkID": 100077,
+          "linkTitle": "农民和农场经理"
+        },
+        {
+          "linkType": "Occ",
+          "linkID": 100324,
+          "linkTitle": "食品科学家"
+        },
+        {
+          "linkType": "Occ",
+          "linkID": 100136,
+          "linkTitle": "自然科学管理人员"
+        }
+      ]
+    },
+    {
+      "sectionName": "UserRating",
+      "sectionResults": 1
+    },
+    {
+      "sectionName": "Video",
+      "sectionResults": [
+        "https://videos.intocareers.org/english/00-000001.mp4"
+      ]
+    }
+  ]
+}]

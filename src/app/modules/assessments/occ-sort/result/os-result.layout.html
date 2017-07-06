@@ -1,0 +1,35 @@
+
+<div *ngIf="(listlength!=0)">
+	<!--Hear we get the list of occupations. -->
+	<occupation-list></occupation-list>
+</div>
+<!--This is to show the image when the list is not present. -->
+<img *ngIf="(listlength==0)" align="center" class="osdata-notfound" src="/assets/images/nodata-found.png" />
+
+<!-- mobile design -->
+<button id="openModalButton" [hidden]="true" data-toggle="modal" data-target="#os-result-print">Open Modal</button>
+
+<div class="modal " id="os-result-print" role="dialog"  >
+	<div class="modal-dialog  popup-dialogbox-plp2">
+		<div class="modal-content os-print-result">
+			<div class="modal-header">				
+				<h6 style="font-weight:bold;">{{'LANG_EN_TRANS.os_title' | translate}} {{'LANG_EN_TRANS.print_preview' | translate}}</h6>
+				<i  class="" data-dismiss="modal" aria-label="Close" style="color:#9d9d9d" [ngStyle]="{'cursor':'pointer'}">&times;</i>
+			</div>
+			 <div class="modal-body">
+				<p style="padding: 10px 4px 4px 0;">
+					{{'LANG_EN_TRANS.occ_match_list' | translate}}</p>
+				 
+				<ul id="occSortList" class="row os-print-list-color">
+					<li class="col-6 col-sm-6 col-md-6"	 *ngFor="let element of occsort;let inx =index;" >
+						<span>&nbsp;&nbsp;{{inx+1}}&nbsp;&nbsp;{{element.OccName}}</span>&nbsp;
+					</li>
+				</ul>
+			<br>
+				<button class="btn-plp-2 btn-raised print-btn-popup blue-btn-plp2" (click)="printResultPage('os-result-print')">{{'LANG_EN_TRANS.done' | translate}}</button>
+			<br>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End mobile design -->

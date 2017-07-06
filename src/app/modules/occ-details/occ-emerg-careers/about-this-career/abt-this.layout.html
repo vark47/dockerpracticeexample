@@ -1,0 +1,43 @@
+ <div class="row p-b gutter-10" >
+   <div class="col-lg-6 col-md-6 col-12">
+        <div class="card-plp3 overview_update-plp3">
+              <div class="card-header-plp3 card-header-plp3-atc" >
+               <h5> <i class="icon-overview icon-align-plp3" aria-hidden="true"></i>
+       &nbsp;&nbsp;{{aboutJsonValue.OverviewSection}}</h5>             
+              </div>
+             <div class="card-block card-box-height scroll-class">
+                <div class="inner" >
+                  <div *ngFor = "let item of aboutJsonValue.Overview">
+                    <p class="para-padding-plp3" *ngIf = "item.type == 'p'">{{item.text}}</p>
+                     <ul  *ngIf = "item.type == 'ul'"  class = "plp3-list " >
+                       <li  *ngFor = "let val of item.text" >
+                        <i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+                         <div class="list-text-alignment-plp3">{{val}}</div>                        
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+       </div>
+   <div class="col-lg-6 col-md-6 col-12">
+            <div class="card-plp3  ec-card-color-pink">
+              <div class="card-header-plp3 card-header-plp3-atc">
+                <h5><i class="icon-job-list icon-align-plp3" aria-hidden="true"></i>&nbsp;&nbsp;
+                  {{aboutJsonValue.ThingsToKnowSection }} </h5>
+                 </div>
+              <div class="card-block card-box-height scroll-class ">
+                <div class="inner" >
+                  <div *ngFor = "let item of aboutJsonValue.ThingsToKnow">
+                   <ul class = "plp3-list " *ngIf = "item.type == 'ul'">
+                       <li  *ngFor = "let val of item.text" >                                          
+                      <i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+                     <div class="list-text-alignment-plp3"> {{val}} </div>              
+                      </li>
+                       </ul>
+                     </div>
+                </div>
+            </div>
+          </div>
+      </div>
+

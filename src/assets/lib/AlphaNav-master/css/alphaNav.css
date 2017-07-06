@@ -1,0 +1,239 @@
+/*
+ *  AlphaNav - A Simple Content list with an alphabetical navigation Bar
+ *  Copyright 2013 triq6, https://github.com/triq6
+ *  Forked from ListNav plugin: Copyright 2010 Monjurul Dolon, http://mdolon.com/
+ *  Released under the MIT, BSD, and GPL Licenses.
+ *  More information: https://github.com/triq6/
+ */
+
+
+/*    
+.cmpr-car-alphscroll{
+  width:100%!important;
+  margin:0 0 0 15px;
+}
+.cmpr-car-alphscroll-card{
+  width:100%!important;     
+}*/
+
+ html,body{
+   overflow: hidden; 
+ }
+dl, menu, ol, ul {
+  margin: 0;
+  padding: 0; }
+
+/* Remove the touch highlights that webkit adds */
+.alphanav-component {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  outline: 0;
+  background: none;
+  color: #FFF; }
+
+#alphanav-wrapper {
+  display: block;
+  overflow: hidden;
+  height: 100%; }
+
+.alphanav-list {
+ width: 94%;
+  overflow-y: scroll;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 14px; 
+  float: left;
+  overflow-x: hidden;  
+  height:470px;
+   }
+
+ 
+
+   .circle-bullet{
+   background-color: #898f9a;
+    border: 2px solid #898f9a;
+    border-radius: 50%;
+    float: left;
+    height: 10px;
+    margin: 20px 0 0 20px;
+    width: 10px;
+}
+
+
+#alphanav-slider {
+  position: relative; 
+    z-index: 0;
+    top: 0;
+    padding: 5px 0;
+    list-style: none;
+    min-height: 250px;
+    width: 6%!important;
+    -webkit-transition: width 250ms ease 0s;
+    -moz-transition: width 250ms ease 0s;
+    -o-transition: width 250ms ease 0s;
+    transition: width 250ms ease 0s;
+    font-size: 14px!important;
+   background-color:#046183;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    display: inline-block!important;     
+    /*height:auto!important;*/
+
+
+
+    
+ }
+
+ 
+  #alphanav-slider.left {
+    left: 0; } 
+  #alphanav-slider.right {
+
+    right: 0; }
+
+    #alphanav-slider li ul li {
+
+    }
+
+  #alphanav-slider li {
+    padding: 0 0px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: normal;
+    cursor: pointer;
+    -webkit-transition: font-size 150ms ease 0s;
+    -moz-transition: font-size 150ms ease 0s;
+    -o-transition: font-size 150ms ease 0s;
+    transition: font-size 150ms ease 0s; 
+    line-height: 18px!important;
+     }
+
+    #alphanav-slider li.alphanav-current {
+      
+      }
+    #alphanav-slider li:focus {
+      outline: none; }
+
+#alphanav-debug {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  z-index: 10;
+}
+.alphanav-arrow {
+  position: fixed;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
+  left: 0;
+  opacity: 0.5;
+  z-index: 5;
+  -webkit-transition: opacity 500ms ease 0s;
+  -moz-transition: opacity 500ms ease 0s;
+  -o-transition: opacity 500ms ease 0s;
+  transition: opacity 500ms ease 0s; }
+  .alphanav-arrow:hover {
+    opacity: 1; }
+
+#alphanav-btn-slide-up {
+  top: 0;
+  background: #FFF url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABB0lEQVRoge3WMU4CQRiG4VdDpLGA3ugNiJWewFhyBUlsDPEOhMbS0hvIDWzlAnRS0oFUxmhCQzZowfzNrobZsDOzxfckX8UuvH8HiIiIiIhIDfWAmdtt4pbS+sBPbvdJi0roAhnFAzL3Wa1dACuK8bYVcJmsbocz4J3/421L92yttIEpu+NtU/dOLTSBMf7xtrF7N6kDYET5eNuz+45khn9Eld0gdrS584jz2Qa4iZsO18B6j+j81sBVrPhz4LvCeNsX0AkdfwosAsTb5sBJqPgW8BYw3jYBjquOPwJeI8TbXoBGlQc8Roy3PVR5wGeCAz58wg49D3hi+3c4lsz9poiIiIiIhPMLCLIh6swbbmwAAAAASUVORK5CYII=) no-repeat center; }
+
+#alphanav-btn-slide-down {
+  bottom: 0;
+  background: #FFF url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABB0lEQVRoge3WPy5EURTA4c8Ukmn9WQDRWAAdO9CJKDU2wBZEP61Kop2wAx22QCbUKKZiKDCqJ2HE3Hneu685X3K6l5ffvcXJJYQQQgghhFCzQwwwzDQDHFR5gH7G+GL6KWGtxAMcJX5XpeMqfzaFE/luvyv9cpNN4zxD/AXaVccXZnBdY/wNZuuKLyzgvob4ByzWHV9YwVOF8c9YzRVf2MDbP8OHeMdm5vYvewmB42Y/e/UPHeXjOw30jmjhzOTxp2rY9WW1cSU9/lKNu76sefSMj+9hrqHGsZb9/fB7xFJjdYnW8Wo0/gVrDXZNZBsfvu/6rUaLStjFHW6x02xKCCGEEEII4RefyrsdfOGedvAAAAAASUVORK5CYII=) no-repeat center; }
+
+/* Currently configured for full-screen scrollers */
+#alphanav-target-overlay {
+  display: none;
+  position: absolute;
+ left: 50%!important;
+ margin-left: -45px;
+   
+  /* set 50% margins, then use translate to push back 50% (to absolute center) */
+ 
+  border-radius: 50%;
+  text-shadow: 0 0 1px #ffffff;
+  text-align: center;
+  font-size: 25px;
+  z-index: 10;
+  opacity: 0.75;
+  color: #dcdcdc;
+  background-color: #046183;
+  width:40px;
+  height: 40px;
+  padding-top:0px;
+  border: 1px solid #d6d6d6; 
+  }
+
+/* default styling for .alphanav-list */
+.alphanav-list ul {
+  list-style: none;
+  padding-left: 0; }
+.alphanav-list li {
+  width: 100%; }
+.alphanav-list  li ul  li  {
+ background: white; }
+
+ 
+ .alphanav-border {
+   border: 1px solid #ebebeb;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-right: 15px;
+    margin-bottom: 35px;
+ }
+
+.alphanav-list   li ul  li:nth-child(even) {
+ background: #eaf9fc; }
+
+ .list-section-content li a span {
+padding-right: 35px; 
+color:#898f9a 
+ }
+
+  .alphanav-list li a {
+    padding: 15px 0 13px 51px;
+    display: block;
+    border-bottom: 1px solid #d6d6d6;
+     }
+
+    .alphanav-list li a:hover {
+       border-color: #d6d6d6; 
+       }
+
+.alphanav-list .title {
+  display: block;
+  padding: 5px 0;
+  text-align: center;
+  background: #aaaaaa;
+  color: #333333;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase; }
+.alphanav-list .title:hover,
+.alphanav-list li.alphanav-current .title {
+  background: #333333;
+  color: #aaaaaa; }
+
+.sticky-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0; }
+
+ .letter, .reminder{
+   position:unset!important;
+   font-size:18px!important;
+   height:9px!important;
+ }
+
+
+
+/*******vertical scroll end********/

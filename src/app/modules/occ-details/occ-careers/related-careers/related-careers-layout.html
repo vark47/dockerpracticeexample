@@ -1,0 +1,75 @@
+<p>{{introRelated}}</p>
+<div class="row gutter-10">
+  <div class="col-lg-4 col-md-4 col-12">
+    <div class="card-plp3 Ideas-card1">
+      <div class="card-header-plp3">
+        <h5>&nbsp;Careers
+          <i class="icon-careers icon-align-plp3-right" [ngStyle]="{'font-size':'30px'}" aria-hidden="true"></i></h5>
+      </div>
+      <div class="card-block card-block2-p-plp3-v scroll-class">
+        <div class="inner">
+          <ul class="plp3-list related-career ">
+            <li *ngFor="let val of relCareerDesc1;">
+<i class="fa fa-chevron-right arrow-align-plp3 text-align-plp3" aria-hidden="true"></i>
+             <a href="#" class="list-text-alignment-plp3 pointer" 
+(click)="$event.preventDefault();CallOccDetailCareer(val.linkID,val.linkTitle)">{{val.linkTitle}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-12">
+    <div class="card-plp3" [ngStyle]="{'background':ClusterColor}">
+      <div class="card-header-plp3">
+        <h5>&nbsp;Career Cluster
+          <i class="{{ClusterIcon}} icon-align-plp3-right" [ngStyle]="{'font-size':'30px'}" aria-hidden="true"></i></h5>
+      </div>
+      <div class="card-block card-block2-p-plp3-v scroll-class">
+        <div class="inner">
+          <ul class="plp3-list related-career ">
+            <li *ngFor="let value of relCareerDesc2;">
+<i class="fa fa-chevron-right arrow-align-plp3 text-align-plp3" aria-hidden="true"></i>
+              <a href="#" class="list-text-alignment-plp3 pointer" 
+ (click)="$event.preventDefault();CallOccDetailCluster(value.linkID,value.linkTitle)">{{value.linkTitle}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-12">
+    <div class="card-plp3 Occupation-physical-demand">
+      <div class="card-header-plp3">
+        <h5>&nbsp;Military Careers
+          <i class="icon-military-careers icon-align-plp3-right" [ngStyle]="{'font-size':'30px'}" aria-hidden="true"></i></h5>
+      </div>
+      <div class="card-block card-block2-p-plp3-v ">
+        <div class="inner">
+          <ul class="plp3-list related-career">
+            <li *ngFor="let val of relCareerDesc3;"><i class="fa fa-chevron-right arrow-align-plp3 text-align-plp3" aria-hidden="true"></i>
+              <div class="list-text-alignment-plp3"> {{val.linkTitle}}</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<br>
+<div>
+  <h5><b>{{relResult.FindJobs}}</b></h5>
+  <div *ngFor="let jobValue of JobParagraph;let jobinx=index;">
+    <!--<div class="card-block card-block2-p-plp3-v   [innerHTML]='val.text | customText'">-->
+    <div class="inner">
+      <p *ngIf="jobValue.type =='p'">{{jobValue.text}}</p>
+      <ul *ngIf="(jobValue.type =='ul')" style="list-style: none;">
+        <li *ngFor="let jobval of jobValue.text;" [innerHTML]='jobval | customText'>
+          <i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>&nbsp;&nbsp;
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--</div>-->
+</div>

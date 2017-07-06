@@ -1,0 +1,132 @@
+<!-- Fixed navbar for interest-profiler assessment-->
+
+<div class="row desktop-design-hide-plp2">
+  <div class="col-md-12">
+    <div class="panel panel-green">
+      <div class="panel-progress-head-orng-plp4 shadow-bottom">
+        <div class="col-md-1 col-sm-2"> <span class="leftArrowClass" (click)="previousQuestion()"><i [class.class-withOpacityIP]="isClassVisibleIP" class="fa  icon-asmnt-back-arrow arrows" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+             </span>
+             <span class="eq-ques">  Q.1  </span>
+             </div>
+        <div class="col-md-8 col-sm-7 col-lg-9">
+          <div class="progress xs progress-m">
+            <div class="progress-bar-bg-green" [ngStyle]="{'width': currentValue +'%'}"></div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-lg-2 text-right">
+          <span>20 Remaining</span>&nbsp;
+          <span class="ntxArrow" *ngIf="showNxtIP" style="float:right;cursor:pointer;">
+                  <i aria-hidden="true"  class="fa icon-asmnt-forward-arrow arrows" (click)="nextIPArrow(cnt)"></i></span>
+        </div>
+      </div>
+      <div class="panel-progress-orng-plp4">
+        <p class="text-center plp2-white">Build kitchen cabinets</p>
+      </div>
+      <div class="circle-body">
+        <div class="circle-ass-plp4 text-center">
+          <button class="btn btn-default blue-circle-button circle-btn-plp4" href=""
+            (click)="callQuestion(4)">
+                <i class="fa icon-asmnt-strongly-agree" [ngClass]="(btnHighLight==4)? 'white-color':''"></i>
+                <p>Strongly Like&nbsp; &nbsp;</p>
+              </button>
+        </div>
+        <div class="circle-ass-plp4 text-center">
+          <button  class="btn btn-default blue-circle-button circle-btn-plp4" href=""  (click)="callQuestion(3)">
+                <i class="fa icon-asmnt-between-strongly" [ngClass]="(btnHighLight==3)? 'white-color':''"></i>
+              <p>Like
+               </p>
+              </button>
+        </div>
+        <div class="circle-ass-plp4 text-center">
+          <button  class="btn btn-default blue-circle-button circle-btn-plp4" href=""  (click)="callQuestion(2)">
+                <i class="fa icon-asmnt-somewhat" [ngClass]="(btnHighLight==2)? 'white-color':''"></i>
+              <p>Unsure &nbsp;</p>
+              </button>
+        </div>
+        <div class="circle-ass-plp4 text-center">
+          <button  class="btn btn-default blue-circle-button circle-btn-plp4" href="" (click)="callQuestion(1)">
+                <i class="fa icon-asmnt-between-somewhat" [ngClass]="(btnHighLight==1)? 'white-color':''"></i>
+              <p>Dislike</p>
+              </button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-default circle-btn-plp4" (click)="callReult()" >Result</button>
+</div>
+
+<!-- mobile design for interest-profiler assessment -->
+
+<div class="mobile-design-hide-plp2">
+  <div class="panel-progress-orng-plp4">
+    <div class="container mob-head-style">
+      <div class="row plp-2-m-t">
+        <div class="col-6"> <span class="text-right">Q.1</span> </div>
+        <div class="col-6 text-right"> <span>30 Remaining</span> </div>
+      </div>
+      <div class="row plp-2-m-t">
+        <div class="col-1"> <span class="leftArrowClass" (click)="previousQuestion()"> <i [class.class-withOpacityIP]="isClassVisibleIP" class="fa icon-asmnt-back-arrow arrows"></i> </span></div>
+        <div class="col-9">
+          <div class="progress xs progress-m">
+            <div class="progress-bar-bg-green" [ngStyle]="{'width': currentValue +'%'}"></div>
+          </div>
+        </div>
+        <div class="col-1 "> <span class="ntxArrow" *ngIf="showNxtIP"> 
+            <i aria-hidden="true" class="fa icon-asmnt-forward-arrow arrows" (click)="nextIPArrow(cnt)"></i> </span> </div>
+      </div>
+      <div class="row plp-2-m-t">
+        <div class="col-1"> </div>
+        <div class="col-9">
+          <p class="text-center">Build kitchen cabinets </p>
+        </div>
+        <div class="col-1"> </div>
+      </div>
+    </div>
+  </div>
+  <div style="clear: both;"> </div>
+  <div class="card-blue">
+    <div class="card-plp-2   circle-btn-plp4"  (click)="callQuestion(4)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>Strongly Like</p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa  icon-asmnt-strongly-agree" [ngClass]="(btnHighLight==4)? 'white-color':''"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="card-plp-2  circle-btn-plp4"  (click)="callQuestion(3)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>Like</p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa  icon-asmnt-between-strongly" [ngClass]="(btnHighLight==3)? 'white-color':''"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="card-plp-2   circle-btn-plp4"  (click)="callQuestion(2)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>Unsure </p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa icon-asmnt-somewhat" [ngClass]="(btnHighLight==2)? 'white-color':''"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="card-plp-2   circle-btn-plp4"  (click)="callQuestion(1)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>Dislike </p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa icon-asmnt-between-somewhat" [ngClass]="(btnHighLight==1)? 'white-color':''"></i></span>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+</div>
+<!-- End  of interest-profiler assessment mobile design -->

@@ -1,0 +1,216 @@
+<!--<PLP-nav-header [header]="sectionObject" (changeView)="changeView($event)" [report-status]="report"></PLP-nav-header>-->
+
+<form [formGroup]="testScoresForm">
+
+  <div class="form-group">
+    <div class="col-spacer">
+      <div *ngIf="edited" class="alert alert-success">
+        <strong>Success!</strong> {{successLabel}}
+      </div>
+
+      <div *ngIf="errorVal" class="alert alert-danger">
+        <strong>Oops!</strong> {{successLabel}}
+      </div>
+      <label *ngIf="(report=='')" class="question-head">
+     <i class="icon-pencil-striped edit-ic-btn w"></i>
+ <p class="ptitle">{{ questionObject.questions[0] }}</p>
+ <span *ngIf="testEmptyVal" style="padding-left:10px;text-align:right;" class="error-color validation-msg" style="padding-left:10px;text-align:right;">
+   Test Name and Score should not be empty</span>
+  <span *ngIf="maxTestlen" style="padding-left:10px;text-align:right;" class="error-color validation-msg" style="padding-left:10px;text-align:right;">
+   You have reached the limit of 6 tests.</span>
+   <span *ngIf="testScoreArr.length > 6" style="padding-left:10px;text-align:right;" class="error-color validation-msg">
+   You have reached the limit of 6 tests.</span>
+        <!--<span *ngIf="testScoresForm.get('Test').touched && testScoresForm.get('Test').errors">
+              <span *ngIf="testScoresForm.get('Test').hasError('maxlengthCheckForTest')" class="error-color">
+              {{errorMessage.testname_limit}}</span>
+              </span>
+        <span  *ngIf="testScoresForm.get('score').touched && testScoresForm.get('score').errors">
+        <span *ngIf="testScoresForm.get('score').hasError('maxlengthCheckForTest')" class="error-color">
+                  {{errorMessage.score_limit}}</span>
+         
+        </span>-->
+        
+    </label>
+
+      <div class="col-12 col-sm-12 col-md-12 ">
+        <div id="addTable" class="rTableBody">
+          <div *ngIf="(report == '')">
+            <div class="rTableHeading row">
+              <div class="col-4 col-sm-5 col-md-6 Test-score-TableHead">
+                &nbsp;Test Name</div>
+              <div class="col-8 col-sm-7 col-md-6 score-TableHead">
+                &nbsp;Score</div>
+            </div>
+
+            <div class="rTableRow row">
+              <div class="col-4 col-sm-5 col-md-6 Test-score-TableHead-data">
+                <input #Testvalue id="Test" type="text" class="form-control" value="" [(ngModel)]="testSc.TestName" formControlName="Test"
+                  (keypress)="changeText($event)" readonly="{{findTable}}" />
+
+              </div>
+              <div class="col-8 col-sm-7 col-md-6 score-TableHead-data">
+                <div class="clearfix"> </div>
+                <div class="input-group">
+                  <input #Scorevalue id="Score" type="text" class="form-control form-control-2" [(ngModel)]="testSc.Score" formControlName="score"
+                    (keypress)="changeText($event)" readonly="{{findTable}}" />
+
+                  <span class="input-group-btn" title="Add" style="height: 30px;width: 30px;"><button class="btn btn-test-plp add-btn2"  
+                type="button" (click)="addTest()" disabled="{{findTable}}">
+                     <i  class="fa  icon-add white-color btn-hght"> </i>
+                </button> </span>&nbsp;&nbsp;
+                  <span class="input-group-btn" title="Clear All" style="height: 30px;width: 30px;">
+                  <button class="btn btn-test-plp reset-test-bt" type="button" (click)="reset()" disabled="{{findTable}}">
+                   <i  class="fa icon-reset btn-hght white-color"> </i>
+                </button> </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><br>
+        <div class="clearfix"> </div>
+        <div class="title-head">
+          <i class="fa icon-clipboard" aria-hidden="true"></i> <span>List of Test Names and Scores</span>
+        </div>
+        <span *ngIf="SaveChanges=='true'" id="changesTest" style="padding-left:10px;text-align:right;" class="error-color validation-msg">
+          Please save the changes.</span>
+
+      </div>
+
+      <div class="desktop-table">
+
+        <div class="col-12 col-sm-12 col-md-12">
+          <div class="rTableBody">
+            <div class="rTableHeading row" *ngIf="testScoreArr && (testScoreArr.length>0)">
+              <div class="col-4 col-sm-5 col-md-6 Test-score-TableHead">
+                Test Name</div>
+              <div class="col-8 col-sm-7 col-md-6 score-TableHead">
+                Score</div>
+            </div>
+            <div class="row rtable-plp1 " *ngIf="testScoreArr && (testScoreArr.length == 0)">
+              <div class="col-12 col-sm-12 col-md-12 rTableCell empty-reflection" align="center">
+                No information has been entered for this item.
+              </div>
+            </div>
+            <div *ngIf="testScoreArr && (testScoreArr.length>0)">
+              <div formGroupName="testScores" class="">
+                <div class="rTableRow  row " *ngFor="let item of testScoreArr; let inx=index;">
+                  <div class="col-4 col-sm-5 col-md-6 Test-score-TableHead-data">
+                    <div class="testNameDesk{{inx}} testScoreBreak"> {{item.TestName}}</div>
+                    <textarea class="TestDesk{{inx}} testScoreSave" style="display:none;" [(ngModel)]="item.TestName" [readonly]="(isClassVisible!='true')"
+                      [formControlName]="item.TestName" (keypress)="changeText($event)" disabled="{{findTable}}"></textarea>
+                  </div>
+                  <div class="col-8 col-sm-7 col-md-6 score-TableHead-data">
+                    <div class="clearfix"> </div>
+                    <div class="input-group">
+                      <div class="scoreNameDesk{{inx}} testScoreBreak" style="height: auto;width: 90%;word-break:break-all;"> {{item.Score}}</div>
+                      <textarea class="ScoreDesk{{inx}} testScoreSave form-control-2" style="display:none;" [(ngModel)]="item.Score" [readonly]="(isClassVisible!='true')"
+                        [formControlName]="item.Score" (keypress)="changeText($event)" disabled="{{findTable}}"></textarea>
+
+                      <span class="input-group-btn" *ngIf="(report == '')" style="height: 30px;width: 30px;">
+                  <button  
+                  class="edtBtn{{inx}} btn btn-test-plp edit-test-bt" type="button" title="Edit" (click)="editTest(inx)" >
+                   <i   class="fa icon-pencil-striped btn-hght white-color"> </i>
+                </button>
+                 <button  
+                  class="cancelBtn{{inx}} btn btn-test-plp edit-test-bt" style="display:none;" type="button" title="Cancel" (click)="CancelTest(inx)" >
+                   <i   class="fa icon-cancel btn-hght white-color" style="font-size:10px!important;"> </i>
+                </button>
+                  <button style="display:none;" 
+                 #visibleclassname class="SaveBtn{{inx}} visibleclassname1 btn btn-test-plp edit-test-bt" type="button"  title="Save" (click)="saveTest(inx)" >
+                   <i  class="fa fa-save btn-hght white-color"> </i>
+                </button>
+                 </span>&nbsp;&nbsp;
+                      <span class="input-group-btn" title="Delete" *ngIf="(report == '')" style="height: 30px;width: 30px;">
+                   <button class="btn btn-test-plp remove-btn2" type="button" (click)="remove(inx)">
+                   <i  class="fa icon-delete btn-hght white-color"> </i>
+                </button> </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span *ngIf="testScoresForm.touched && !testScoresForm.valid">
+              <span class="error-color">
+                    {{errorMessage.testname_limit}}</span>
+          </span>
+
+        </div>
+        <div *ngIf="(report=='')" class="btn-m-t">
+          <button class="btn btn-red-plp" type="submit" [disabled]="!testScoresForm.valid" (click)="SaveTestScores()"><i class="fa fa-save white-color"> </i> Save Information</button>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <div class="clearfix"> </div>
+      <div class="mobile-table" style="width: 100%;">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12">
+            <div class="row rtable-plp1" *ngIf="testScoreArr && (testScoreArr.length == 0)">
+
+              <div class="col-12 col-sm-12 col-md-12 rTableCell empty-reflection" align="center">
+                No information has been entered for this item.
+              </div>
+            </div>
+            <div formGroupName="testScoreArrMob">
+              <div class="mTableRow " *ngFor='let item of testScoreArrMob, let inx =index;let odd=odd, let evn=even'>
+                <div class="mTableCell">
+                  <div class="inner-row-m">
+                    <div class="col-4 col-sm-5 col-md-5 ">
+                      <b>Test Name:</b></div>
+
+                    <div class="col-8 col-sm-7 col-md-7 ">
+                      <div class="testNameDesk{{inx}} testScoreBreak">{{item.TestNameMob}}</div>
+                      <textarea style="display:none;" class="TestDesk{{inx}} testScoreSave" [(ngModel)]="item.TestNameMob" [readonly]="(isClassVisible!='true')"
+                        [formControlName]="item.TestNameMob" (keypress)="changeText($event)"></textarea>
+                    </div>
+                  </div>
+                  <div class="inner-row-m border-bottom-test-score">
+                    <div class="col-4 col-sm-5 col-md-5 ">
+                      <b> Score: </b></div>
+                    <div class="col-8 col-sm-7 col-md-7 ">
+                      <div class="scoreNameDesk{{inx}} testScoreBreak"> {{item.ScoreMob}}</div>
+                      <textarea style="display:none;" #visibleclassname class="ScoreDesk{{inx}} testScoreSave form-control-2" [(ngModel)]="item.ScoreMob"
+                        [formControlName]="item.ScoreMob" [readonly]="(isClassVisible!='true')" (keypress)="changeText($event)"></textarea>
+                    </div>
+                  </div>
+                  <div class=" inner-row-m" style="float: right;">
+                    <div class="input-group" style="margin-right:10px!important;">
+                      <div class=" form-control-2">
+                      </div>
+                      <span class="input-group-btn testtscor-heigt" *ngIf="(report == '')">
+                  <button 
+                  class="edtBtn{{inx}} btn btn-test-plp edit-test-bt" type="button" title="Edit" (click)="editTest(inx)" >
+                   <i class="fa icon-pencil-striped btn-hght white-color font-size-delt-pencli"> </i>
+                </button>
+                 <button 
+                  class="cancelBtn{{inx}} btn btn-test-plp edit-test-bt" style="display:none;" type="button" title="Cancel" (click)="CancelTest(inx)" >
+                   <i class="fa icon-cancel btn-hght white-color" style="font-size:10px!important;"> </i>
+                </button>
+                  <button style="display:none;"
+                 #visibleclassname class="SaveBtn{{inx}} visibleclassname1 helpClassname btn btn-test-plp edit-test-bt" type="button"  title="Save" (click)="saveTest(inx)" >
+                   <i class="fa fa-save btn-hght white-color"> </i>
+                </button>
+                 </span> 
+                      <span class="input-group-btn" title="Delete" *ngIf="(report == '')">
+                   <button class="btn btn-test-plp remove-btn2" type="button" (click)="remove(inx)">
+                   <i class="fa icon-delete btn-hght white-color font-size-delt-pencli"> </i>
+                </button> </span> </div>
+                  </div>   
+                </div>
+              </div>
+            </div>
+          </div>
+          <span *ngIf="testScoresForm.touched && !testScoresForm.valid">
+        <span class="error-color">
+             {{errorMessage.testname_limit}}</span>
+          </span>
+        </div>
+        <div *ngIf="(report=='')" class="btn-m-t mobile-table">
+          <button class="btn btn-red-plp" type="submit" [disabled]="!testScoresForm.valid" (click)="SaveTestScores()"><i class="fa fa-save white-color"> </i> Save Information</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>

@@ -1,0 +1,82 @@
+[{
+  "Version": "1.0.0",
+  "StatusCode": 200,
+  "Success": true,
+  "Authorized": true,
+  "Result": {
+    "buttons": [
+      {
+        "button": "index",
+        "title": "职业列表"
+      },
+      {
+        "button": "backAssess",
+        "title": "回到评估"
+      },
+      {
+        "button": "save",
+        "title": "保存"
+      },
+      {
+        "button": "print",
+        "title": "打印"
+      }
+    ],
+    "tabs": [
+      {
+        "seq": 0,
+        "title": "乍看上去"
+      },
+      {
+        "seq": 1,
+        "title": "对我有用吗"
+      },
+      {
+        "seq": 2,
+        "title": "教育"
+      },
+      {
+        "seq": 3,
+        "title": "途径"
+      },
+      {
+        "seq": 4,
+        "title": "相关职业"
+      }
+    ],
+    "sections": [
+      {
+        "section": "EmploymentOutlook",
+        "title": "就业与展望"
+      },
+      {
+        "section": "HelpfulHSCourses",
+        "title": "有用的高中课程"
+      },
+      {
+        "section": "Overview",
+        "title": "概述"
+      },
+      {
+        "section": "RelatedPrograms",
+        "title": "学习计划"
+      },
+      {
+        "section": "Skills",
+        "title": "技能"
+      },
+      {
+        "section": "TopOpportunities",
+        "title": "五大就业机会"
+      },
+      {
+        "section": "TopSalaries",
+        "title": "前五名工资"
+      },
+      {
+        "section": "UserRating",
+        "title": "评价这个职业"
+      }
+    ]
+  }
+}]

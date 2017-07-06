@@ -1,0 +1,1199 @@
+{
+  "Version": "1.0.0",
+  "StatusCode": 200,
+  "Success": true,
+  "Authorized": true,
+  "Result": [
+    {
+      "sectionName": "EducationLevel",
+      "sectionResults": "4 年份"
+    },
+    {
+      "sectionName": "FindJobs",
+      "sectionResults": [
+        {
+          "type": "p",
+          "text": "下面列出一个或多个职业名称。这些职业在US.jobs工作银行中列出，与您正在探索的职业有关。选择您要搜索职位空缺的职业."
+        },
+        {
+          "type": "ul",
+          "text": [
+            "[会计师](https://materials.intocareers.org/jobcentral.asp?State=IC&amp;ID=100002)",
+            "[审计人员](https://materials.intocareers.org/jobcentral.asp?State=IC&amp;ID=100073)"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "HelpfulHSCourses",
+      "sectionResults": [
+        {
+          "type": "p",
+          "text": "在高中，上课准备上大学。 [大学预科课程](https://cis.intocareers.org/Occ/materials/HHSC_coll_prep.pdf)可能与您所在州的毕业要求有所不同."
+        },
+        {
+          "type": "p",
+          "text": "你也应该考虑在高中毕业。这包括高级安置(AP) 和国际文凭(IB) 课程，如果您在学校可用。如果您在这些课程中表现良好，您可能会获得大学学分。高级课程也可以加强您的大学申请."
+        },
+        {
+          "type": "p",
+          "text": "有用的高中选修课为你准备这个职业包括："
+        },
+        {
+          "type": "ul",
+          "text": [
+            "会计",
+            "计算机应用",
+            "经济学",
+            "创业精神",
+            "业务介绍"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "上述课程旨在帮助您创建高中计划。如果您还没有这样做，请咨询学校辅导员或家长，了解您正在考虑的课程。"
+        },
+        {
+          "type": "p",
+          "text": "您还应与老师或辅导员联系，查看您的学校和社区是否提供基于工作的学习机会。这些可能包括实地考察，工作监督，实习和实际工作经验。这些活动的目标是帮助您将您的学校体验与现实生活中的工作联系起来。"
+        },
+        {
+          "type": "p",
+          "text": "加入一些团体，尝试一些爱好，或志愿与一个感兴趣的组织。通过参加活动，您可以玩乐，结交新朋友，并了解自己。也许其中一个将帮助您引导未来的职业生涯。以下是您的高中或社区可能提供的[活动和团体的例子](https://cis.intocareers.org/Occ/materials/HHSC_activities.pdf)。"
+        }
+      ]
+    },
+    {
+      "sectionName": "Image",
+      "sectionResults": "https://images.intocareers.org/occ/100001.png"
+    },
+    {
+      "sectionName": "Interests",
+      "sectionResults": {
+        "header": "会计师和审计师通常具有以下兴趣：",
+        "items": [
+          "有传统兴趣他们喜欢按照设定的程序，例程和标准进行的工作活动。他们喜欢使用数据和细节。他们更喜欢在有明确权力的地方工作。",
+          "有进取的兴趣他们喜欢开展和开展项目的工作活动，特别是在企业中。他们喜欢领导和说服别人，做出决定，冒险获利。"
+        ]
+      }
+    },
+    {
+      "sectionName": "Knowledge",
+      "sectionResults": {
+        "header": "会计师和审计师需要知识在以下几个方面：",
+        "items": [
+          "经济与会计：银行业务。",
+          "数学：数字的规则和用法。",
+          "英语语言：英文的含义和用法。",
+          "管理和管理：如何运行业务或组。",
+          "客户和个人服务：根据客户需求为客户提供特殊服务。",
+          "计算机和电子学：计算机硬件和软件。",
+          "法律，政府和法学：法律，法院规则和政治。",
+          "文书：一般办公室工作，如填写和存储信息"
+        ]
+      }
+    },
+    {
+      "sectionName": "LicensingCert",
+      "sectionResults": [
+        {
+          "type": "p",
+          "text": "一些会计师的认证是可选的。开始会计师在实践之前不需要有许可证。然而，这些会计师的名称在他们可以使用的标题和他们可以做的工作方面是有限的。"
+        },
+        {
+          "type": "p",
+          "text": "一些会计师的认证是可选的。开始会计师在实践之前不需要有许可证。然而，这些会计师的名称在他们可以使用的标题和他们可以做的工作方面是有限的。"
+        },
+        {
+          "type": "p",
+          "text": "有关本地许可要求的更多信息，请联系您的州会计师事务所。如果您需要帮助找到国家机构，请联系："
+        },
+        {
+          "type": "p",
+          "text": "[全国国家会计师协会](http://nasba.org/stateboards/)"
+        }
+      ]
+    },
+    {
+      "sectionName": "MajorEmployers",
+      "sectionResults": [
+        "会计，税务准备，簿记和薪资公司",
+        "财务和保险",
+        "国家和地方政府机构"
+      ]
+    },
+    {
+      "sectionName": "OpportunityRating",
+      "sectionResults": {
+        "rating": "高于平均水平",
+        "amount": "49,800 工作"
+      }
+    },
+    {
+      "sectionName": "OutlookInfo",
+      "sectionResults": [
+        {
+          "type": "p",
+          "text": "这一职业的增长与经济增长密切相关。由于2008年金融危机，更严格的法律法规增加了会计师对企业遵守新法律的要求。此外，更严格的贷款标准将增加对审计师的需求。"
+        },
+        {
+          "type": "p",
+          "text": "大量的全球企业将需要在国际贸易，兼并和规则等方面具有知识的会计师。"
+        },
+        {
+          "type": "p",
+          "text": "会计师和审计师预计有良好的就业前景。会计师事务所将享受最广泛的就业机会。"
+        }
+      ]
+    },
+    {
+      "sectionName": "OutlookRatings",
+      "sectionResults": {
+        "headers": [
+          {
+            "type": "current",
+            "header": "目前的就业"
+          },
+          {
+            "type": "growth",
+            "header": "工作增长"
+          },
+          {
+            "type": "opportunity",
+            "header": "就业机会"
+          }
+        ],
+        "states": [
+          {
+            "state": "阿拉斯加州",
+            "ratings": [
+              {
+                "type": "current",
+                "rating": "很大",
+                "amount": "1,728 人"
+              },
+              {
+                "type": "growth",
+                "rating": "平均",
+                "amount": "5.0％"
+              },
+              {
+                "type": "opportunity",
+                "rating": "高于平均水平",
+                "amount": "56 工作"
+              }
+            ]
+          },
+          {
+            "state": "美国",
+            "ratings": [
+              {
+                "type": "current",
+                "rating": "很大",
+                "amount": "1,332,700 人"
+              },
+              {
+                "type": "growth",
+                "rating": "亮",
+                "amount": "10.7%"
+              },
+              {
+                "type": "opportunity",
+                "rating": "高于平均水平",
+                "amount": "49,800 工作"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sectionName": "Overview",
+      "sectionResults": [
+        {
+          "type": "p",
+          "text": "会计师和审计师汇总，分析和检查财务信息的准确性。"
+        },
+        {
+          "type": "p",
+          "text": "会计师经常专注于四大会计领域之一："
+        },
+        {
+          "type": "ul",
+          "text": [
+            "上市",
+            "管理",
+            "政府",
+            "内部审计"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "所有会计师和审计师都必须了解其所在地区的规章制度。规则频繁变化。会计师和审计师必须定期进行培训，使他们的知识更新。"
+        },
+        {
+          "type": "h",
+          "text": "公会会计师"
+        },
+        {
+          "type": "p",
+          "text": "会计师事务所拥有自己的业务或为会计师事务所工作。他们的客户是个人或企业。会计师提供会计，审计，税务和咨询服务。例如，他们检查业务运营，如收入和成本。他们翻阅财务记录，以确保信息正确无误。他们可以为客户开发会计系统。"
+        },
+        {
+          "type": "h",
+          "text": "管理会计师"
+        },
+        {
+          "type": "p",
+          "text": "管理会计师为公司工作。这些会计师是公司管理团队的一部分，并作出决定。他们向团队提供关于某些财务变化如何影响公司的建议。他们记录和分析业务的财务信息。此外，他们还创建了预算，并管理成本和资产。"
+        },
+        {
+          "type": "h",
+          "text": "政府会计师"
+        },
+        {
+          "type": "p",
+          "text": "政府会计师维护和审查政府机构的记录。他们必须遵循特殊程序和规定。这方面的会计师可以为政府官员撰写报告。政府审计员检查企业和个人的税务记录。"
+        },
+        {
+          "type": "h",
+          "text": "内部审计"
+        },
+        {
+          "type": "p",
+          "text": "内部审计师通常为公司工作。他们检查公司的财务记录是否正确。他们还检查浪费或欺诈，并帮助找到方法来防止经济损失。"
+        }
+      ]
+    },
+    {
+      "sectionName": "ParentCluster",
+      "sectionResults": {
+        "linkType": "偶尔",
+        "linkID": 110600,
+        "linkTitle": "金融"
+      }
+    },
+    {
+      "sectionName": "PhysicalDemands",
+      "sectionResults": [
+        {
+          "header": "会计师和审计师经常：",
+          "items": [
+            "坐很长一段时间。"
+          ]
+        },
+        {
+          "header": "会计师和审计师能够：",
+          "items": [
+            "查看距离不到几英尺的物体的细节。",
+            "了解另一个人的演讲。",
+            "说清楚听众可以理解。"
+          ]
+        },
+        {
+          "header": "对于会计师和审计师来说，这并不重要，但仍然是必要的：",
+          "items": [
+            "查看超过几英尺远的物体的细节。",
+            "用手指握住，移动或组装非常小的物体。",
+            "看到颜色，色调和亮度之间的差异。",
+            "听到声音并认识到它们之间的区别"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionName": "Preparation",
+      "sectionResults": [
+        {
+          "type": "p",
+          "text": "作为会计师或审计师，您通常需要："
+        },
+        {
+          "type": "ul",
+          "text": [
+            "有高中文凭或同等学历;和",
+            "拥有会计学士学位。"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "作为注册会计师（CPA）工作，您通常需要："
+        },
+        {
+          "type": "ul",
+          "text": [
+            "有高中文凭或同等学历;",
+            "完成为期五年，150小时的会计课程(获得学士或硕士学位);",
+            "具有公共会计经验;和",
+            "通过统一的CPA考试."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "高中毕业后"
+        },
+        {
+          "type": "p",
+          "text": "根据你想做的会计类型，你可以学习两到五年。为期两年的课程准备好您的簿记工作。这些课程可在社区学院和私立商学院获得。"
+        },
+        {
+          "type": "p",
+          "text": "会计学士学位为您准备入门级会计或审计工作。在你四年的学习中，你需要一年的会计课程和一年的一般商务课程。你也需要两年的文科课程。这些课程可在许多高校获得。"
+        },
+        {
+          "type": "p",
+          "text": "如果您想成为注册会计师，则需要在会计中完成额外30小时的学习。额外的课程准备你参加统一的CPA考试，并独立工作，作为公共会计师。"
+        },
+        {
+          "type": "h",
+          "text": "工作经验"
+        },
+        {
+          "type": "p",
+          "text": "在大学期间，您可以通过夏季或兼职实习计划获得经验。"
+        },
+        {
+          "type": "p",
+          "text": "开始的公共会计师通常在持牌注册会计师工作至少一年。他们这样做是为了获得CPA许可证所需的经验。"
+        },
+        {
+          "type": "h",
+          "text": "在职培训"
+        },
+        {
+          "type": "p",
+          "text": "大学毕业后，您可以从事常规工作，并由有经验的会计师或审计师进行监督。当你获得经验的时候，你会有更多的困难和更多的责任。一般来说，初始会计师可以接受长达12个月的在职培训。审核员通常会接受一到两年的在职培训。"
+        },
+        {
+          "type": "h",
+          "text": "军事训练"
+        },
+        {
+          "type": "p",
+          "text": "军火部门的一些分支机构是财务和会计经理。培训持续2至16周。通过高级课程进行进一步的培训。你必须有会计，财务或相关领域的学位才能进入这个军事占领。"
+        }
+      ]
+    },
+    {
+      "sectionName": "RelatedCareers",
+      "sectionResults": {
+        "intro": "下面列出的职业类似于您目前正在探索的职业。职业可能具有类似的工作职责，使用类似的技能，在同一个职业阶梯，具有相似的教育水平，或以其他方式相关。",
+        "lists": [
+          {
+            "header": "职业",
+            "links": [
+              {
+                "linkType": "偶尔",
+                "linkID": 100003,
+                "linkTitle": "精算师"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100257,
+                "linkTitle": "簿记和会计文员"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100025,
+                "linkTitle": "预算分析师"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100286,
+                "linkTitle": "成本估算器"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100055,
+                "linkTitle": "信用分析师"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100082,
+                "linkTitle": "财务分析师"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100315,
+                "linkTitle": "财务顾问"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100506,
+                "linkTitle": "财务考官"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100316,
+                "linkTitle": "财务经理"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 140035,
+                "linkTitle": "法定会计师(新兴)"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100108,
+                "linkTitle": "保险保险人"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100496,
+                "linkTitle": "工作福利和分析专家"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100206,
+                "linkTitle": "税务考官"
+              },
+              {
+                "linkType": "偶尔",
+                "linkID": 100207,
+                "linkTitle": "税务人员"
+              }
+            ]
+          },
+          {
+            "header": "职业群",
+            "links": [
+              {
+                "linkType": "偶尔",
+                "linkID": 110600,
+                "linkTitle": "金融"
+              }
+            ]
+          },
+          {
+            "header": "军事职业",
+            "links": [
+              {
+                "linkType": "米尔",
+                "linkID": 200200,
+                "linkTitle": "财务和会计经理"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sectionName": "相关程序",
+      "sectionResults": {
+        "intro": "这些学习课程将帮助您准备您正在探索的职业生涯。",
+        "lists": [
+          {
+            "header": "与这个职业直接相关的学习方案",
+            "links": [
+              {
+                "linkType": "程序",
+                "linkID": 160100,
+                "linkTitle": "会计"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 421000,
+                "linkTitle": "财务法证和欺诈调查"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 162500,
+                "linkTitle": "税收"
+              }
+            ]
+          },
+          {
+            "header": "其他考虑学习方案",
+            "links": [
+              {
+                "linkType": "程序",
+                "linkID": 160600,
+                "linkTitle": "企业管理与行政"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 162600,
+                "linkTitle": "企业，将军"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 160800,
+                "linkTitle": "创业和小企业运营"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 160300,
+                "linkTitle": "金融"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 161200,
+                "linkTitle": "国际商业，贸易和金融"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 161400,
+                "linkTitle": "物流与物料管理"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 161500,
+                "linkTitle": "管理信息系统"
+              },
+              {
+                "linkType": "程序",
+                "linkID": 161600,
+                "linkTitle": "管理科学"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sectionName": "SalaryRating",
+      "sectionResults": {
+        "rating": "高于平均水平",
+        "amount": "$67,190"
+      }
+    },
+    {
+      "sectionName": "ShortDescription",
+      "sectionResults": "会计师和审计师汇总，分析和检查财务信息的准确性。"
+    },
+    {
+      "sectionName": "SkillsAbilities",
+      "sectionResults": {
+        "intro": "会计师和审计师需要：",
+        "lists": [
+          {
+            "header": "通信",
+            "items": [
+              "了解书面信息。",
+              "了解口语信息。",
+              "听别人问问题",
+              "说清楚听众可以理解。",
+              "阅读并了解工作相关资料。",
+              "写清楚，以便其他人能够理解。"
+            ]
+          },
+          {
+            "header": "理由和问题解决",
+            "items": [
+              "使用推理来发现问题的答案。",
+              "注意事项错误或可能出错。",
+              "分析想法和使用逻辑来确定他们的优缺点。",
+              "综合几条信息并得出结论",
+              "按照指导方针按照特定的顺序安排对象或动作。",
+              "认识到一个问题的本质。",
+              "判断可能采取的行动的成本和收益。",
+              "通过学习和与他们合作来了解新的信息或材料。",
+              "制定以各种方式对物品进行分组的规则。",
+              "集中精力，不要在执行任务时分心。",
+              "识别系统中发生重大变化或可能发生的重要变化。"
+            ]
+          },
+          {
+            "header": "使用数学和科学",
+            "items": [
+              "快速，正确地加，减，乘，分。",
+              "选择一个数学方法或公式来解决问题。",
+              "用数学技巧解决问题。"
+            ]
+          },
+          {
+            "header": "管理自己，人，时间和事物",
+            "items": [
+              "管理自我和他人的时间",
+              "检查学习或做某事有多好。"
+            ]
+          },
+          {
+            "header": "与人合作",
+            "items": [
+              "改变与他人行为有关的行为。",
+              "注意别人的反应，了解可能的原因。"
+            ]
+          },
+          {
+            "header": "感知和可视化",
+            "items": [
+              "快速准确地比较字母，数字，对象，图片或图案。",
+              "识别隐藏在分心材料中的图案(图形，对象，单词或声音)。"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sectionName": "TaskList",
+      "sectionResults": {
+        "header": "以下职业任务列表专门针对会计师和审计师：",
+        "items": [
+          "确定欠税多少，编制财务和税务报表。",
+          "分析业务运营，趋势，收入和成本。",
+          "分析财务数据和记录，确保遵守法律和财务标准。",
+          "就客户的财务和税务需求提供咨询。",
+          "将财务信息输入记录保存和会计系统。",
+          "制定企业或代理机构的会计或审计制度。",
+          "根据上一年的财务数据创建和维护预算。",
+          "撰写关于财务状况和建议变更管理的报告。",
+          "进行研究以学习会计或审计需求。",
+          "建议使用资源管理，纳税和预算预测。",
+          "确定和记录不动产和设备的价值。",
+          "进行培训，使技能保持最新。"
+        ]
+      }
+    },
+    {
+      "sectionName": "TopInterests",
+      "sectionResults": {
+        "taken": true,
+        "text": "您的兴趣分析师分数显示，您的前2大兴趣是这些领域：",
+        "interests": [
+          "社会",
+          "常规"
+        ]
+      }
+    },
+    {
+      "sectionName": "TopJobTasks",
+      "sectionResults": [
+        "确定欠税多少，编制财务和税务报表。",
+        "分析业务运营，趋势，收入和成本。",
+        "分析财务数据和记录，确保遵守法律和财务标准。",
+        "就客户的财务和税务需求提供咨询。"
+      ]
+    },
+    {
+      "sectionName": "TopOpeningLocations",
+      "sectionResults": [
+        "位置1",
+        "位置 2",
+        "位置 3",
+        "位置 4",
+        "位置 5"
+      ]
+    },
+    {
+      "sectionName": "TopSalaryLocations",
+      "sectionResults": [
+        "位置 1",
+        "位置 2",
+        "位置 3",
+        "位置 4",
+        "位置 5"
+      ]
+    },
+    {
+      "sectionName": "TopValues",
+      "sectionResults": {
+        "taken": true,
+        "text": "您的工作重要性定位器分数显示您的前2个值为:",
+        "values": [
+          "成就",
+          "独立"
+        ]
+      }
+    },
+    {
+      "sectionName": "TopWorkSetting",
+      "sectionResults": [
+        "有中等程度的社会接触。他们与客户，其他会计师和审计师以及办公室工作人员合作。一般而言，审计人员与会计师有更多的联系。",
+        "经常在室内工作",
+        "在工作中必须精确，并确保所有细节都完成。错误可能导致客户亏损。",
+        "如果专门从事税务准备，可以在1月至4月间长时间工作。"
+      ]
+    },
+    {
+      "sectionName": "UserRating",
+      "sectionResults": 1
+    },
+    {
+      "sectionName": "Values",
+      "sectionResults": {
+        "header": "会计师和审计师通常具有以下工作价值：",
+        "items": [
+          "考虑成就重要。他们喜欢看他们的工作成果，并用最强的能力。他们喜欢从工作中获得成就感。",
+          "考虑独立性很重要。他们喜欢做决定，自己尝试想法。他们更喜欢工作，他们可以很少的监督来规划工作。",
+          "考虑识别重要。他们喜欢工作，有机会推进，得到工作认可，直接指导他人。他们通常喜欢被别人看待的工作。",
+          "考虑关系重要。他们喜欢在友好，非竞争的环境中工作。他们喜欢为别人做事情。他们更喜欢没有压力的工作，去做违反自己对错的事情。",
+          "考虑雇主的支持重要。他们喜欢被公平对待，并且有主管谁会支持他们。他们更喜欢他们受过良好训练的工作。",
+          "考虑良好的工作条件很重要。他们喜欢提供稳定就业和良好工资的工作。他们想要符合个人工作作风的就业机​​会。他们可能喜欢做各种任务，单独工作，或者一直忙着。"
+        ]
+      }
+    },
+    {
+      "sectionName": "Video",
+      "sectionResults": [
+        "https://videos.intocareers.org/english/13-201101.mp4"
+      ]
+    },
+    {
+      "sectionName": "WageInfo",
+      "sectionResults": [
+        {
+          "type": "p",
+          "text": "付款根据雇主的大小，位置和类型而有所不同。对于会计师来说，薪酬可能会随着一年的时间而变化。许多会计师通过在税收季节加班来赚取额外的钱。工资也取决于工人的教育，经验和责任。企业的合作伙伴和业主的收入要高于员工。"
+        },
+        {
+          "type": "p",
+          "text": "全职工作的会计师和审计师通常会收到福利。共同福利包括有薪假期，健康和牙科保险以及退休计划。"
+        }
+      ]
+    },
+    {
+      "sectionName": "WageLevels",
+      "sectionResults": {
+        "headers": [
+          {
+            "type": "annual",
+            "header": "年度"
+          },
+          {
+            "type": "monthly",
+            "header": "每月"
+          },
+          {
+            "type": "hourly",
+            "header": "每小时"
+          },
+          {
+            "type": "location",
+            "header": "位置"
+          },
+          {
+            "type": "entry",
+            "header": "入职工资"
+          },
+          {
+            "type": "median",
+            "header": "中位数工资"
+          },
+          {
+            "type": "expert",
+            "header": "有经验的工资"
+          }
+        ],
+        "periods": [
+          {
+            "period": "一年一度",
+            "wages": [
+              {
+                "label": "儿童，家庭和学校社工(21-1021)",
+                "locations": [
+                  {
+                    "location": "阿拉斯加州",
+                    "isRegion": false,
+                    "entry": "$38,290",
+                    "median": "$48,650",
+                    "expert": "$60,610"
+                  },
+                  {
+                    "location": "安克雷奇",
+                    "isRegion": true,
+                    "entry": "$43,090",
+                    "median": "$52,390",
+                    "expert": "$61,140"
+                  },
+                  {
+                    "location": "平衡",
+                    "isRegion": true,
+                    "entry": "$36,620",
+                    "median": "$45,200",
+                    "expert": "$60,140"
+                  },
+                  {
+                    "location": "费尔班克斯",
+                    "isRegion": true,
+                    "entry": "$38,260",
+                    "median": "$56,190",
+                    "expert": "$66,700"
+                  },
+                  {
+                    "location": "东南",
+                    "isRegion": true,
+                    "entry": "$33,610",
+                    "median": "$42,320",
+                    "expert": "$56,580"
+                  },
+                  {
+                    "location": "美国",
+                    "isRegion": false,
+                    "entry": "$33,790",
+                    "median": "$42,350",
+                    "expert": "$55,410"
+                  }
+                ]
+              },
+              {
+                "label": "医疗社会工作者(21-1022)",
+                "locations": [
+                  {
+                    "location": "阿拉斯加州",
+                    "isRegion": false,
+                    "entry": "$42,430",
+                    "median": "$55,990",
+                    "expert": "$71,420"
+                  },
+                  {
+                    "location": "安克雷奇",
+                    "isRegion": true,
+                    "entry": "$41,480",
+                    "median": "$58,100",
+                    "expert": "$73,540"
+                  },
+                  {
+                    "location": "平衡",
+                    "isRegion": true,
+                    "entry": "$43,160",
+                    "median": "$48,710",
+                    "expert": "$67,540"
+                  },
+                  {
+                    "location": "美国",
+                    "isRegion": false,
+                    "entry": "$40,690",
+                    "median": "$52,380",
+                    "expert": "$64,060"
+                  }
+                ]
+              },
+              {
+                "label": "心理健康和物质滥用社会工作者 (21-1023)",
+                "locations": [
+                  {
+                    "location": "阿拉斯加州",
+                    "isRegion": false,
+                    "entry": "$36,170",
+                    "median": "$44,610",
+                    "expert": "$53,430"
+                  },
+                  {
+                    "location": "安克雷奇",
+                    "isRegion": true,
+                    "entry": "$34,470",
+                    "median": "$43,220",
+                    "expert": "$51,000"
+                  },
+                  {
+                    "location": "平衡",
+                    "isRegion": true,
+                    "entry": "$43,000",
+                    "median": "$52,410",
+                    "expert": "$64,680"
+                  },
+                  {
+                    "location": "东南",
+                    "isRegion": true,
+                    "entry": "$39,060",
+                    "median": "$44,270",
+                    "expert": "$49,650"
+                  },
+                  {
+                    "location": "美国",
+                    "isRegion": false,
+                    "entry": "$32,880",
+                    "median": "$42,170",
+                    "expert": "$55,740"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "period": "每月",
+            "wages": [
+              {
+                "label": "儿童，家庭和学校社会工作者 (21-1021)",
+                "locations": [
+                  {
+                    "location": "阿拉斯加州",
+                    "isRegion": false,
+                    "entry": "$3,190",
+                    "median": "$4,053",
+                    "expert": "$5,050"
+                  },
+                  {
+                    "location": "安克雷奇",
+                    "isRegion": true,
+                    "entry": "$3,591",
+                    "median": "$4,365",
+                    "expert": "$5,095"
+                  },
+                  {
+                    "location": "平衡 ",
+                    "isRegion": true,
+                    "entry": "$3,050",
+                    "median": "$3,766",
+                    "expert": "$5,010"
+                  },
+                  {
+                    "location": "费尔班克斯",
+                    "isRegion": true,
+                    "entry": "$3,187",
+                    "median": "$4,681",
+                    "expert": "$5,558"
+                  },
+                  {
+                    "location": "东南",
+                    "isRegion": true,
+                    "entry": "$2,801",
+                    "median": "$3,527",
+                    "expert": "$4,714"
+                  },
+                  {
+                    "location": "美国",
+                    "isRegion": false,
+                    "entry": "$2,814",
+                    "median": "$3,528",
+                    "expert": "$4,617"
+                  }
+                ]
+              },
+              {
+                "label": "医疗社会工作者 (21-1022)",
+                "locations": [
+                  {
+                    "location": "阿拉斯加州",
+                    "isRegion": false,
+                    "entry": "$3,535",
+                    "median": "$4,665",
+                    "expert": "$5,951"
+                  },
+                  {
+                    "location": "安克雷奇",
+                    "isRegion": true,
+                    "entry": "$3,456",
+                    "median": "$4,840",
+                    "expert": "$6,128"
+                  },
+                  {
+                    "location": "平衡",
+                    "isRegion": true,
+                    "entry": "$3,596",
+                    "median": "$4,059",
+                    "expert": "$5,627"
+                  },
+                  {
+                    "location": "余额国家",
+                    "isRegion": false,
+                    "entry": "$3,390",
+                    "median": "$4,364",
+                    "expert": "$5,338"
+                  }
+                ]
+              },
+              {
+                "label": "心理健康和物质滥用社会工作者 (21-1023)",
+                "locations": [
+                  {
+                    "location": "阿拉斯加州",
+                    "isRegion": false,
+                    "entry": "$3,014",
+                    "median": "$3,717",
+                    "expert": "$4,452"
+                  },
+                  {
+                    "location": "安克雷奇",
+                    "isRegion": true,
+                    "entry": "$2,872",
+                    "median": "$3,601",
+                    "expert": "$4,249"
+                  },
+                  {
+                    "location": "平衡",
+                    "isRegion": true,
+                    "entry": "$3,582",
+                    "median": "$4,367",
+                    "expert": "$5,390"
+                  },
+                  {
+                    "location": "东南",
+                    "isRegion": true,
+                    "entry": "$3,255",
+                    "median": "$3,688",
+                    "expert": "$4,137"
+                  },
+                  {
+                    "location": "美国",
+                    "isRegion": false,
+                    "entry": "$2,740",
+                    "median": "$3,515",
+                    "expert": "$4,644"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "period": "小时",
+            "wages": [
+              {
+                "label": "儿童，家庭和学校社会工作者(21-1021)",
+                "locations": [
+                  {
+                    "location": "阿拉斯加州",
+                    "isRegion": false,
+                    "entry": "$18.41",
+                    "median": "$23.39",
+                    "expert": "$29.14"
+                  },
+                  {
+                    "location": "安克雷奇",
+                    "isRegion": true,
+                    "entry": "$20.72",
+                    "median": "$25.19",
+                    "expert": "$29.40"
+                  },
+                  {
+                    "location": "安克雷奇",
+                    "isRegion": true,
+                    "entry": "$17.60",
+                    "median": "$21.73",
+                    "expert": "$28.91"
+                  },
+                  {
+                    "location": "费尔班克斯",
+                    "isRegion": true,
+                    "entry": "$18.39",
+                    "median": "$27.01",
+                    "expert": "$32.07"
+                  },
+                  {
+                    "location": "东南",
+                    "isRegion": true,
+                    "entry": "$16.16",
+                    "median": "$20.35",
+                    "expert": "$27.20"
+                  },
+                  {
+                    "location": "美国",
+                    "isRegion": false,
+                    "entry": "$16.24",
+                    "median": "$20.36",
+                    "expert": "$26.64"
+                  }
+                ]
+              },
+              {
+                "label": "医疗社会工作者 (21-1022)",
+                "locations": [
+                  {
+                    "location": "阿拉斯加州",
+                    "isRegion": false,
+                    "entry": "$20.40",
+                    "median": "$26.92",
+                    "expert": "$34.34"
+                  },
+                  {
+                    "location": "安克雷奇",
+                    "isRegion": true,
+                    "entry": "$19.94",
+                    "median": "$27.93",
+                    "expert": "$35.36"
+                  },
+                  {
+                    "location": "平衡",
+                    "isRegion": true,
+                    "entry": "$20.75",
+                    "median": "$23.42",
+                    "expert": "$32.47"
+                  },
+                  {
+                    "location": "美国",
+                    "isRegion": false,
+                    "entry": "$19.56",
+                    "median": "$25.18",
+                    "expert": "$30.80"
+                  }
+                ]
+              },
+              {
+                "label": "心理健康和物质滥用社会工作者 (21-1023)",
+                "locations": [
+                  {
+                    "location": "阿拉斯加州",
+                    "isRegion": false,
+                    "entry": "$17.39",
+                    "median": "$21.45",
+                    "expert": "$25.69"
+                  },
+                  {
+                    "location": "安克雷奇",
+                    "isRegion": true,
+                    "entry": "$16.57",
+                    "median": "$20.78",
+                    "expert": "$24.52"
+                  },
+                  {
+                    "location": "平衡",
+                    "isRegion": true,
+                    "entry": "$20.67",
+                    "median": "$25.20",
+                    "expert": "$31.10"
+                  },
+                  {
+                    "location": "东南",
+                    "isRegion": true,
+                    "entry": "$18.78",
+                    "median": "$21.28",
+                    "expert": "$23.87"
+                  },
+                  {
+                    "location": "美国",
+                    "isRegion": false,
+                    "entry": "$15.81",
+                    "median": "$20.28",
+                    "expert": "$26.80"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sectionName": "WorkingConditions",
+      "sectionResults": {
+        "intro": "在典型的工作环境中，会计师和审计师：",
+        "lists": [
+          {
+            "header": "人际关系",
+            "items": [
+              "有中等程度的社会接触。他们与客户，其他会计师和审计师以及办公室工作人员合作。一般而言，审计人员与会计师有更多的联系。",
+              "对他人所做的工作负有责任。",
+              "每天通过电子邮件，电话和面对面的讨论进行沟通。他们还写信和备忘录。",
+              "通常作为团队的一部分工作。"
+            ]
+          },
+          {
+            "header": "身体工作条件",
+            "items": [
+              "经常在室内工作"
+            ]
+          },
+          {
+            "header": "工作表现",
+            "items": [
+              "在工作中必须精确，并确保所有细节都完成。错误可能导致客户亏损。",
+              "重复同样的心理任务。",
+              "计划大部分自己的任务，优先事项和目标，而无需与主管交谈。",
+              "做出最大的决定，而不是和主管交谈。这些决定可能会极大地影响到他们的客户。",
+              "在适度竞争的环境中工作。春季（税季）很忙。"
+            ]
+          },
+          {
+            "header": "小时/旅行",
+            "items": [
+              "每周可以工作超过50小时，特别是如果是个体经营者。",
+              "如果专门从事税务准备，可以在1月至4月间长时间工作。",
+              "可以经常前往客户办公室。"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

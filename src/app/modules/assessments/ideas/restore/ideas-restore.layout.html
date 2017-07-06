@@ -1,0 +1,35 @@
+<!-- Intrest-profiler restore view start -->
+<div class="row">
+	<div class="col-md-8">
+		<div class="panel-group t-p-p2">
+			<div *ngIf="successDelete" class="success-color"><b>Answer Set 10 Deleted successfully</b><br></div>
+			<!--This is for displaying the data in the view-->
+			<div class="panel panel-default panel-box-plp2 " >
+				<div class="panel-body body-content-plp2"  >
+					<h4>
+						<u class="cls-cursor" (click)="restoreQuestionsIP(item.AnswerSet,item.UserNotes)">Restore Answer Set 10 </u>
+					</h4>
+					<p>Save partila</p>
+				</div>
+				<div class="panel-footer-p2">
+					<div class="row">
+						<div class="col-6 col-sm-6 col-md-6">
+							<h6 class="green-color-plp2"><i class="icon-asmnt-date" aria-hidden="true"></i>&nbsp;&nbsp;2017-05-06</h6>
+						</div>
+						<div class="col-6 col-sm-6 col-md-6 ">
+							<h6 class="pull-right"> <a class="red-color-plp2 cls-cursor" (click)="DeleteIPAnswerSet(item.AnswerSet)"><i class="icon-asmnt-delete" aria-hidden="true"></i>&nbsp;Delete</a></h6>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--This is for displaying the image when there is no data in the view -->
+			<img *ngIf="(resLength==0)" align="center" class="data-notfound" src="/assets/images/nodata-found.png" />
+		</div>
+
+
+
+	</div>
+	<div class="clearfix"> </div>
+</div>
+<!--End of the restore view-->

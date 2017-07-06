@@ -1,0 +1,178 @@
+<!-- Fixed navbar -->
+
+<div class="clear-fixed"> </div>
+<div class="header-p2 headerheight plp2-green-bg-margin">
+	<div class="mobile-design-hide-plp2" *ngIf="(endurl!='occCareer') && (endurl!='occCluster') && (endurl!='occEmergCareer') 
+	&& (endurl!='occIndex') && (endurl!='compare')">
+		<div class="plp2-title-bg ">
+			<div class="row ">
+				<div *ngIf="((asmnt_object?.endurl =='assessment')||(asmnt_object?.endurl =='result'))" class="col-8 text-save-print">{{assessmenthead}} {{assessmentheadextra}}</div>
+				<div *ngIf="((asmnt_object?.endurl !='assessment')&&(asmnt_object?.endurl !='result'))" class="col-8 text-logout">{{assessmenthead}} {{assessmentheadextra}}</div>
+				<div class="col-4 save-align ">
+					<div class="" style="display:inline-flex;">
+
+						<div [ngStyle]="(asmnt_object?.buttons.indexOf('partialsave') === -1) ? {'display':'none'}:{'display':'block' }" 
+						(click)="SaveParitalAssesment(asmnt_object?.assessment)">
+							<button class="btn btn-green-plp3" data-tooltip="Save" >
+								<i class="icon-asmnt-save occ-icon-plp2" ></i></button>
+						</div>
+
+						<div [ngStyle]="(asmnt_object?.buttons.indexOf('resultsave') === -1) ? {'display':'none'}:{'display':'block' }" 
+						(click)="SaveResultAssessment(asmnt_object?.assessment)">
+							<button class="btn btn-green-plp3" data-tooltip="Save" >
+								<i class="icon-asmnt-save occ-icon-plp2" ></i></button>
+						</div>
+						<div [ngStyle]="(asmnt_object?.buttons.indexOf('startover') === -1) ? {'display':'none'}:{'display':'block' }" (click)="StartOver(asmnt_object?.assessment)"
+						 style="cursor:pointer;font-weight:bold;">
+							<button class="btn btn-green-plp3" data-tooltip="Start Over"><span class="icon-asmnt-start-over" style="font-weight:bold;"></span></button></div>
+
+
+						<div [ngStyle]="(asmnt_object?.buttons.indexOf('restore') === -1) ? {'display':'none'}:{'display':'block' }" (click)="RestoreAnswerSets(asmnt_object?.assessment)"
+						 style="cursor:pointer;">
+							<button class="btn btn-green-plp3" data-tooltip="Restore"><span class="icon-asmnt-restore-2" style="font-weight:bold;"></span> </button></div>
+
+
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div style="top:-23px;" [ngClass]="(endurl=='occCareer') || (endurl=='occCluster') || (endurl=='occEmergCareer')? 'mobile-container' : ''">
+	<div *ngIf="(endurl!='occCareer') && (endurl!='occCluster') && (endurl!='occEmergCareer') 
+	&& (endurl!='occIndex') && (endurl!='compare')" class="row desktop-design-hide-plp2">
+		<div class="head-title col-md-5 col-sm-5 col-xl-5 ">
+			<h2 class="page-header-2 plp2-title-bg">
+				<div [ngClass]="(endurl=='intro')?'text-center':''">{{assessmenthead}} {{assessmentheadextra}} </div>
+			</h2>
+		</div>
+		<div class="head-buttons col-md-7 col-sm-7 col-xl-7 ">
+
+
+			<ul class="nav navbar-nav pull-right circle-top-nav">
+
+				<li [ngStyle]="(asmnt_object.buttons.indexOf('partialsave') === -1) ? {'display':'none'}:{'display':'block' }">
+					<button class="btn-plp-2 btn-raised save-btn-plp2 {{asmnt_object.btnClass}}" (click)="SaveParitalAssesment(asmnt_object.assessment)">
+					{{'LANG_EN_TRANS.btn_save' | translate}} 
+					
+					</button>
+				</li>
+				<li [ngStyle]="(asmnt_object.buttons.indexOf('resultsave') === -1) ? {'display':'none'}:{'display':'block' }">
+					<button class="btn-plp-2 btn-raised save-btn-plp2 {{asmnt_object.btnClass}}" (click)="SaveResultAssessment(asmnt_object.assessment)">
+					 {{'LANG_EN_TRANS.btn_save' | translate}} 
+					 </button>
+				</li>
+				<li [ngStyle]="(asmnt_object.buttons.indexOf('startover') === -1) ? {'display':'none'}:{'display':'block' }">
+					<button class="btn-plp-2 btn-raised {{asmnt_object.btnClass}}" (click)="StartOver(asmnt_object.assessment)">
+					{{'LANG_EN_TRANS.btn_startover' | translate}}
+					 </button>
+				</li>
+
+				<li [ngStyle]="(asmnt_object.buttons.indexOf('print') === -1) ? {'display':'none'}:{'display':'block' }">
+					<button class="btn-plp-2 btn-raised {{asmnt_object.btnClass}}" (click)="printResult(asmnt_object.assessment)">
+					{{'LANG_EN_TRANS.print' | translate }} 
+					</button>
+				</li>
+
+
+				<li [ngStyle]="(asmnt_object.buttons.indexOf('myresults') === -1) ? {'display':'none'}:{'display':'block' }">
+					<button class="btn-plp-2 btn-raised {{asmnt_object.btnClass}}" (click)="myIPResult(asmnt_object.assessment)">
+					{{'LANG_EN_TRANS.myresults' | translate}}
+					</button>
+				</li>
+				<li [ngStyle]="(asmnt_object.buttons.indexOf('restore') === -1) ? {'display':'none'}:{'display':'block' }">
+					<button class="btn-plp-2 btn-raised save-btn-plp2 {{asmnt_object.btnClass}}" (click)="RestoreAnswerSets(asmnt_object.assessment)">
+					{{'LANG_EN_TRANS.btn_rst' | translate}} 
+					</button>
+				</li>
+				<li [ngStyle]="(asmnt_object.buttons.indexOf('entrepreneur') === -1) ? {'display':'none'}:{'display':'block' }">
+					<button class="btn-plp-2 btn-raised {{asmnt_object.btnClass}}" (click)="LaunchEntiQuiz(asmnt_object.assessment)">
+					{{'LANG_EN_TRANS.eq_title' | translate}}
+					</button>
+				</li>
+				<li [ngStyle]="(asmnt_object.buttons.indexOf('interestprofiler') === -1) ? {'display':'none'}:{'display':'block' }">
+					<button class="btn-plp-2 btn-raised {{asmnt_object.btnClass}}" (click)="LaunchInterestProfile(asmnt_object.assessment)">
+					 {{'LANG_EN_TRANS.ip_title' | translate}}
+					 </button>
+				</li>
+				<li [ngStyle]="(asmnt_object.buttons.indexOf('occSort') === -1) ? {'display':'none'}:{'display':'block' }">
+					<button class="btn-plp-2 btn-raised {{asmnt_object.btnClass}}" (click)="LaunchOccSort(asmnt_object.assessment)">
+					{{'LANG_EN_TRANS.os_title' | translate}}
+					</button>
+				</li>
+				<li [ngStyle]="(asmnt_object.buttons.indexOf('Learning Style Survey') === -1) ? {'display':'none'}:{'display':'block' }">
+					<button class="btn-plp-2 btn-raised {{asmnt_object.btnClass}}" 
+					(click)="LaunchLearnStyle(asmnt_object.assessment)">
+				     Learning Style Survey
+					</button>
+				</li>
+				<li [ngStyle]="(asmnt_object.buttons.indexOf('wes') === -1) ? {'display':'none'}:{'display':'block' }">
+					<button class="btn-plp-2 btn-raised {{asmnt_object.btnClass}}" (click)="LaunchWES(asmnt_object.assessment)">
+				
+					Work Employability Skills
+					</button>
+				</li>
+
+		<li [ngStyle]="(asmnt_object.buttons.indexOf('cciJr'|| 'cciAdult') === -1) ? {'display':'none'}:{'display':'block' }">
+					<button class="btn-plp-2 btn-raised {{asmnt_object.btnClass}}" (click)="LaunchcciJr(asmnt_object.assessment)">
+				
+					Career Cluster Inventory
+				
+					</button>
+				</li>
+
+			</ul>
+		</div>
+		<div class="clear-fixed"> </div>
+		<div class="hr-line"> </div>
+	</div>
+
+	<!--This html tag loads the actual layout, 
+	Inside that layout we have router-outlet which loads the internal components-->
+	<router-outlet></router-outlet>
+
+	<div class="floatingContainer mobile-design-hide-plp2">
+		<div [ngStyle]="(asmnt_object?.buttons.indexOf('entrepreneur') === -1) ? {'display':'none'}:{'display':'block' }" class="actionButton "
+		 (click)="LaunchEntiQuiz(asmnt_object?.assessment)">
+			<i class="icon-asmnt-assessment occ-icon-plp2-restore"></i>
+			<p class="floatingText">
+			</p>
+		</div>
+		<div [ngStyle]="(asmnt_object?.buttons.indexOf('interestprofiler') === -1) ? {'display':'none'}:{'display':'block' }" class="actionButton "
+		 (click)="LaunchInterestProfile(asmnt_object?.assessment)"><i class="icon-asmnt-assessment occ-icon-plp2-restore"></i>
+			<p class="floatingText">
+			</p>
+		</div>
+		<div [ngStyle]="(asmnt_object?.buttons.indexOf('occSort') === -1) ? {'display':'none'}:{'display':'block' }" class="actionButton "
+		 (click)="LaunchOccSort(asmnt_object?.assessment)"><i class="icon-asmnt-assessment occ-icon-plp2-restore"></i>
+			<p class="floatingText">
+			</p>
+		</div>
+	<div [ngStyle]="(asmnt_object?.buttons.indexOf('cciJr') === -1) ? {'display':'none'}:{'display':'block' }" class="actionButton "
+		 (click)=" LaunchcciJr(asmnt_object?.assessment)"><i class="icon-asmnt-assessment occ-icon-plp2-restore"></i>
+			<p class="floatingText">
+			</p>
+		</div>
+		<div [ngStyle]="(asmnt_object?.buttons.indexOf('cciAdult') === -1) ? {'display':'none'}:{'display':'block' }" class="actionButton "
+		 (click)=" LaunchcciJr(asmnt_object?.assessment)"><i class="icon-asmnt-assessment occ-icon-plp2-restore"></i>
+			<p class="floatingText">
+			</p>
+		</div>
+			<div [ngStyle]="(asmnt_object?.buttons.indexOf('Learning Style Survey') === -1) ? {'display':'none'}:{'display':'block' }" class="actionButton"
+		 (click)="LaunchLearnStyle(asmnt_object?.assessment)">
+    <i class="icon-asmnt-assessment occ-icon-plp2-restore"></i>
+			<p class="floatingText">
+			</p>
+		</div>
+		<div [ngStyle]="(asmnt_object?.buttons.indexOf('print') === -1)? {'display':'none'}:{'display':'block' }" class="actionButton">
+			<i [ngStyle]="((asmnt_object?. assessment== 'entrepreneurQuiz')&&(asmnt_object?. assessment== 'interestProfilerSf')) ? {'display':'none'}:{'display':'block' }"
+			 class="icon-asmnt-print result-icon-plp2" (click)="printResult(asmnt_object?.assessment);"></i>
+		</div>
+
+	</div>
+
+</div>

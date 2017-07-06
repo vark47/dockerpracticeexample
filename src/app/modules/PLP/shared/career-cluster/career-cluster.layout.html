@@ -1,0 +1,63 @@
+<!--<PLP-nav-header [header]="sectionObject" (changeView)="changeView($event)" [report-status]="report"></PLP-nav-header>-->
+<form>
+
+
+  <div class="form-group">
+    <div class="col-spacer">
+      <div *ngIf="edited" class="alert alert-success">
+        <strong>Success!</strong> {{successLabel}}
+      </div>
+
+      <div *ngIf="errorVal" class="alert alert-danger">
+        <strong>Oops!</strong> {{successLabel}}
+      </div>
+      <label class="question-head"><i *ngIf="(report=='')" class="icon-pencil-striped edit-ic-btn"></i>
+      <i *ngIf="!(report=='')" class="icon-pencil-striped review-ic-btn"></i>
+              <p class="ptitle">{{ questionObject.questions[0] }}</p>   
+                <span class="date-text-p">Last Saved On {{ careerClusterCheck | customDate}}</span>
+            </label>
+      <div class="desktop-table">
+
+        <div class="col-12 col-sm-12 col-md-12 rtable-plp1">
+          <div class="rTableRow row" *ngFor="let item of careerClusterData; let even = even;let odd = odd;let indx = index">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 rTableCell" *ngIf="even">
+ 			   <div class="checkbox-occ">
+                <input type="checkbox" 
+id="{{careerClusterData[indx].ClusterID}}" 
+[(ngModel)]="careerClusterData[indx].selected" 
+name="{{careerClusterData[indx].ClusterName}}">
+                <label for="{{careerClusterData[indx].ClusterID}}">{{careerClusterData[indx].ClusterName}}</label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 rTableCell" *ngIf="even">
+             <div class="checkbox-occ">
+                <input type="checkbox" id="{{careerClusterData[indx+1].ClusterID}}" [(ngModel)]="careerClusterData[indx+1].selected" name="{{careerClusterData[indx+1].ClusterName}}">
+                <label for="{{careerClusterData[indx+1].ClusterID}}">{{careerClusterData[indx+1].ClusterName}}</label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div style="width: 100%;" class="mobile-table">
+        <div class="row table-striped table-hover">
+          <div class="col-12 col-sm-12 col-md-12">
+            <div class="table-card" *ngFor="let item of careerClusterData; let even = even;let odd = odd;let indx = index">
+              <div class="checkbox-occ">
+                <input type="checkbox" class="checkbox-size" id="{{item.ClusterID}}" [(ngModel)]="item.selected" name="{{item.ClusterName}}">
+                <label for="{{item.ClusterID}}">{{item.ClusterName}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div *ngIf="(report=='')">
+        <button type="button" class="btn btn-red-plp" (click)="SaveCareerCluster()">
+            <i class="fa fa-save white-color"> </i> Save Information</button>
+      </div>
+    </div>
+  </div>
+
+</form>

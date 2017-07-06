@@ -1,0 +1,107 @@
+<!--<PLP-nav-header [header]="sectionObject" (changeView)="changeView($event)" [report-status]="report">
+  </PLP-nav-header>
+  -->
+
+<form>
+
+  <div class="form-group">
+
+    <div class="col-spacer">
+
+      <div class="desktop-table">
+
+
+        <div class="col-12 col-sm-12 col-md-12 rtable-plp1">
+          <div class="expTableHeading row" *ngIf="occAndClusterData && occAndClusterData.length>0">
+            <div class="col-4 col-sm-4 col-md-4 rTableHead">
+              Occupation</div>
+            <div class="col-4 col-sm-4 col-md-4 rTableHead">
+              Date Saved</div>
+            <div class="col-4 col-sm-4 col-md-4 rTableHead">
+              What I Learned</div>
+          </div>
+
+          <div class="">
+            <div class="row" *ngIf="occAndClusterData && occAndClusterData.length == 0">
+              <div class="col-12 col-sm-12 col-md-12 rTableCell " align="center">
+                <b>{{tableNoData}}</b>
+              </div>
+            </div>
+            <div class="rTableRow row" *ngFor='let item of occAndClusterData'>
+              <div class="col-4 col-sm-4 col-md-4 rTableCell">
+                {{item.Title}}
+              </div>
+              <div class="col-4 col-sm-4 col-md-4 rTableCell">
+                {{item.UpdatedTimeStamp | customDate}}
+              </div>
+              <div class="col-4 col-sm-4 col-md-4 rTableCell">
+                {{item.UserNotes}}
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="clearfix"> </div>
+      </div>
+
+
+
+      <!-- mobile table ---->  
+
+      <div style="width: 100%;" class="mobile-table">
+
+        <div class="col-12 col-sm-12 col-md-12">
+          <div class="row rtable-plp1" *ngIf="occAndClusterData && occAndClusterData.length == 0">
+            <div class="col-12 col-sm-12 col-md-12 rTableCell" align="center">
+              <b>{{tableNoData}}</b>
+            </div>
+          </div>
+          <div class="row mTableRow " *ngFor='let item of occAndClusterData, let odd=odd, let evn=even'>
+            <div class="mTableCell">
+              <div class="inner-row-m">
+
+                <div class="col-6 col-sm-6 col-md-6 ">
+                  <b>Occupation</b></div>
+
+                <div class="col-6 col-sm-6 col-md-6 p-0">
+                  {{item.Title}}</div>
+              </div>
+              <div class=" inner-row-m">
+                <div class="col-6 col-sm-6 col-md-6 ">
+                  <b> Date Saved </b></div>
+
+                <div class="col-6 col-sm-6 col-md-6 p-0">
+                  {{item.UpdatedTimeStamp | customDate}}</div>
+
+              </div>
+              <div class=" inner-row-m">
+                <div class="col-6 col-sm-6 col-md-6 ">
+                  <b> What I Learned </b></div>
+
+                <div class="col-6 col-sm-6 col-md-6 p-0">
+                  {{item.UserNotes}}</div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+      <!-- End mobile table ---->
+
+
+      <div class="clearfix"> </div>
+
+
+    </div>
+
+  </div>
+</form>

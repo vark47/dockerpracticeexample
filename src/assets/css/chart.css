@@ -1,0 +1,585 @@
+/* RESET STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.chart-skills {
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+	height: 98px;
+}
+ .chart-skills *, .chart-skills::before {
+ box-sizing: border-box;
+}
+/* CHART-SKILLS STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+ .eo-bottom-image {
+	background:url('../images/map-plp3.jpg') repeat!important;
+	height:auto;
+	padding: 20px 4px;
+}
+.eo-location-card {
+	border:1px solid #ccc;
+	box-shadow:0 0 3px 1px #ccc;
+	background-color:white;
+	color:#000;
+}
+.eo-card-bottom-align {
+	margin-bottom: 5px;
+}
+.eo-location-card-dummy {
+	height: 66px;
+	border: 1px solid #ceddeb;
+}
+.eo-image-heading {
+	color:yellow;
+	padding:10px;
+}
+.loc-button-color {
+	padding:10px;
+	border:2px solid white;
+	color:white;
+	border-radius:5px;
+}
+.eo-location-button {
+	list-style-type: none;
+	margin:0px;
+	padding:0px;
+}
+.eo-location-card-data {
+	list-style:none;
+	display:inline-flex;
+	padding: 5px 10px 0px!important;
+	font-size: 15px;
+}
+.eo-location-card-graph li {
+	height:48px!important;
+	padding:0 42px;
+	width: 50%;
+}
+ .eo-location-card-data li:nth-child(1) {
+ width:  70%;
+}
+ .eo-location-card-data li:nth-child(2) {
+ width:  49%;
+}
+ .eo-location-card-data li:nth-child(2) img {
+ float: right;
+}
+.chart-skills {
+	position: relative;
+	width: 100%;
+	height: 98px;
+	overflow: hidden;
+	float: right;
+}
+ .chart-skills::before, .chart-skills::after {
+ position: absolute;
+}
+ .chart-skills::before {
+ width: inherit;
+ height: inherit;
+ border: 20px solid rgba(211, 211, 211, .3);
+ border-bottom: none;
+ border-top-left-radius: 175px;
+ border-top-right-radius: 175px;
+}
+ .chart-skills::after {
+ left: 50%;
+ bottom: 10px;
+ transform: translateX(-50%);
+ font-size: 1rem;
+ color: black;
+}
+.chart-skills li {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: inherit;
+	height: inherit;
+	border: 20px solid;
+	border-top: none;
+	border-bottom-left-radius: 175px;
+	border-bottom-right-radius: 175px;
+	transform-origin: 50% 0;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	animation-fill-mode: forwards;
+ animation-duration: .4s;
+	animation-timing-function: linear;
+}
+ .chart-skills li:nth-child(1) {
+ z-index: 4;
+ border-color: #a2a2a2;
+ animation-name: rotate-one;
+}
+ .chart-skills li:nth-child(2) {
+ z-index: 3;
+ border-color: #2f8cd9;
+ animation-name: rotate-two;
+ animation-delay: .4s;
+}
+ .chart-skills li:nth-child(3) {
+ z-index: 2;
+ border-color: #073b8e;
+ animation-name: rotate-three;
+ animation-delay: .8s;
+}
+.chart-ative-p3 {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #073b8e;
+	margin-top: 8px !important;
+	margin: auto;
+}
+.chart-skills span {
+	position: absolute;
+ font-size: .85rem;
+	backface-visibility: hidden;
+ animation: fade-in .4s linear forwards;
+}
+ .chart-skills li:nth-child(1) span {
+ top: 5px;
+ left: 10px;
+ transform: rotate(-79.6deg);
+}
+ .chart-skills li:nth-child(2) span {
+ top: 20px;
+ left: 10px;
+ transform: rotate(-21.2deg);
+ animation-delay: .4s;
+}
+ .chart-skills li:nth-child(3) span {
+ top: 10px;
+ left: -2px;
+ transform: rotate(-109.4deg);
+ animation-delay: .8s;
+}
+ .arc, &:before {
+content: '';
+width: $pie_width;
+height: $pie_height;
+position: absolute;
+-ms-transform-origin: 50% 0%;
+-webkit-transform-origin: 50% 0%;
+transform-origin: 50% 0%;
+left: 0;
+box-sizing: border-box;
+}
+ &:before {
+border: 50px solid $wrapper-bg;
+border-bottom: none;
+top: 0;
+z-index: 1;
+border-radius: 300px 300px 0 0;
+}
+.arc {
+	border: 50px solid transparent;
+	border-top: none;
+	border-radius: 0 0 300px 300px;
+	top: 100px;
+	z-index: 2;
+ &::before {
+ content: "";
+ height:1px;
+ width:5px;
+ position: absolute;
+ top: -8px;
+}
+}
+
+ 
+
+/* ANIMATIONS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@keyframes rotate-one {
+ 100% {
+ transform: rotate(56.6deg);
+/**
+     * 12% => 21.6deg
+     */
+  }
+}
+ @keyframes rotate-two {
+ 0% {
+ transform: rotate(56.6deg);
+}
+ 100% {
+ transform: rotate(135.2deg);
+/**
+     * 32% => 57.6deg 
+     * 57.6 + 21.6 => 79.2deg
+     */
+  }
+}
+ @keyframes rotate-three {
+ 0% {
+ transform: rotate(135.2deg);
+}
+ 100% {
+ transform: rotate(180.4deg);
+/**
+     * 34% => 61.2deg 
+     * 61.2 + 79.2 => 140.4deg
+     */
+  }
+}
+ @keyframes rotate-four {
+ 0% {
+ transform: rotate(140.4deg);
+}
+ 100% {
+ transform: rotate(180deg);
+/**
+     * 22% => 39.6deg  
+     * 140.4 + 39.6 => 180deg
+     */
+  }
+}
+ @keyframes fade-in {
+ 0%,  90% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
+}
+}
+/* End desktop half circle end */
+
+/* Start desktop  chart end */
+
+
+.chart {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	max-width: 110px;
+	margin: auto;
+	padding: 0px;
+	padding-bottom: 32px;
+}
+.chart-mini {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	max-width: 44px;
+	margin: auto;
+	padding: 0px;
+	position: relative;
+	float:right;
+}
+.chart-mini-1 {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	max-width: 44px;
+	margin: 0;
+	padding: 0px;
+	right: 0px;
+	position: relative;
+	float: right;
+}
+.chart li {
+	position: relative;
+	display: table-cell;
+	vertical-align: bottom;
+	height: 85px;
+	padding: 0px;
+	margin: 0;
+}
+.chart-mini li {
+	position: relative;
+	display: table-cell;
+  vertical-align: bottom;
+	height: 92px;
+	padding: 0px;
+	margin: 0;
+}
+.chart-mini-1 li {
+	position: relative;
+	display: table-cell;
+  vertical-align: bottom;
+	height: 92px;
+	padding: 0px;
+	margin: 0;
+}
+.chart span {
+	margin: 0px;
+	display: block;
+	animation: draw 1s ease-in-out;
+
+}
+.chart-mini span {
+	margin: 0px;
+	display: block;
+	animation: draw 1s ease-in-out;
+}
+
+.chart-mini-1 span {
+	margin: 0px;
+	display: block;
+	animation: draw 1s ease-in-out;
+}
+
+.chart li:nth-child(1) span {
+ background: #a2a2a2;
+ height:50%;
+}
+ .chart-mini li:nth-child(1) span {
+ background: #d4d4d4;
+ height:20%;
+ width:15px;
+}
+ .chart-mini-1 li:nth-child(1) span {
+ background: #d4d4d4;
+ height:50%;
+ width: 21px;
+}
+.chart li:nth-child(2) span {
+ background: #d4d4d4;
+ height:70%;
+}
+.chart-mini li:nth-child(2) span {
+ background: #a2a2a2;
+ height:40%;
+ width: 15px;
+}
+.chart-mini-1 li:nth-child(2) span {
+ background: #a2a2a2;
+ height:70%;
+ width: 15px;
+}
+ .chart li:nth-child(3) span {
+ background: #a2a2a2;
+ height:100%;
+}
+.chart-mini li:nth-child(3) span {
+ background: #747474;
+ height:100%;
+}
+.chart-mini-1 li:nth-child(3) span {
+ background: #747474;
+ height:100%;
+}
+.chart li:nth-child(4) span {
+ background: #747474;
+ height:100%;
+}
+
+
+.activeChartClass0 {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	margin-top: 8px !important;
+	margin: auto;
+	top:14px!important;
+	left:0px!important;
+	transform:rotate(-113.6deg)!important;
+	border-top:10px solid #a2a2a2;
+}
+.activeChartClass1 {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	margin-top: 8px !important;
+	margin: auto;
+	top:30px!important;
+	left:9px!important;
+	transform:rotate(-130.6deg)!important;
+	border-top:10px solid #2f8cd9;
+}
+.chart-mini li:nth-child(3) span {
+ background: #d4d4d4;
+ height:60%;
+ width:15px;
+}
+.chart-mini li:nth-child(4) span {
+ background: #a2a2a2;
+ height:80%;
+ width:10px;
+}
+.chart-mini li:nth-child(5) span {
+ background: #d4d4d4;
+ height:100%;
+ width:7px;
+}
+.chartColor {
+	background: #0d47a1;
+}
+.chart span:before {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	/*! padding: 5px 1em 0; */
+  display: block;
+	text-align: center;
+	content: attr(title);
+	word-wrap: break-word;
+}
+.bar-1 {
+	background: #a2a2a2;
+	height: 26px;
+}
+.bar-2 {
+	background: #0d47a1;
+	height: 26px;
+}
+.chart-mini span:before {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	/*! padding: 5px 1em 0; */
+  display: block;
+	text-align: center;
+	content: attr(title);
+	word-wrap: break-word;
+}
+@keyframes draw {
+ 0% {
+ height: 0;
+}
+}
+/* End desktop  chart end */
+
+/* start desktop  stacked-bar-graph  */
+
+.stacked-bar-graph {
+	width: 100%;
+	height: 44px;
+	color:#414042;
+}
+.stacked-bar-graph div {
+	float: left;
+}
+.stacked-bar-graph .bar-1 {
+	background: #a2a2a2;
+	height: 22px;
+}
+.stacked-bar-graph .bar-2 {
+	background: #0d47a1;
+	height: 26px;
+}
+/*.stacked-bar-graph .bar-3 {
+    background: #a2a2a2;
+     height: 26px;
+  }*/
+  
+/*.stacked-bar-graph div {
+
+  float: left;
+}*/
+
+.stacked-bar-graph div.bar-3 span {
+	line-height: 96px;
+	font-size: 1rem;
+	color: black;
+}
+/* End desktop  stacked-bar-graph  */
+
+.textDiv {
+	text-align: center;
+	position: relative;
+	top: -25px;
+	font-size:21px;
+}
+ @media only screen and (max-width: 767px) {
+ .eo-location-card {
+ border:1px solid #ccc;
+ border-top: none;
+ box-shadow: none;
+}
+ .chart-skills {
+float: none;
+ width: 167px;
+height: 83px;
+}
+.ataglance-bargraph {
+	margin: 0 0 0 -108px!important;
+	top: 85px;
+	position: relative;
+}
+.ataglance-bargraph1 {
+	margin: 0 0 0 -66px!important;
+	top: 85px;
+	position: relative;
+}
+}      
+
+
+ @media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+ .textDiv {
+ position: absolute;
+ top: 93%;
+ right: 58px;
+}
+.chart-mini {
+ margin: 0px 0px;
+}
+ .chart-skills {
+ position: relative;
+ width: 167px;
+height: 83px;
+ overflow: hidden;
+ float: right;
+}
+}
+tab-content h4 {
+	padding-top: 20px!important;
+	line-height: 24px;
+}
+
+
+.eduNameStyle { 
+	display:inherit;
+	width:200px;
+	position:absolute;
+	top:87px;
+}
+.stacked-bar-graph .eduBar:last-child span{
+	text-align: left;
+	right:-75px;
+	
+}
+ @media only screen and (min-width: 768px){
+	 .ataglance-bargraph {
+	top: 85px;
+	position: relative;
+	margin: 0 0 0 -79px!important;
+}
+
+.ataglance-bargraph1 {
+	position: relative;
+    margin: 0 0 0 -68px!important;
+    left: 10px;
+    top: 85px;
+}
+ }
+ 
+ .plp3-model-close-align{
+margin-left:auto;
+outline:0!important;
+}
+.borderBottom{
+	border-bottom: 2px solid red;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+	 .ataglance-bargraph1 {
+	top: 75px;
+	margin: 0 0 0 -55px!important;
+}
+.chart li {
+	height: 75px;
+}
+.chart li:nth-child(1) span {
+    height: 36%;
+}
+ }

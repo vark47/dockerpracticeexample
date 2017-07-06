@@ -1,0 +1,82 @@
+<!-- Fixed navbar for WES assessment-->
+
+<div class="row desktop-design-hide-plp2">
+  <div class="col-md-12">
+    <div class="panel panel-green">
+      <div class="panel-progress-head-onion-plp4 shadow-bottom">
+        <!--Display back arrow that indicate we can go to previous questions-->
+        <div class="col-md-1 col-sm-2"> <span class="leftArrowClass" (click)="previousQuestion()"><i [class.class-withOpacityIP]="isClassVisibleIP" class="fa  icon-asmnt-back-arrow arrows" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+             </span>
+          <span class="eq-ques"> Q.{{currentQuestion+1}}  </span>
+        </div>
+        <div class="col-md-8 col-sm-7 col-lg-9">
+          <div class="progress xs progress-m">
+            <div class="progress-bar-bg-green" [ngStyle]="{'width': currentValue +'%'}"></div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-lg-2 text-right">
+          <span>{{WES_Questions.length-(currentQuestion+1)}} Remaining</span>&nbsp;
+          <span class="ntxArrow" *ngIf="showNxt" style="float:right;cursor:pointer;">
+                  <i aria-hidden="true"  class="fa icon-asmnt-forward-arrow arrows" (click)="nextQuestion()"></i></span>
+        </div>
+      </div>
+      <div class="panel-progress-onion-plp4">
+        <p class="text-center plp2-white">{{WES_Questions[currentQuestion]}}</p>
+      </div>
+      <div class="circle-body">
+        <div class="circle-lss-plp4 text-center" *ngFor="let value of WES_Responses;let inx=index">
+          <button class="btn btn-default blue-circle-button circl-wes-hover" href="" [ngClass]="(btnHighLight == (3-inx))? 'circle-wes-clicked':''"
+            (click)="callQuestion(3-inx)">
+                <i class="fa icon-asmnt-strongly-agree" [ngClass]="(btnHighLight == (3-inx))? 'white-color':''"></i>
+                <p>{{value}}</p>
+              </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- mobile design for WES assessment -->
+
+<div class="mobile-design-hide-plp2">
+  <div class="panel-progress-head-onion-plp4">
+    <div class="container mob-head-style">
+      <div class="row plp-2-m-t">
+        <div class="col-6"> <span class="text-right">Q.{{currentQuestion+1}}</span> </div>
+        <div class="col-6 text-right"> <span>{{WES_Questions.length-(currentQuestion+1)}} Remaining</span> </div>
+      </div>
+      <div class="row plp-2-m-t">
+        <div class="col-1"> <span class="leftArrowClass" (click)="previousQuestion()"> <i [class.class-withOpacityIP]="isClassVisibleIP" class="fa icon-asmnt-back-arrow arrows"></i> </span></div>
+        <div class="col-9">
+          <div class="progress xs progress-m">
+            <div class="progress-bar-bg-green" [ngStyle]="{'width': currentValue +'%'}"></div>
+          </div>
+        </div>
+        <div class="col-1 "> <span class="ntxArrow" *ngIf="showNxt"> 
+            <i aria-hidden="true" class="fa icon-asmnt-forward-arrow arrows" (click)="nextQuestion()"></i> </span> </div>
+      </div>
+      <div class="row plp-2-m-t">
+        <div class="col-1"> </div>
+        <div class="col-9">
+          <p class="text-center">{{WES_Questions[currentQuestion]}}</p>
+        </div>
+        <div class="col-1"> </div>
+      </div>
+    </div>
+  </div>
+  <div style="clear: both;"> </div>
+  <div class="card-blue">
+    <div class="card-plp-2  circl-wes-hover" *ngFor="let value of WES_Responses;let inx=index" (click)="callQuestion(3-inx)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>{{value}}</p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa  icon-asmnt-strongly-agree" [ngClass]="(btnHighLight==inx)? 'circle-wes-clicked':''"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End  of WES assessment mobile design -->

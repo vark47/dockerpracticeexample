@@ -1,0 +1,91 @@
+
+<div class="row p-b gutter-10 flex-row-plp-3">
+  <div class="col-lg-6 col-md-6 col-12 ">
+    <div class="card-plp3  pq-cards panel-progress-blue-color">
+      <div class="card-header-plp3 pq-heading-plp3">
+        <h5> {{heading[0]}}</h5>
+        <p>{{headerText[0]}}</p>
+      </div>
+      <div *ngIf="asessmentAttended">
+
+        <div *ngIf="existVal[0]==true" align="center" class="pq-img-card" [ngStyle]="{'background-color':'white'}">
+          <div class="pichart-align-plp3">
+
+            <ul class="personal-qts">
+              <li *ngFor="let val of intrest_Val;let i=index;" class="para-padding-plp3 text-left pointer" >
+                <i class="fa fa-chevron-right arrow-align-plp3 text-align-plp3" aria-hidden="true"></i>
+<a href="#" (click)="$event.preventDefault();callIpResult('IP',val.interest)">
+<u>{{val.interest}}</u></a>
+              </li>
+
+            </ul>
+            <img src="/assets/images/pieChartimg.png" [ngStyle]="{'width':'200px'}" class="pizzpie-image-plp3" /> <br>
+          </div>
+
+        </div>
+        <div *ngIf="existVal[0]==false" (click)="backAssessment('ip')" align="center" class="pq-img-card pointer" [ngStyle]="{'background-color':'white'}">
+          <div class="pichart-align-plp3">
+            <img src="/assets/images/personal_Qua_1.png" /> </div><br>
+        </div>
+      </div>
+      <div class="card-block "><br>
+        <div *ngFor="let value of valuesHeader[0]">
+          <h5 *ngIf="(value.type == 'h')" class="para-padding-plp3"> {{value.text}}</h5>
+          <ul *ngIf="(value.type == 'ul')" class="plp3-list link-text-rc">
+            <li *ngFor="let val of value.text"><i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+              <div class="list-text-alignment-plp3">{{val}}</div>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-lg-6 col-md-6 col-12 ">
+    <div class="card-plp3 pq-card-body1 pq-cards">
+      <div class="card-header-plp3 pq-heading-plp3">
+        <h5> {{heading[1]}}</h5>
+        <p>{{headerText[1]}}</p>
+      </div>
+      <div *ngIf="asessmentAttended">
+
+        <div *ngIf="existVal[1]==true" align="center" class="pq-img-card" [ngStyle]="{'background-color':'white'}">
+          <div class="pichart-align-plp3">
+
+            <ul class="personal-qts">
+              <li *ngFor="let val of work_imp;let i=index;" class="para-padding-plp3 text-left">
+                <i class="fa fa-chevron-right arrow-align-plp3 text-align-plp3" aria-hidden="true"></i>
+<a href="#" (click)="$event.preventDefault();callIpResult('WIL',val.value)">
+<u>{{val.value}}</u></a>
+              </li>
+
+            </ul>
+            <img src="/assets/images/purplepieChartimg.png" [ngStyle]="{'width':'200px'}" class="pizzpie-image-plp3" /> <br>
+          </div>
+
+        </div>
+        <div *ngIf="existVal[1]==false" (click)="backAssessment('WIL')" align="center" class="pq-img-card pointer" [ngStyle]="{'background-color':'white'}">
+          <div class="pichart-align-plp3">
+            <img src="/assets/images/personal_Qua_2.png" /> </div><br>
+        </div>
+
+
+      </div>
+      <div class="card-block "><br>
+        <div *ngFor="let value of valuesHeader[1]">
+          <h5 *ngIf="(value.type == 'h')" class="para-padding-plp3"> {{value.text}}</h5>
+          <ul *ngIf="(value.type == 'ul')" class="plp3-list link-text-rc">
+            <li *ngFor="let val of value.text"><i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+              <div class="list-text-alignment-plp3">{{val}}</div>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

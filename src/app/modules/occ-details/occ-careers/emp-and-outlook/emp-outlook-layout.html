@@ -1,0 +1,224 @@
+<div class="eo-allcards-box">
+  <div *ngFor="let item of state;let inx=index">
+    <div class="row gutter-10 eo-card-bottom-align" *ngIf="empselectedStates[inx].checkedVal">
+      <div class="col-lg-2 col-md-2">
+        <div class="eo-location-box" align="center"><b>{{state[inx]}}</b></div>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-12 ">
+        <div class="row gutter-10">
+          <div class="col-lg-4 col-md-4 col-sm-12 ">
+            <div class="eo-location-card">
+              <div class="row ">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-8 employee-states-txt-h"> <b>Current Employment</b> <br>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                  <ul id="empId" class="chart-mini eo-location-card-graph">
+                    <li *ngFor="let currentitem of [0,1,2,3,4];let inx=index"> <span [ngStyle]="(currentitem == currentValue)? {'background-color':'#0d47a1'}:{}"></span> </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="row employee-states">
+                <div class="col-lg-5 col-md-5 col-sm-5 col-5">
+                 <div class="row box-align-vl-plp3"> {{currentrating[inx].rating}} </div>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-7 col-7 text-right">
+                 <div class="row box-align-avg-plp3">  {{currentrating[inx].amount}}</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="eo-location-card">
+              <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-8 employee-states-txt-h"> <b>Job Growth</b></div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-4 text-right">
+                  <img *ngIf="growthtrating[inx].rating == 'Average'" src="/assets/images/average.png" [ngStyle]="{'width':'40px'}" />
+                  <img *ngIf="growthtrating[inx].rating == 'Bright'" src="/assets/images/bright.png" [ngStyle]="{'width':'40px'}" />
+                  <img *ngIf="growthtrating[inx].rating == 'Poor'" src="/assets/images/poor.png" [ngStyle]="{'width':'40px'}" />
+                  <img *ngIf="growthtrating[inx].rating == 'Declining'" src="/assets/images/declining.png" [ngStyle]="{'width':'40px'}" />
+                </div>
+              </div>
+              <div class="row employee-states">
+                <div class="col-lg-5 col-md-5 col-sm-5 col-5"> {{growthtrating[inx].rating}} </div>
+                <div class="col-lg-7 col-md-7 col-sm-7 col-7 text-right">{{growthtrating[inx].amount}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 ">
+            <div class="eo-location-card">
+              <div class="row employee-states-txt-h">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-8"><b>Employment Opportunities</b>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                  <ul class="chart-mini-1 eo-location-card-graph">
+                    <li *ngFor="let item of [0,1,2];let inx=index"> <span [ngStyle]="(item == chartValue)? {'background-color':'#0d47a1'}:{}"></span> </li>
+                    <!--style="height:50%;width:15px;"-->
+                    <!--<li> <span style="height:70%;width:15px;"></span> </li>
+                  <li> <span style="height:100%;width:15px;"></span> </li>-->
+                  </ul>
+
+                </div>
+              </div>
+
+              <div class="row employee-states">
+                 <div class="col-lg-7 col-md-7 col-sm-5 col-5">
+                  <div class="row box-align-vl-plp3"> {{opp_Rating[inx].rating}} </div>
+                  
+                  </div>
+
+
+
+                <div class="col-lg-5 col-md-5 col-sm-7 col-7 text-right">
+                  <div class="row box-align-avg-plp3">{{opp_Rating[inx].amount}}</div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row gutter-10 eo-card-bottom-align">
+    <div class="col-lg-2 col-md-2">
+      <div ngbDropdown class="d-inline-block" style="width:100%;">
+        <button class="s-state-btn w-100" (click)="checkopen()" data-toggle="collapse" href="#collapseExample3" aria-expanded="false"
+          aria-controls="collapseExample3" ><b>Select States</b></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- drop down toggel start -->
+
+
+  <div class="col-12 col-md-12 col-lg-12 p-b">
+    <div class="collapse slider-drop-plp3-2" id="collapseExample3">
+      <div class="card ">
+        <div class="card-header-slider">
+          {{stateIntro}}
+        </div>
+        <div class="card-block-slider-filter">
+          <div class="row">
+            <div class="col-6 col-md-4 col-lg-4" *ngFor="let stateName of stateval;let checkId=index;" >
+              <!--[class.disabledp2]="stateName.checkedVal == false"-->
+              <ul class="lst-style-plp3">
+                <li>
+ 				<div class="checkbox-occ">
+                    <input type="checkbox" (keydown)="count(stateName.stateNam,$event)" (click)="count(stateName.stateNam,'click')" id="emptest{{checkId}}"
+                      [checked]="stateName.checkedVal" />
+                    <label for="emptest{{checkId}}" class="popup-states" [class.disabledp2]="stateName.checkedVal==false && displayValue>=5">{{stateName.stateNam}}</label>
+                  </div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer-slider  text-right">
+          <button class="btn btn-success" data-toggle="collapse" (click)="showStates()" href="#collapseExample3" aria-expanded="false"
+            aria-controls="collapseExample" type="button">Apply</button>
+
+          <button type="button" class="btn btn-warning  " (click)="resetStates()">Reset</button>
+          <button class="btn btn-danger" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample"
+            type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+<div class="row gutter-10">
+  <div class="col-lg-4 col-md-4 col-12">
+    <div class="card-plp3 careere-video-card">
+      <div class="card-header-plp3 card-header-plp3-atc">
+        <h5>
+          <i aria-hidden="true " class="icon-major-employers-icon occCluster-icon-txt"> </i>
+          {{empResult.MajorEmployers}}</h5>
+      </div>
+      <!--<div class="card-header-plp3 ">
+        <h5>{{empResult.MajorEmployers}} </h5>
+        <i class="icon-major-employers-icon"></i>
+      </div>-->
+      <div class="card-block eo-card-height emp-block2-p-plp3-v scroll-class">
+        <div class="inner">
+          <ul class="plp3-list ">
+            <li *ngFor="let item of military_outlook"><i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+              <div class="list-text-alignment-plp3">{{item}}</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-8 col-md-8 col-12">
+    <div class="card-plp3 rc-card-body3">
+      <div class="card-header-plp3 card-header-plp3-atc">
+        <h5>
+          <i aria-hidden="true " class="icon-employment-outlook occCluster-icon-txt"> </i>
+          {{empResult.OutlookInfo}}</h5>
+      </div>
+      <div class="card-block eo-card-height emp-block2-p-plp3-v scroll-class">
+        <div class="inner">
+          <div *ngFor="let value of emp_outlook">
+            <p *ngIf="(value.type == 'p')"> {{value.text}}</p>
+            <ul *ngIf="(value.type == 'ul')" style="list-style: none;">
+              <li *ngFor="let val of value.text"><i class="fa fa-chevron-right arrow-align-plp3" aria-hidden="true"></i>
+                <div class="list-text-alignment-plp3"> {{val}} </div>
+              </li>
+            </ul>
+            <h5 *ngIf="(value.type == 'h')">{{value.text}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="eo-bottom-image desktop-table">
+  <div class="">
+    <h5 class="eo-image-heading">{{empResult.TopOpeningLocations}} </h5>
+    <!--<div class="bd-example">
+      <button *ngFor="let item of emp_location;let inx=index" type="button" class="btn loc-button-color">{{emp_location[inx]}}</button>
+    </div>-->
+    <div class="row text-center">
+
+      <div class="col-lg-1 col-md-1"> </div>
+      <div class="col-lg-2 col-md-2 col-sm-3 col-6 " *ngFor="let item of emp_location;let inx=index">
+        <button type="button" class=" loc-button-color" [ngStyle]="{'background':loc_btn_color[inx]}">
+           <i>{{emp_location[inx]}}</i></button>
+      </div>
+      <div class="col-lg-1 col-md-1">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Checkbox code starts  -->
+
+<!--<div class="modal fade" id="empexampleModal" role="dialog" aria-labelledby="empexampleModalLabel" aria-hidden="true" data-keyboard="false"
+  data-backdrop="static">
+  <div class="modal-dialog modal-lg" role="document" style="width:92%;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="empexampleModalLabel">Select State</h5>
+        <button type="button" (click)="checkBoxClick('close')" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+      </div>
+      <div class="modal-body ">
+        <p style="margin:15px 15px;">Select up to five states for which you would like to see wages information</p>
+        <div class="row card-block-plp3-v  scroll-class">
+          <div class="col-12 col-md-3  col-lg-3" style="left:15px;"> <span *ngFor="let stateName of empuniqueStates;let checkId=index;">
+            <input type="checkbox" id="emptest{{checkId}}" class="mycheck" [(ngModel)]="stateName.checkedVal"/>
+            <label for="emptest{{checkId}}" class="popup-states">{{stateName.stateNam}}</label>
+            </span> </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" [ngClass]="(empbuttonColor==true)? 'career-list-powderblue-plp3': 'disabled-btn'" (click)="showStates()"
+          class="btn" data-dismiss="modal">Display data for this States</button>
+      </div>
+    </div>
+  </div>
+</div>-->

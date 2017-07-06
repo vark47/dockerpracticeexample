@@ -1,0 +1,119 @@
+<!--<PLP-nav-header [header]="sectionObject" (changeView)="changeView($event)" [report-status]="report"></PLP-nav-header>-->
+<form [formGroup]="ExperientialLearningForm">
+
+  <div class="form-group">
+    <div class="col-spacer">
+      <div class="clearfix"> </div>
+      <div style="width: 100%; padding: 5px;">
+        <label *ngIf="(report=='') && (expLearn!='nodata')" class="question-head">
+      <i  class="icon-pencil-striped edit-ic-btn"></i>
+ <p class="ptitle">For each type of learning experience write your thoughts or check the boxes that apply.</p>
+  </label>
+        <label *ngIf="(report!='') && (expLearn!='nodata')" class="question-head">
+            <i  class="icon-pencil-striped review-ic-btn"></i>
+ <p class="ptitle">For each type of learning experience write your thoughts or check the boxes that apply.</p>
+  </label>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="rTableRow" *ngIf="(report!='') && (expLearn=='nodata')">
+            <div class="col-12 col-sm-12 col-md-12 rTableCell" align="center" style="font-weight: normal;">
+              No information has been entered for this item.
+            </div>
+          </div>
+          <div *ngIf="(expLearn!='nodata')">
+            <div formGroupName="expLearning">
+              <div class="row mTableRow " *ngFor="let item of TotalExperientialLearning;let indx = index">
+                <div class="mTableCell">
+                  <div class="inner-row-m">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                      {{item.name}} <i class="icon-question-circular-button exp-img exptooltip"><span class="exptooltiptext">{{item.hoverTextVal}}</span></i>
+                      <br><br><textarea class="form-control " placeholder="Summary of Experience" style="height:95px;" rows="1"
+                        [(ngModel)]="item.text" [formControlName]="item.name" (keypress)="changeTextarea($event,indx)"></textarea>
+
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-10 col-sm-9 col-md-10 col-lg-10  col-xl-10" style="float:right;">
+                            <br><label for="checkbox1" style="margin:0;"><span ><i class="icon-personal-info exp-ic-color"></i></span><span>
+        <p class="expAligningText"> I learned more about myself</p>
+       </span></label>
+                          </div>
+                          <div class="col-2  col-sm-3 col-md-2  col-lg-2  col-xl-2" style="float:right;">
+                            <br>
+ 							<div class="checkbox-occ pull-right">
+                              <input class="pull-right" type="checkbox" id="Myself+'{{indx}}'" [(ngModel)]="item.Myself" [formControlName]="item.Myself">
+                              <label for="Myself+'{{indx}}'">&nbsp; </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-10 col-sm-9 col-md-10 col-lg-10  col-xl-10" style="float:right;">
+                            <label for="checkbox2" style="margin:0;"> <span><i class="icon-occ-and-clusters-interest exp-ic-color"></i></span>
+       <p class="expAligningText">I learned more about different careers </p></label>
+
+                          </div>
+                          <div class="col-2  col-sm-3 col-md-2 col-lg-2  col-xl-2" style="float:right;">
+                           
+							<div class="checkbox-occ pull-right">
+                              <input class="pull-right" type="checkbox" id="Careers+'{{indx}}'" [(ngModel)]="item.Careers" [formControlName]="item.Careers">
+                              <label for="Careers+'{{indx}}'">&nbsp; </label>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="row">
+                          <div class="col-10 col-sm-9 col-md-10 col-lg-10  col-xl-10" style="float:right;">
+                            <label for="checkbox3" style="margin:0;"><span ><i class="icon-chat exp-ic-color"></i> </span>
+       <p class="expAligningText">This helped me think of some things I'd like to do in my future </p></label>
+
+                          </div>
+                          <div class="col-2  col-sm-3 col-md-2 col-lg-2  col-xl-2" style="float:right;">
+                             <div class="checkbox-occ pull-right">
+                              <input class="pull-right" type="checkbox" id="Future+'{{indx}}'" [(ngModel)]="item.Future" [formControlName]="item.Future">
+                              <label for="Future+'{{indx}}'">&nbsp; </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-10 col-sm-9 col-md-10 col-lg-10  col-xl-10" style="float:right;">
+                            <label for="checkbox4" style="margin:0;"><span><i class="icon-like exp-ic-color"></i></span>
+     <p class="expAligningText">I haven't tried this, but I'd like to </p></label>
+                          </div>
+                          <div class="col-2  col-sm-3 col-md-2 col-lg-2  col-xl-2" style="float:right;">
+                            <div class="checkbox-occ pull-right">
+                              <input class="pull-right" type="checkbox" id="Try+'{{indx}}'" [(ngModel)]="item.Try" [formControlName]="item.Try">
+                              <label for="Try+'{{indx}}'">&nbsp; </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+      <div *ngIf="(ExperientialLearningForm.touched) && (!ExperientialLearningForm.valid)">
+
+        <span style="padding-left:10px;text-align:right;" class="error-color">
+      {{errorMessage.usernotes_limit}}</span>
+        <!--<span *ngIf="ExperientialLearningForm.get('formVal').hasError('maxlengthCheck')" style="padding-left:10px;text-align:right;" class="error-color">
+      {{errorMessage.usernotes_limit}}</span>
+        </span>-->
+      </div><br>
+      <div *ngIf="edited" class="alert alert-success">
+        <strong>Success!</strong> {{successLabel}}
+      </div>
+      <div *ngIf="errorVal" class="alert alert-danger">
+        <strong>Oops!</strong> {{successLabel}}
+      </div>
+      <div *ngIf="(report=='')" class="btn-m-t">
+        <button type="submit" class="btn btn-red-plp" [disabled]="!ExperientialLearningForm.valid" (click)="SaveExperientialLearning()">
+          <i class="fa fa-save white-color"> </i> Save Information</button>
+      </div>
+    </div>
+  </div>
+
+</form>

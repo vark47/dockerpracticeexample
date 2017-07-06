@@ -1,0 +1,39 @@
+<div class="login-bg login-scroll-plp1">
+  <div class="plp-ParentContaniner">
+    <!-- Top content -->
+    <div class="plp-inr-parentContainer">
+      <div class="top-content">
+        <div class="inner-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-12 col-xl-8">
+                <div class="text">
+                  <h1 class="text-align-login">{{loginText.title}}</h1>
+                  <div class="description">
+                    <p class="text-align login-para">{{loginText.subtitle}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-12 col-xl-4">
+                <router-outlet></router-outlet>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer" class="copy-rights-p">
+        <div class="container ">
+          <div class="white-color  col-sm-9  offset-sm-3 copy-text-size">
+            <!--<p class="">-->
+            <div class="copy-image-div">
+              <img class="copy-logo" src="{{loginText.login_footer_image}}">
+            </div>
+
+            <b>{{loginText.login_footer_title}}</b> <br/> {{loginText.login_footer_subtitle}}
+            <!--</p>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

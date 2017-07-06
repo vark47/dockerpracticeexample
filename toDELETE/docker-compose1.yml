@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+    cis-mobile:
+        image: intocareers/cis-mobile        
+        container_name: cis-mobile
+        mem_limit: 500m
+        env_file:
+            - ../.env           
+        memswap_limit: 1g
+        build: .  
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./logs:/home/nodejs/logs
+        restart: always

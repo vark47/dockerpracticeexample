@@ -1,0 +1,152 @@
+<!-- Fixed navbar for interest-profiler assessment-->
+
+<div class="row desktop-design-hide-plp2">
+  <div class="col-md-12">
+    <div class="panel panel-green">
+      <div class="panel-progress-blue shadow-bottom">
+        <div class="col-md-1 col-sm-2 col-lg-1"> <a href="#" class="leftArrowClass white-color" (click)="$event.preventDefault();previousQuestion()">
+          <i [class.class-withOpacityIP]="isClassVisibleIP" class="fa  icon-asmnt-back-arrow arrows" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+             </a>
+             <span class="eq-ques">  {{'LANG_EN_TRANS.question_txt' | translate}}.{{cnt}}  </span>
+             </div>
+        <div class="col-md-8 col-sm-7 col-lg-9">
+          <div class="progress xs progress-m">
+            <div class="progress-bar progress-bar-blue" [ngStyle]="{'width': currentValue +'%'}"></div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-lg-2 text-right">
+          <span class="eq-ques-remainng">{{remaining}} {{'LANG_EN_TRANS.shortip_ques_opt' | translate}}</span>&nbsp;
+          <a href="#" class="ntxArrow pointer pull-right white-color" *ngIf="showNxtIP" (click)="$event.preventDefault();nextIPArrow(cnt)">
+                  <i aria-hidden="true"  class="fa icon-asmnt-forward-arrow arrows" ></i></a>
+        </div>
+      </div>
+      <div class="block-box-blue">
+        <p class="text-center">{{questionarr[InterestQuestionName]}}</p>
+      </div>
+      <div class="circle-body">
+        <div class="col-md-5ths text-center">
+          <button [ngClass]="(btnHighLight==4)? 'blue-circle-button-onPrev':''" class="btn btn-default blue-circle-button" href=""
+            (click)="callQuestion(4)">
+                <i class="fa icon-asmnt-strongly-agree" [ngClass]="(btnHighLight==4)? 'white-color':''"></i>
+                <p>{{responsesarr[0] }}&nbsp;&nbsp;</p>
+              </button>
+        </div>
+        <div class="col-md-5ths text-center">
+          <button [ngClass]="(btnHighLight==3)? 'blue-circle-button-onPrev':''" class="btn btn-default blue-circle-button" href=""
+            (click)="callQuestion(3)">
+                <i class="fa icon-asmnt-between-strongly" [ngClass]="(btnHighLight==3)? 'white-color':''"></i>
+              <p>{{responsesarr[1] }}
+               </p>
+              </button>
+        </div>
+        <div class="col-md-5ths text-center">
+          <button [ngClass]="(btnHighLight==2)? 'blue-circle-button-onPrev':''" class="btn btn-default blue-circle-button" href=""
+            (click)="callQuestion(2)">
+                <i class="fa icon-asmnt-somewhat" [ngClass]="(btnHighLight==2)? 'white-color':''"></i>
+              <p>{{responsesarr[2] }}  &nbsp;</p>
+              </button>
+        </div>
+        <div class="col-md-5ths text-center">
+          <button [ngClass]="(btnHighLight==1)? 'blue-circle-button-onPrev':''" class="btn btn-default blue-circle-button" href=""
+            (click)="callQuestion(1)">
+                <i class="fa icon-asmnt-between-somewhat" [ngClass]="(btnHighLight==1)? 'white-color':''"></i>
+              <p>{{responsesarr[3]}}</p>
+              </button>
+        </div>
+        <div class="col-md-5ths text-center">
+          <button [ngClass]="(btnHighLight==0)? 'blue-circle-button-onPrev':''" class="btn btn-default blue-circle-button" href=""
+            (click)="callQuestion(0)">
+                <i class="fa icon-asmnt-strongly-disagree" [ngClass]="(btnHighLight==0)? 'white-color':''"></i>
+              <p>{{responsesarr[4]}}&nbsp;</p>
+              </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<br>-->
+<!-- mobile design for interest-profiler assessment -->
+
+<div class="mobile-design-hide-plp2">
+  <div class="plp2-blue-bg plp2-green-bg-margin">
+    <div class="container mob-head-style">
+      <div class="row plp-2-m-t">
+        <div class="col-6"> <span class="text-right">{{'LANG_EN_TRANS.question_txt' | translate}}.{{cnt}}</span> </div>
+        <div class="col-6 text-right"> <span>{{remaining}} {{'LANG_EN_TRANS.shortip_ques_opt' | translate}}</span> </div>
+      </div>
+      <div class="row plp-2-m-t">
+        <div class="col-1">
+ <div   class="leftArrowClass" (click)="previousQuestion()"> 
+<i [class.class-withOpacityIP]="isClassVisibleIP" class="fa icon-asmnt-back-arrow arrows"></i> </div></div>
+        <div class="col-9">
+          <div class="progress xs progress-m">
+            <div class="progress-bar progress-bar-blue" [ngStyle]="{'width': currentValue +'%'}"></div>
+          </div>
+        </div>
+        <div class="col-1 "> <div class="ntxArrow" *ngIf="showNxtIP" (click)="nextIPArrow(cnt)"> 
+            <i aria-hidden="true" class="fa icon-asmnt-forward-arrow arrows" ></i> </div> </div>
+      </div>
+      <div class="row plp-2-m-t">
+        <div class="col-1"> </div>
+        <div class="col-9">
+          <p class="text-center">{{questionarr[InterestQuestionName]}} </p>
+        </div>
+        <div class="col-1"> </div>
+      </div>
+    </div>
+  </div>
+  <div style="clear: both;"> </div>
+  <div class="card-blue">
+    <div class="card-plp-2  card-blue-hover" [ngClass]="(btnHighLight==4)? 'blue-circle-button-onPrev':''" (click)="callQuestion(4)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>{{responsesarr[0]}}</p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa  icon-asmnt-strongly-agree" [ngClass]="(btnHighLight==4)? 'white-color':''"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="card-plp-2  card-blue-hover" [ngClass]="(btnHighLight==3)? 'blue-circle-button-onPrev':''" (click)="callQuestion(3)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>{{responsesarr[1]}} </p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa  icon-asmnt-between-strongly" [ngClass]="(btnHighLight==3)? 'white-color':''"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="card-plp-2  card-blue-hover " [ngClass]="(btnHighLight==2)? 'blue-circle-button-onPrev':''" (click)="callQuestion(2)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>{{responsesarr[2]}} </p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa icon-asmnt-somewhat" [ngClass]="(btnHighLight==2)? 'white-color':''"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="card-plp-2  card-blue-hover" [ngClass]="(btnHighLight==1)? 'blue-circle-button-onPrev':''" (click)="callQuestion(1)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>{{responsesarr[3]}}</p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa icon-asmnt-between-somewhat" [ngClass]="(btnHighLight==1)? 'white-color':''"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="card-plp-2  card-blue-hover" [ngClass]="(btnHighLight==0)? 'blue-circle-button-onPrev':''" (click)="callQuestion(0)">
+      <div class="row valign">
+        <div class="col-9">
+          <p>{{responsesarr[4]}} </p>
+        </div>
+        <div class="col-3">
+          <span> <i class="fa icon-asmnt-strongly-disagree" [ngClass]="(btnHighLight==0)? 'white-color':''"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End  of interest-profiler assessment mobile design -->

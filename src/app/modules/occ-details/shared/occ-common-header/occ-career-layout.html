@@ -1,0 +1,184 @@
+<div class="p-t-b  mobie-width mobile-container bodyheight bodypadding">
+  <div class="row">
+    <div class="col-md-4 col-lg-4">
+      <h4 class="color-green-plp3">{{occName}}</h4>
+    </div>
+    <div class="col-md-8 col-lg-8 text-right">
+      <div class="btn-group-plp3 btn-group-justified">
+        <!--button on header-->
+        <button type="button" class="btn btn-green-plp3" (click)="CareerList('no')"><b>{{careersListValue.buttons.index}}</b></button>
+        <button type="button" class="btn btn-green-plp3" data-toggle="modal" data-target="#myModal7"><b>{{careersListValue.buttons.compare}}</b></button>
+        <button type="button" class="btn btn-green-plp3" *ngIf="backAssessmentValue" (click)="backAssessment()"><b>{{careersListValue.buttons.backAssess}}</b></button>
+        <button type="button" class="btn btn-green-plp3 iteam-none-big-screen" (click)="savePost()"><b>{{careersListValue.buttons.save}}</b></button>
+        <button type="button" class="btn btn-green-plp3 iteam-none-big-screen"><b>{{careersListValue.buttons.print}}</b></button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <!--video popup-->
+    <div class="col-lg-12"> <a> <img src="{{imgHeaderScr}}" class="img-responsive" alt="No image found" onerror="this.onerror=null;this.src='/assets/images/career-rating.jpg';" /> </a>
+      <div class="desc"></div>
+      <div class="opacity-header-plp3 row">
+        <div class="col-lg-5  col-2 col-md-6 col-sm-2"> <a href="#myModal" data-toggle="modal" data-target="#myModal"> 
+          <img class="video-hight-plp3" src="/assets/images/video-icon-plp3.png"  alt="" />
+          </a>
+        </div>
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog" style="width:92%">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close plp3-model-close-align" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body" *ngFor="let video of videoSrc">
+                <video height="100%" width="100%" controls>
+                  <source src="{{video}}" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7 col-md-6 col-sm-10 col-10">
+          <div class="row text-right">
+            <div class="col-lg-10 col-8 col-md-9 col-sm-9 text-right">
+              <p class="desc_content stars-plp3 ">Rate this Career</p>
+            </div>
+            <div class="col-lg-2 col-4 col-md-3 col-sm-3">
+              <div class="row ">
+
+                <span class="star"> 
+          <a href="#" (click)="$event.preventDefault();getUnFill('up')">   <i class="star fillstroke" [ngClass]="(showCareerColorUp == 1)?'icon-thumbs-up-hover':'icon-thumbs-up'"  aria-hidden="true"  ></i> </a>
+            <a href="#" (click)="$event.preventDefault();getUnFill('down')">  <i class="star fillstroke" [ngClass]="(showCareerColorUp == 0)?'icon-thumbs-down-hover':'icon-thumbs-down'"  aria-hidden="true"></i></a>
+           
+             </span>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--tabs to go to screen-->
+      <div class="ngb-tabset">
+        <ul class="nav nav-pills justify-content-start iteam-none-big-screen" role="tablist ">
+          <li class="nav-item">
+            <a class="nav-link " [class.active]="(activeVal==0)" (click)="dropDownVal(tabsValue.tabs[0],0)" data-toggle="tab" href="#glanceId"
+              role="tab">{{tabsValue.tabs[0]}} <div class="p3tab-arrow"> </div></a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [class.active]="(activeVal==1)" (click)="dropDownVal(tabsValue.tabs[1],1)" data-toggle="tab" href="#description"
+              role="tab">{{tabsValue.tabs[1]}}<div class="p3tab-arrow"> </div></a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [class.active]="(activeVal==2)" (click)="dropDownVal(tabsValue.tabs[2],2)" data-toggle="tab" href="#wagesId"
+              role="tab">{{tabsValue.tabs[2]}}<div class="p3tab-arrow"> </div></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [class.active]="(activeVal==3)" (click)="dropDownVal(tabsValue.tabs[3],3)" data-toggle="tab" href="#outlookId"
+              role="tab">{{tabsValue.tabs[3]}}<div class="p3tab-arrow"> </div></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [class.active]="(activeVal==4)" (click)="dropDownVal(tabsValue.tabs[4],4)" data-toggle="tab" href="#edu_traninigId"
+              role="tab">{{tabsValue.tabs[4]}}  <div class="p3tab-arrow"> </div></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [class.active]="(activeVal==5)" (click)="dropDownVal(tabsValue.tabs[5],5)" data-toggle="tab" href="#personal"
+              role="tab">{{tabsValue.tabs[5]}} <div class="p3tab-arrow"> </div></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [class.active]="(activeVal==6)" (click)="dropDownVal(tabsValue.tabs[6],6)" data-toggle="tab" href="#careerId"
+              role="tab">{{tabsValue.tabs[6]}} <div class="p3tab-arrow"> </div></a>
+          </li>
+        </ul>
+      </div>
+      <div class="ngb-tabset-mobile iteam-none-small-screen">
+        <ul class="nav nav-pills">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{value}}</a>
+            <div class="dropdown-menu">
+              <a class="nav-link " [class.active]="(activeVal==0)" (click)="dropDownVal(tabsValue.tabs[0],0)" data-toggle="tab" href="#glanceId"
+                role="tab">{{tabsValue.tabs[0]}}</a>
+              <a class="nav-link" [class.active]="(activeVal==1)" (click)="dropDownVal(tabsValue.tabs[1],1)" data-toggle="tab" href="#description"
+                role="tab">{{tabsValue.tabs[1]}}</a>
+              <a class="nav-link" [class.active]="(activeVal==2)" (click)="dropDownVal(tabsValue.tabs[2],2)" data-toggle="tab" href="#wagesId"
+                role="tab">{{tabsValue.tabs[2]}}</a>
+              <a class="nav-link" [class.active]="(activeVal==3)" (click)="dropDownVal(tabsValue.tabs[3],3)" data-toggle="tab" href="#outlookId"
+                role="tab">{{tabsValue.tabs[3]}}</a>
+              <a class="nav-link" [class.active]="(activeVal==4)" (click)="dropDownVal(tabsValue.tabs[4],4)" data-toggle="tab" href="#edu_traninigId"
+                role="tab">{{tabsValue.tabs[4]}}</a>
+              <a class="nav-link" [class.active]="(activeVal==5)" (click)="dropDownVal(tabsValue.tabs[5],5)" data-toggle="tab" href="#personal"
+                role="tab">{{tabsValue.tabs[5]}}</a>
+              <a class="nav-link" [class.active]="(activeVal==6)" (click)="dropDownVal(tabsValue.tabs[6],6)" data-toggle="tab" href="#careerId"
+                role="tab">{{tabsValue.tabs[6]}}</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content ">
+        <div class="tab-pane " [class.active]="(activeVal==0)" id="glanceId" role="tabpanel">
+          <at-a-glance [jsonValue]="glanceDataVal"></at-a-glance>
+        </div>
+        <div class="tab-pane" [class.active]="(activeVal==1)" id="description" role="tabpanel">
+          <job-description [job_descResult]="job_descriptionData"></job-description>
+        </div>
+        <div class="tab-pane" [class.active]="(activeVal==2)" id="wagesId" role="tabpanel">
+          <wages [wageoccIDVal]="occID" [wageStates]="emp_outStateData" [wageResult]="wagesData"></wages>
+        </div>
+        <div class="tab-pane" [class.active]="(activeVal==3)" id="outlookId" role="tabpanel">
+          <emp-and-outlook [occIDVal]="occID" [empStates]="emp_outStateData" [empResult]="emp_outlookData"></emp-and-outlook>
+        </div>
+        <div class="tab-pane" [class.active]="(activeVal==4)" id="edu_traninigId" role="tabpanel">
+          <edu-and-traninig [edu_trainResult]="edu_traninig"></edu-and-traninig>
+        </div>
+        <div class="tab-pane" [class.active]="(activeVal==5)" id="personal" role="tabpanel">
+          <personal-qualities [personal_qualResult]="personalResult"></personal-qualities>
+        </div>
+        <div class="tab-pane" [class.active]="(activeVal==6)" id="careerId" role="tabpanel">
+          <related-careers [relResult]="related_careers" (changeViewRelate)="relate($event)"></related-careers>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--pop up for compare and save career-->
+<div style="position: absolute; margin-top: -50px;">
+  <div class="iteam-none-small-screen  float-btn-plp3">
+    <div class='multi-action'>
+      <button class='action-button' (click)="filter = !filter" [ngClass]="{'active': filter }"><span class='fa fa-plus'></span></button>
+      <ul class='actions'>
+        <li [ngStyle]="{'cursor':'pointer'}" (click)="savePost()"><a><span class='fa fa-floppy-o'></span></a></li>
+        <li [ngStyle]="{'cursor':'pointer'}"><a><span class='fa fa-print'></span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:92%;">
+      <div class="modal-content content-color">
+        <div class="modal-header eq-heading careere-dark-blue-card">
+          <h6 class="modal-title eq-popup-tittle"><b>Compare 2 Careers</b></h6>
+          <i class="" data-dismiss="modal" (click)="cancleOccupation()" aria-label="Close">&times;</i>
+        </div>
+        <div class="modal-body">
+          <div class="">{{this.indexTitleName[0]}}&nbsp;<i *ngIf="(indexOccId.length>=1)" [ngStyle]="{'color':'red','font-size':'20px','position':'relative','top':'2px'}"
+              class="cursorpointer-plp" (click)="checkCareer(indexOccId[0],indexTitleName[0])">&times;</i></div>
+          <div class="">{{this.indexTitleName[1]}}&nbsp;<i *ngIf="(indexOccId.length==2)" [ngStyle]="{'color':'red','font-size':'20px','position':'relative','top':'2px'}"
+              class="cursorpointer-plp" (click)="checkCareer(indexOccId[1],indexTitleName[1])">&times;</i></div><br>
+          <div>
+            <p *ngIf="(indexOccId.length<2)"> Select one more career to compare</p>
+            <button *ngIf="(indexOccId.length<2)" type="button" class="btn btn-success text-right pull-right" data-dismiss="modal" (click)="SaveOccupation()">Save</button>
+            <button *ngIf="(indexOccId.length==2)" type="button" class="btn btn-success text-right pull-right" data-dismiss="modal" (click)="CompareOccupations()">Compare</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<!-- Desktop view for interest-profiler intro-->
+
+<div class="panel panel-default occ-mobil-top content-box-shadow-plp2">
+	<div class="row panel-body-p2" style="height:auto;">
+
+		<div class="col-md-3 col-sm-3 col-centered-p2">
+			<div id="svgOcc" style="margin-top: 0px;"></div>
+		</div>
+		<div class="col-md-9 col-sm-9 col-12 col-centered-p2">
+			<div class="occ-list-p2">
+				<ul data-pie-id="svgOcc" id="ipsf_pie" class="columns-ip-occlist">
+					<li *ngFor="let res of pieDataInOcc" class="ChartData " [attr.data-value]="res.score" [ngStyle]="{'color': pieColor[res.interest]}">
+						<span class="box-color1 cls-cursor" (click)="getIPAreaOccListParent(res.interest)" [ngStyle]="{'background-color': pieColor[res.interest]}"></span>&nbsp;
+						<a href="#" class="colorocc-heading-plp2 number-alignocc cls-cursor" (click)="$event.preventDefault();getIPAreaOccListParent(res.interest)"
+						 [attr.id]="res.interest">
+							<a  class = "heading-link-plp2 cmpr-cap-letr" 
+							[ngClass]="(interest==res.interest)? 'high-lighting-text-num':'dehigh-lighting-text-num'" >
+							<u>{{res.interest| translate }}</u></a></a>&nbsp;
+						<span class="color-number-plp2 cls-cursor" (click)="getIPAreaOccListParent(res.interest)">
+						<a  class = "heading-link-plp2" [ngClass]="(interest==res.interest)? 'high-lighting-text-num':'dehigh-lighting-text-num'" >{{res.score}}</a></span>
+					</li>
+					<img *ngIf="(ipsfOccListData.length==0)" align="center" class="data-notfound" src="/assets/images/nodata-found.png" />
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="interst-profiler-data"> <a class="page-sub-header-2 cmpr-cap-letr">{{interest | translate }}</a>
+	<p class="realstic-data">{{('LANG_EN_TRANS.shortip_score_opt'| translate)[interest] }} </p>
+</div>
+<!--Hear we get the list of occupations relating to the interest we select -->
+<occupation-list>
+
+
+</occupation-list>

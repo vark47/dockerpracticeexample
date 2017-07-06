@@ -1,0 +1,70 @@
+[{
+  "Version": "1.0.0",
+  "StatusCode": 200,
+  "Success": true,
+  "Authorized": true,
+  "Result": {
+    "buttons": [
+      {
+        "button": "index",
+        "title": "职业列表"
+      },
+      {
+        "button": "backAssess",
+        "title": "回到评估"
+      },
+      {
+        "button": "save",
+        "title": "保存"
+      },
+      {
+        "button": "print",
+        "title": "打印"
+      }
+    ],
+    "tabs": [
+      {
+        "seq": 0,
+        "title": "关于这个职业"
+      },
+      {
+        "seq": 1,
+        "title": "教育和培训"
+      },
+      {
+        "seq": 2,
+        "title": "相关职业"
+      }
+    ],
+    "sections": [
+      {
+        "section": "HelpfulHSCourses",
+        "title": "有用的高中课程"
+      },
+      {
+        "section": "LicensingCert",
+        "title": "授权/认证"
+      },
+      {
+        "section": "Overview",
+        "title": "概述"
+      },
+      {
+        "section": "Preparation",
+        "title": "制备"
+      },
+      {
+        "section": "RelatedPrograms",
+        "title": "相关课程"
+      },
+      {
+        "section": "ThingsToKnow",
+        "title": "事情要知道"
+      },
+      {
+        "section": "UserRating",
+        "title": "评价这个职业"
+      }
+    ]
+  }
+}]
